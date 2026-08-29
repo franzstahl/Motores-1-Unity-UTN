@@ -1,6 +1,5 @@
-using UnityEditor;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.ProBuilder.Shapes;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,36 +9,50 @@ public class GameManager : MonoBehaviour
     private float resetTimerOriginalValue;
     private bool playerDetected;
     [SerializeField] private Vector3 startingPosition;
+    [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] private float fadeDuration = 5.0f;
     public GameObject player;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    public AudioSource audioSource;
+    public AudioClip clip;
+
+    private Coroutine fadeCoroutine;
+
     void Start()
     {
         player = GameObject.Find("Player");
         resetTimerActive = false;
         resetTimerOriginalValue = resetTimer;
+        EnterPlayingState();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
             playerDetected = true;
+
+        if (Input.GetKeyDown(KeyCode.G))
+            FadeOut();
+
+        if (Input.GetKeyDown(KeyCode.H))
+            FadeIn();
+
         if (playerDetected)
-            EnterDetectedState();
-        if (resetTimerActive)
         {
-            resetTimer -= Time.deltaTime;
-            //Debug.Log(resetTimer);
+            playerDetected = false;
+            EnterDetectedState();
         }
 
+        if (resetTimerActive)
+            resetTimer -= Time.deltaTime;
+
         if (resetTimer < 0 && resetTimerActive)
-        {
             EnterRestartingState();
-        }
     }
 
     public void EnterPlayingState()
     {
+        FadeIn();
         isMovementActive = true;
         playerDetected = false;
         resetTimerActive = false;
@@ -49,20 +62,51 @@ public class GameManager : MonoBehaviour
     public void EnterDetectedState()
     {
         Debug.Log("Jugador detectado");
-        playerDetected = true;
+        audioSource.PlayOneShot(clip);
         isMovementActive = false;
         resetTimerActive = true;
     }
 
     public void EnterRestartingState()
     {
-        player.transform.position = startingPosition;
-        EnterPlayingState();
+        resetTimerActive = false; // stop timer immediately so this can't re-trigger
+        StartCoroutine(RestartRoutine());
     }
 
-    //1. Estados del juego: Playing, Detected, Restarting.
-    //2. Función PlayerDetected(): se llama cuando te descubren.Cambia el estado, frena al jugador, tira un placeholder de luz/sonido(por ahora alcanza con un Debug.Log), y después de 1-2 segundos reinicia.
-    //3. Función RestartGame(): recarga la escena entera desde cero con SceneManager.LoadScene.No hay checkpoints, siempre se vuelve al inicio.
-    //4. Patrón Singleton: que solo exista una instancia del GameManager en la escena, accesible desde cualquier script con GameManager.Instance.
-    //5. Se puede probar todo esto sin esperar a nadie más, simulando la detección con una tecla de testeo (por ejemplo, apretar T llama a PlayerDetected() a mano).
+    private IEnumerator RestartRoutine()
+    {
+        // Wait for the screen to fully fade to black before moving the player
+        yield return StartFade(1f);
+
+        player.transform.position = startingPosition;
+
+        EnterPlayingState(); // fades back in
+    }
+
+    // Opacity control
+
+    public void FadeIn() => StartFade(0f);
+    public void FadeOut() => StartFade(1f);
+
+    private Coroutine StartFade(float target)
+    {
+        if (fadeCoroutine != null)
+            StopCoroutine(fadeCoroutine);
+
+        fadeCoroutine = StartCoroutine(FadeCanvasGroup(canvasGroup.alpha, target, fadeDuration));
+        return fadeCoroutine;
+    }
+
+    private IEnumerator FadeCanvasGroup(float start, float end, float duration)
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            canvasGroup.alpha = Mathf.Lerp(start, end, elapsedTime / duration);
+            yield return null;
+        }
+        canvasGroup.alpha = end;
+        fadeCoroutine = null;
+    }
 }

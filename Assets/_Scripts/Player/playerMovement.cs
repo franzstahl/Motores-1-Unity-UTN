@@ -21,6 +21,8 @@ public class playerMovement : MonoBehaviour
     private Vector3 velocity; // This will hold player's current velocity, including vertical movement due to gravity and jumping
     private bool isGrounded;
 
+    [SerializeField] private GameManager gameManager;
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -29,6 +31,7 @@ public class playerMovement : MonoBehaviour
 
     private void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         if (cameraTransform == null && Camera.main != null) // If no cameraTransform is assigned in the inspector, try to find the main camera in the scene.
             cameraTransform = Camera.main.transform;
     }
@@ -91,7 +94,8 @@ public class playerMovement : MonoBehaviour
 
         Vector3 moveDirection = camForward * moveInput.y + camRight * moveInput.x;
 
-        controller.Move(moveDirection * moveSpeed * Time.deltaTime);
+        if(gameManager.isMovementActive)
+            controller.Move(moveDirection * moveSpeed * Time.deltaTime);
 
         if (moveDirection.sqrMagnitude > 0.01f)
         {
