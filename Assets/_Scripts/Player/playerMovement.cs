@@ -94,7 +94,7 @@ public class playerMovement : MonoBehaviour
 
         Vector3 moveDirection = camForward * moveInput.y + camRight * moveInput.x;
 
-        if(gameManager.isMovementActive)
+        if (gameManager.isMovementActive)
             controller.Move(moveDirection * moveSpeed * Time.deltaTime);
 
         if (moveDirection.sqrMagnitude > 0.01f)
