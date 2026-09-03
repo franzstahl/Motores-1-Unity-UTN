@@ -90,8 +90,12 @@ public class GameManager : MonoBehaviour
 
     private Coroutine StartFade(float target)
     {
+        if (canvasGroup == null)
+        {
+            return null;
+        }
         if (fadeCoroutine != null)
-            StopCoroutine(fadeCoroutine);
+        StopCoroutine(fadeCoroutine);
 
         fadeCoroutine = StartCoroutine(FadeCanvasGroup(canvasGroup.alpha, target, fadeDuration));
         return fadeCoroutine;
