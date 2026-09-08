@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     private bool resetTimerActive;
     [SerializeField] private float resetTimer;
     private float resetTimerOriginalValue;
-    private bool playerDetected;
+    [SerializeField] private bool playerDetected;
     [SerializeField] private Vector3 startingPosition;
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private float fadeDuration = 5.0f;
@@ -17,6 +17,13 @@ public class GameManager : MonoBehaviour
     public AudioClip clip;
 
     private Coroutine fadeCoroutine;
+
+    public bool PlayerDetected
+    {
+        get { return playerDetected; }
+        set { playerDetected = value; }
+    }
+
 
     void Start()
     {

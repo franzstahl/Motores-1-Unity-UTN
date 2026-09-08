@@ -64,7 +64,8 @@ public class playerMovement : MonoBehaviour
 
     private void OnJumpPerformed(InputAction.CallbackContext context) // Mark that was requested to be jumped (a flag), to be processed later
     {
-        jumpRequested = true;
+        if (gameManager.isMovementActive)
+            jumpRequested = true;
     }
 
     private void Update()
