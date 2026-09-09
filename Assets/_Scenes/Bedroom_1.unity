@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 1068543963}
   - component: {fileID: 1068543967}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
