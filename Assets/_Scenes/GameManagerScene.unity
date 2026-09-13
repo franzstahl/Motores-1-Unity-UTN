@@ -1767,7 +1767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6382656529295073705, guid: 5106cf9494c231f469254c24b468a29a, type: 3}
       propertyPath: m_Name
-      value: fridge
+      value: Fridge
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
