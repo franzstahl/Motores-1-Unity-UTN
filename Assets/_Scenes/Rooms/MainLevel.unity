@@ -90872,7 +90872,7 @@ MonoBehaviour:
       Enabled: 1
       Input:
         InputAction: {fileID: 925396577}
-        Gain: 4
+        Gain: 8
         LegacyInput: 
         LegacyGain: 1
         CancelDeltaTime: 0
@@ -90885,7 +90885,7 @@ MonoBehaviour:
       Enabled: 1
       Input:
         InputAction: {fileID: 535675297}
-        Gain: 4
+        Gain: 8
         LegacyInput: 
         LegacyGain: 1
         CancelDeltaTime: 0
@@ -90898,7 +90898,7 @@ MonoBehaviour:
       Enabled: 1
       Input:
         InputAction: {fileID: 0}
-        Gain: 1
+        Gain: 4
         LegacyInput: 
         LegacyGain: 1
         CancelDeltaTime: 0
