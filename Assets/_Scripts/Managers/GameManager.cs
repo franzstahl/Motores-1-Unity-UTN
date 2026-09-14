@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -46,8 +47,8 @@ public class GameManager : MonoBehaviour
 
         if (playerDetected)
         {
-            playerDetected = false;
             EnterDetectedState();
+            playerDetected = false;
         }
 
         if (resetTimerActive)
@@ -85,7 +86,7 @@ public class GameManager : MonoBehaviour
         // Wait for the screen to fully fade to black before moving the player
         yield return StartFade(1f);
 
-        player.transform.position = startingPosition;
+        SceneManager.LoadScene("LivingRoom");
 
         EnterPlayingState(); // fades back in
     }

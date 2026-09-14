@@ -3,9 +3,13 @@ using UnityEngine;
 public class LevelTeleporter : MonoBehaviour, InteractibleInterface
 {
     [SerializeField] private Transform destination;
+    [SerializeField] private GameObject player;
 
     public void Interact()
     {
-        GameObject.FindGameObjectWithTag("Player").transform.position = destination.position;
+        player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<CharacterController>().enabled = false;
+        player.transform.position = destination.position;
+        player.GetComponent<CharacterController>().enabled = true;
     }
 }
