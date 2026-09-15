@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    void Start()
+    private void Start()
     {
         player = GameObject.Find("Player");
         resetTimerActive = false;
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
         EnterPlayingState();
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
             playerDetected = true;
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
 
     public void EnterRestartingState()
     {
-        resetTimerActive = false; // stop timer immediately so this can't re-trigger
+        resetTimerActive = false; // Stop timer immediately so this can't re-trigger
         StartCoroutine(RestartRoutine());
     }
 
@@ -86,9 +86,9 @@ public class GameManager : MonoBehaviour
         // Wait for the screen to fully fade to black before moving the player
         yield return StartFade(1f);
 
-        SceneManager.LoadScene("LivingRoom");
+        SceneManager.LoadScene("MainLevel");
 
-        EnterPlayingState(); // fades back in
+        EnterPlayingState(); // Fades back in
     }
 
     // Opacity control

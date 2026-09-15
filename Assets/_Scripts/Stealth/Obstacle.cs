@@ -4,16 +4,10 @@ public class Obstacle : MonoBehaviour
 {
     GameManager gameManager;
     
-    void Start()
+    private void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
-
-    
-    //void Update()
-    //{
-        
-    //}
 
     private void OnTriggerEnter(Collider collision)
     {
