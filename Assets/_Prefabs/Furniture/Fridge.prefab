@@ -1078,7 +1078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8210744456148750055}
   m_Layer: 0
-  m_Name: Heladera
+  m_Name: Fridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -6284,7 +6284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6543151462202084282}
   m_Layer: 0
-  m_Name: Jaula
+  m_Name: Cage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

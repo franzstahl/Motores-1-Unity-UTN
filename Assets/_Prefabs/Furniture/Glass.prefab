@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6958004889317866819}
   - component: {fileID: 4654793060224321526}
   m_Layer: 0
-  m_Name: vaso
+  m_Name: Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -3570,7 +3570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4514234244766617202}
   m_Layer: 0
-  m_Name: Reja(heladera)
+  m_Name: ShelfFridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

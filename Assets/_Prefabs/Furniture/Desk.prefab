@@ -1790,7 +1790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2110657632329124698}
   m_Layer: 0
-  m_Name: Escritorio
+  m_Name: Desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
