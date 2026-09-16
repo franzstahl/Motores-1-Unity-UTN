@@ -10,15 +10,16 @@ using UnityEngine;
 /// both read from the same object, but that object's rotation is driven purely by
 /// mouse input (via CinemachineInputAxisController), never by the player's own facing.
 /// </summary>
-public class cameraTargetFollow : MonoBehaviour
+
+public class CameraTargetFollow : MonoBehaviour
 {
     public Transform target;
     public Vector3 offset = new Vector3(0f, 1.6f, 0f); // roughly chest/head height
 
-    void LateUpdate()
+    private void LateUpdate()
     {
         if (target == null) return;
         transform.position = target.position + offset;
-        // Deliberately not touching rotation here — Pan Tilt owns it.
+        // Deliberately not touching rotation here — Rotation Composer owns it.
     }
 }
