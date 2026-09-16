@@ -12734,7 +12734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 173107301}
   - component: {fileID: 173107298}
-  - component: {fileID: 173107300}
+  - component: {fileID: 173107302}
   - component: {fileID: 173107299}
   m_Layer: 0
   m_Name: GameManager
@@ -12861,20 +12861,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &173107300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 173107297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04697c682161a2d48afb24d5d4ee0170, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::cameraTargetFollow
-  target: {fileID: 864972473}
-  offset: {x: 0, y: 0, z: 0}
 --- !u!4 &173107301
 Transform:
   m_ObjectHideFlags: 0
@@ -12890,6 +12876,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &173107302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173107297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04697c682161a2d48afb24d5d4ee0170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraManager
+  target: {fileID: 864972473}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!43 &173257379
 Mesh:
   m_ObjectHideFlags: 0
@@ -90872,7 +90872,7 @@ MonoBehaviour:
       Enabled: 1
       Input:
         InputAction: {fileID: 925396577}
-        Gain: 8
+        Gain: 10
         LegacyInput: 
         LegacyGain: 1
         CancelDeltaTime: 0
@@ -90885,7 +90885,7 @@ MonoBehaviour:
       Enabled: 1
       Input:
         InputAction: {fileID: 535675297}
-        Gain: 8
+        Gain: 10
         LegacyInput: 
         LegacyGain: 1
         CancelDeltaTime: 0

@@ -11,7 +11,7 @@ using UnityEngine;
 /// mouse input (via CinemachineInputAxisController), never by the player's own facing.
 /// </summary>
 
-public class CameraTargetFollow : MonoBehaviour
+public class CameraManager : MonoBehaviour
 {
     public Transform target;
     public Vector3 offset = new Vector3(0f, 1.6f, 0f); // roughly chest/head height
@@ -21,5 +21,17 @@ public class CameraTargetFollow : MonoBehaviour
         if (target == null) return;
         transform.position = target.position + offset;
         // Deliberately not touching rotation here — Rotation Composer owns it.
+    }
+
+    void OnEnable()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    void OnDisable()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }
