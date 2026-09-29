@@ -12131,6 +12131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &164032077
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12438,6 +12439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!64 &170484245
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12769,6 +12771,7 @@ GameObject:
   - component: {fileID: 173107301}
   - component: {fileID: 173107298}
   - component: {fileID: 173107302}
+  - component: {fileID: 173107303}
   - component: {fileID: 173107299}
   m_Layer: 0
   m_Name: GameManager
@@ -12924,6 +12927,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraManager
   target: {fileID: 864972473}
   offset: {x: 0, y: 0, z: 0}
+--- !u!114 &173107303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173107297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 158a83b0f7d164502ab52881d48daf20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NoiseMeter
+  noiseMeterImage: {fileID: 931961916}
+  maxNoiseUntilDefeat: 2
+  amountOfNoise: 0
 --- !u!43 &173257379
 Mesh:
   m_ObjectHideFlags: 0
@@ -23858,6 +23876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &384016694
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -60153,6 +60172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &442469205
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -62360,6 +62380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &494608165
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -64034,6 +64055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &522105559
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -64339,6 +64361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &531845465
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -79297,6 +79320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &566309740
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -79424,6 +79448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &569518416
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -80441,6 +80466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &630004452
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -84382,6 +84408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &724932066
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -85657,6 +85684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &796588609
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -95345,6 +95373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &954146121
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -96117,184 +96146,6 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   'm_MeshMetrics[0]': 2.4416642
-  'm_MeshMetrics[1]': 1
-  m_MeshOptimizationFlags: 1
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
-  m_MeshLodInfo:
-    serializedVersion: 2
-    m_LodSelectionCurve:
-      serializedVersion: 1
-      m_LodSlope: 0
-      m_LodBias: 0
-    m_NumLevels: 1
-    m_SubMeshes:
-    - serializedVersion: 2
-      m_Levels:
-      - serializedVersion: 1
-        m_IndexStart: 0
-        m_IndexCount: 0
---- !u!43 &972024718
-Mesh:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-26562
-  serializedVersion: 12
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 36
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 24
-    localAABB:
-      m_Center: {x: -0.2771263, y: 0.2492199, z: -0.13041973}
-      m_Extent: {x: 0.38438892, y: 0.56212425, z: 0.39681315}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_BonesAABB: []
-  m_VariableBoneCountWeights:
-    m_Data: 
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
-  m_VertexData:
-    serializedVersion: 3
-    m_VertexCount: 24
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 40
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 1152
-    _typelessdata: 105929bf0035a0beb864883e00000000000000000000803f000080bf0000000000000000000080bfa0ce443f0076febd80acdb3d0035a0beb864883e00000000000000000000803f000080bf0000000000000000000080bf000000000076febd105929bf40b44f3fb864883e00000000000000000000803f000080bf0000000000000000000080bfa0ce443f0000803f80acdb3d40b44f3fb864883e00000000000000000000803f000080bf0000000000000000000080bf000000000000803f80acdb3d0035a0beb864883e0000803f000000000000000000000000000000000000803f000080bf182b4b3f0076febd80acdb3d0035a0bebcf806bf0000803f000000000000000000000000000000000000803f000080bf000000000076febd80acdb3d40b44f3fb864883e0000803f000000000000000000000000000000000000803f000080bf182b4b3f0000803f80acdb3d40b44f3fbcf806bf0000803f000000000000000000000000000000000000803f000080bf000000000000803f80acdb3d0035a0bebcf806bf0000000000000000000080bf0000803f0000000000000000000080bfa0ce443f0076febd105929bf0035a0bebcf806bf0000000000000000000080bf0000803f0000000000000000000080bf000000000076febd80acdb3d40b44f3fbcf806bf0000000000000000000080bf0000803f0000000000000000000080bfa0ce443f0000803f105929bf40b44f3fbcf806bf0000000000000000000080bf0000803f0000000000000000000080bf000000000000803f105929bf0035a0bebcf806bf000080bf00000000000000000000000000000000000080bf000080bf182b4b3f0076febd105929bf0035a0beb864883e000080bf00000000000000000000000000000000000080bf000080bf000000000076febd105929bf40b44f3fbcf806bf000080bf00000000000000000000000000000000000080bf000080bf182b4b3f0000803f105929bf40b44f3fb864883e000080bf00000000000000000000000000000000000080bf000080bf000000000000803f105929bf40b44f3fb864883e000000000000803f000000000000803f0000000000000000000080bf000000000000803f80acdb3d40b44f3fb864883e000000000000803f000000000000803f0000000000000000000080bfa0ce443f0000803f105929bf40b44f3fbcf806bf000000000000803f000000000000803f0000000000000000000080bf00000000a053533e80acdb3d40b44f3fbcf806bf000000000000803f000000000000803f0000000000000000000080bfa0ce443fa053533e105929bf0035a0bebcf806bf00000000000080bf00000000000080bf0000000000000000000080bfa0ce443fa053533e80acdb3d0035a0bebcf806bf00000000000080bf00000000000080bf0000000000000000000080bf00000000a053533e105929bf0035a0beb864883e00000000000080bf00000000000080bf0000000000000000000080bfa0ce443f0000803f80acdb3d0035a0beb864883e00000000000080bf00000000000080bf0000000000000000000080bf000000000000803f
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: -0.2771263, y: 0.2492199, z: -0.13041973}
-    m_Extent: {x: 0.38438892, y: 0.56212425, z: 0.39681315}
-  m_MeshUsageFlags: 0
-  m_CookingOptions: 30
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  'm_MeshMetrics[0]': 1
   'm_MeshMetrics[1]': 1
   m_MeshOptimizationFlags: 1
   m_StreamData:
@@ -99110,6 +98961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!135 &1034123620
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -100748,6 +100600,185 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
+--- !u!43 &1079640385
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: pb_Mesh81164
+  serializedVersion: 12
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 36
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 24
+    localAABB:
+      m_Center: {x: -0.2771263, y: 0.2492199, z: -0.13041973}
+      m_Extent: {x: 0.38438892, y: 0.56212425, z: 0.39681315}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 24
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 40
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 1152
+    _typelessdata: 105929bf0035a0beb864883e00000000000000000000803f000080bf0000000000000000000080bfa0ce443f0076febd80acdb3d0035a0beb864883e00000000000000000000803f000080bf0000000000000000000080bf000000000076febd105929bf40b44f3fb864883e00000000000000000000803f000080bf0000000000000000000080bfa0ce443f0000803f80acdb3d40b44f3fb864883e00000000000000000000803f000080bf0000000000000000000080bf000000000000803f80acdb3d0035a0beb864883e0000803f000000000000000000000000000000000000803f000080bf182b4b3f0076febd80acdb3d0035a0bebcf806bf0000803f000000000000000000000000000000000000803f000080bf000000000076febd80acdb3d40b44f3fb864883e0000803f000000000000000000000000000000000000803f000080bf182b4b3f0000803f80acdb3d40b44f3fbcf806bf0000803f000000000000000000000000000000000000803f000080bf000000000000803f80acdb3d0035a0bebcf806bf0000000000000000000080bf0000803f0000000000000000000080bfa0ce443f0076febd105929bf0035a0bebcf806bf0000000000000000000080bf0000803f0000000000000000000080bf000000000076febd80acdb3d40b44f3fbcf806bf0000000000000000000080bf0000803f0000000000000000000080bfa0ce443f0000803f105929bf40b44f3fbcf806bf0000000000000000000080bf0000803f0000000000000000000080bf000000000000803f105929bf0035a0bebcf806bf000080bf00000000000000000000000000000000000080bf000080bf182b4b3f0076febd105929bf0035a0beb864883e000080bf00000000000000000000000000000000000080bf000080bf000000000076febd105929bf40b44f3fbcf806bf000080bf00000000000000000000000000000000000080bf000080bf182b4b3f0000803f105929bf40b44f3fb864883e000080bf00000000000000000000000000000000000080bf000080bf000000000000803f105929bf40b44f3fb864883e000000000000803f000000000000803f0000000000000000000080bf000000000000803f80acdb3d40b44f3fb864883e000000000000803f000000000000803f0000000000000000000080bfa0ce443f0000803f105929bf40b44f3fbcf806bf000000000000803f000000000000803f0000000000000000000080bf00000000a053533e80acdb3d40b44f3fbcf806bf000000000000803f000000000000803f0000000000000000000080bfa0ce443fa053533e105929bf0035a0bebcf806bf00000000000080bf00000000000080bf0000000000000000000080bfa0ce443fa053533e80acdb3d0035a0bebcf806bf00000000000080bf00000000000080bf0000000000000000000080bf00000000a053533e105929bf0035a0beb864883e00000000000080bf00000000000080bf0000000000000000000080bfa0ce443f0000803f80acdb3d0035a0beb864883e00000000000080bf00000000000080bf0000000000000000000080bf000000000000803f
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: -0.2771263, y: 0.2492199, z: -0.13041973}
+    m_Extent: {x: 0.38438892, y: 0.56212425, z: 0.39681315}
+  m_MeshUsageFlags: 0
+  m_CookingOptions: 30
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  'm_MeshMetrics[0]': 1
+  'm_MeshMetrics[1]': 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
+  m_MeshLodInfo:
+    serializedVersion: 2
+    m_LodSelectionCurve:
+      serializedVersion: 1
+      m_LodSlope: 0
+      m_LodBias: 0
+    m_NumLevels: 1
+    m_SubMeshes:
+    - serializedVersion: 2
+      m_Levels:
+      - serializedVersion: 1
+        m_IndexStart: 0
+        m_IndexCount: 0
 --- !u!43 &1085571022
 Mesh:
   m_ObjectHideFlags: 0
@@ -102864,6 +102895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1112499087
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -103998,7 +104030,7 @@ GameObject:
   - component: {fileID: 1125890897}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105117,6 +105149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!135 &1155755961
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -110494,6 +110527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1207233456
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -110799,6 +110833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!135 &1225162590
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -114141,6 +114176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1291872487
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -114446,6 +114482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1302789373
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -114896,6 +114933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1304372409
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -115731,6 +115769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1364567496
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -116214,6 +116253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!135 &1394750139
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -126475,6 +126515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!135 &1470666821
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -127668,6 +127709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1529207140
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -128685,6 +128727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!135 &1540967615
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -130382,6 +130425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1594766757
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -137610,6 +137654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!64 &1775954043
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -140615,6 +140660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!64 &1851196246
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -141128,6 +141174,7 @@ GameObject:
   - component: {fileID: 1855931071}
   - component: {fileID: 1855931070}
   - component: {fileID: 1855931069}
+  - component: {fileID: 1855931075}
   m_Layer: 0
   m_Name: Obstacle (3)
   m_TagString: Untagged
@@ -141162,6 +141209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!64 &1855931070
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -141177,13 +141225,13 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 972024718}
+  m_Mesh: {fileID: 1079640385}
 --- !u!33 &1855931071
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -141191,7 +141239,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855931067}
-  m_Mesh: {fileID: 972024718}
+  m_Mesh: {fileID: 1079640385}
 --- !u!23 &1855931072
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -141476,12 +141524,39 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 972024718}
+  m_Mesh: {fileID: 1079640385}
   m_VersionIndex: 2464
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!54 &1855931075
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855931067}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1860532425
 GameObject:
   m_ObjectHideFlags: 0
@@ -142319,6 +142394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1871103826
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -145336,6 +145412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1946617063
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -145435,7 +145512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!225 &1950971030
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -146985,6 +147062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1964099380
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -155028,6 +155106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &2115941343
 CapsuleCollider:
   m_ObjectHideFlags: 0
