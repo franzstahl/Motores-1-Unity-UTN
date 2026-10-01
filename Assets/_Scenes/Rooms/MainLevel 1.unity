@@ -6149,10 +6149,10 @@ MeshCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1306907220}
 --- !u!33 &46976110
@@ -14802,6 +14802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &164032077
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15287,6 +15288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!64 &170484245
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15753,7 +15755,7 @@ Transform:
   m_GameObject: {fileID: 173107297}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.67, y: 0.585, z: -55.48}
+  m_LocalPosition: {x: 16.67, y: 0.585, z: -53.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30101,6 +30103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &384016694
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -66930,6 +66933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &442469205
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -69493,6 +69497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &494608165
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -72057,6 +72062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &522105559
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -72362,6 +72368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &531845465
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -88056,6 +88063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &566309740
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -88343,6 +88351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &569518416
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -89896,6 +89905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &630004452
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -94465,6 +94475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &724932066
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -96342,6 +96353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &796588609
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -102339,7 +102351,7 @@ Transform:
   m_GameObject: {fileID: 864972468}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.137, y: 0.872, z: -56.624}
+  m_LocalPosition: {x: 17.137, y: 0.872, z: -54.884003}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -103913,6 +103925,7 @@ GameObject:
   - component: {fileID: 889407589}
   - component: {fileID: 889407588}
   - component: {fileID: 889407587}
+  - component: {fileID: 889407593}
   m_Layer: 0
   m_Name: CinemachineCamera
   m_TagString: Untagged
@@ -103992,12 +104005,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineDeoccluder
   CollideAgainst:
     serializedVersion: 2
-    m_Bits: 1
-  IgnoreTag: 
+    m_Bits: 4294967295
+  IgnoreTag: Player
   TransparentLayers:
     serializedVersion: 2
     m_Bits: 0
-  MinimumDistanceFromTarget: 1.55
+  MinimumDistanceFromTarget: 1
   AvoidObstacles:
     Enabled: 1
     DistanceLimit: 0
@@ -104006,7 +104019,7 @@ MonoBehaviour:
     UseFollowTarget:
       Enabled: 0
       YOffset: 0
-    Strategy: 0
+    Strategy: 1
     MaximumEffort: 4
     SmoothingTime: 0
     Damping: 0.4
@@ -104092,7 +104105,7 @@ MonoBehaviour:
   VerticalAxis:
     Value: 17.5
     Center: 17.5
-    Range: {x: -10, y: 45}
+    Range: {x: -20, y: 45}
     Wrap: 0
     Recentering:
       Enabled: 0
@@ -104160,13 +104173,43 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889407586}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.15212342, y: -0.0000000028809923, z: 4.4342713e-10, w: 0.98836154}
-  m_LocalPosition: {x: 16.67, y: 1.1202563, z: -57.177616}
+  m_LocalRotation: {x: 0.34517294, y: 0, z: 0, w: 0.93853915}
+  m_LocalPosition: {x: 16.67, y: 1.1202563, z: -55.43762}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &889407593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889407586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7de3aefa901374ba29464584a3109a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineDecollider
+  CameraRadius: 1
+  Decollision:
+    Enabled: 1
+    ObstacleLayers:
+      serializedVersion: 2
+      m_Bits: 1
+    UseFollowTarget:
+      Enabled: 0
+      YOffset: 0
+    Damping: 0.5
+    SmoothingTime: 0
+  TerrainResolution:
+    Enabled: 1
+    TerrainLayers:
+      serializedVersion: 2
+      m_Bits: 1
+    MaximumRaycast: 10
+    Damping: 0.5
 --- !u!43 &895395452
 Mesh:
   m_ObjectHideFlags: 0
@@ -108370,8 +108413,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939342778}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.15212338, y: 0, z: 0, w: 0.98836154}
-  m_LocalPosition: {x: 16.67, y: 1.1202563, z: -57.177616}
+  m_LocalRotation: {x: 0.34517297, y: 0.000000008890115, z: -0.0000000032695766, w: 0.93853915}
+  m_LocalPosition: {x: 16.67, y: 2.0290039, z: -55.43762}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -108715,6 +108758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &954146121
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -112840,6 +112884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!135 &1034123620
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -115012,6 +115057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!1 &1081070101
 GameObject:
   m_ObjectHideFlags: 0
@@ -119728,6 +119774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1112499087
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -122031,6 +122078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!135 &1155755961
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -127942,6 +127990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1207233456
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -128603,6 +128652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!135 &1225162590
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -133038,6 +133088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1291872487
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -133343,6 +133394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1302789373
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -133793,6 +133845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1304372409
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -135213,6 +135266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1364567496
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -135733,6 +135787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!135 &1394750139
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -146722,6 +146777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!135 &1470666821
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -149482,6 +149538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1529207140
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -151033,6 +151090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!135 &1540967615
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -153739,6 +153797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1594766757
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -166392,6 +166451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!64 &1775954043
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -171232,6 +171292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!64 &1851196246
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -171779,6 +171840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!64 &1855931070
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -172936,6 +172998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1871103826
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -176121,6 +176184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1946617063
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -177948,6 +178012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &1964099380
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -190049,6 +190114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  causesInstantLoss: 0
 --- !u!136 &2115941343
 CapsuleCollider:
   m_ObjectHideFlags: 0
