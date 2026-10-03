@@ -14,6 +14,20 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float rotationSpeed = 10f; // Speed at which the player rotates to face the movement direction
     [SerializeField] private float sprintSpeed = 5.5f;
 
+    [Header("Stamina")]
+    [SerializeField] private float maxStamina = 100f;
+    [SerializeField] private float staminaDrainPerSecond = 25f; // Lost per second while sprinting
+    [SerializeField] private float staminaRegenPerSecond = 15f; // Gained per second while not sprinting
+    [SerializeField] private float regenDelay = 1f; // Seconds to wait after sprinting before regenerating
+    [SerializeField] private float minStaminaToSprint = 20f; // After running out, stamina needed to sprint again
+
+
+    private float currentStamina;
+    private float regenTimer;
+    private bool exhausted; // True after hitting 0, until stamina recovers past the minimum
+
+    public float StaminaNormalized => currentStamina / maxStamina; // 0 to 1, for the UI later
+
     private bool sprintHeld; // True while the sprint key is being held down
     public MovementState CurrentState { get; private set; } = MovementState.Walking; // Other scripts can read it but not change it
 
@@ -33,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         inputActions = new InputSystem_Actions();
+        currentStamina = maxStamina; // Start with full stamina
     }
 
     private void Start()
@@ -97,6 +112,39 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = -2f;
     }
 
+    private void UpdateStamina(bool isSprinting) // Drains stamina while sprinting and regenerates it after a short delay
+    {
+        if (isSprinting)
+        {
+            currentStamina -= staminaDrainPerSecond * Time.deltaTime; // Drain per second, scaled by deltaTime so it's frame rate independent
+            regenTimer = regenDelay; // Reset the regen delay every frame we sprint, so it only counts down once we stop
+
+            if (currentStamina <= 0f)
+            {
+                currentStamina = 0f; // Clamp to 0, the subtraction can overshoot into negative values
+                exhausted = true; // Block sprinting until stamina recovers past minStaminaToSprint
+            }
+        }
+        else
+        {
+            if (regenTimer > 0f)
+            {
+                regenTimer -= Time.deltaTime; // Still waiting before regeneration starts
+            }
+            else
+            {
+                currentStamina = Mathf.Min(maxStamina, currentStamina + staminaRegenPerSecond * Time.deltaTime); // Regenerate, never above max
+            }
+               
+
+            if (exhausted && currentStamina >= minStaminaToSprint)
+            {
+                exhausted = false; // Recovered enough, sprinting is allowed again
+            }
+               
+        }
+    }
+
     private void HandleMovement() // Converts input into real movement, relative where the camera is looking, and turns character in direction is walking.
     {
         Vector3 camForward = cameraTransform.forward;
@@ -108,8 +156,12 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 moveDirection = camForward * moveInput.y + camRight * moveInput.x;
 
-        // Sprint only counts if the player is also moving, so standing still with Shift held stays as Walking
-        bool isSprinting = sprintHeld && moveInput.sqrMagnitude > 0.01f;
+        // Determine if the player wants to sprint and if they can sprint based on stamina
+        bool wantsToSprint = sprintHeld && moveInput.sqrMagnitude > 0.01f; // Only sprint if the sprint key is held and the player is moving
+        bool isSprinting = wantsToSprint && !exhausted; // Can't sprint while exhausted
+        UpdateStamina(isSprinting); // Update stamina every frame
+
+        // Update the current movement state and speed based on whether the player is sprinting or walking
         CurrentState = isSprinting ? MovementState.Sprinting : MovementState.Walking;
         float currentSpeed = isSprinting ? sprintSpeed : moveSpeed;
 
