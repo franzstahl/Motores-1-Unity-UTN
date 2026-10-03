@@ -167581,6 +167581,7 @@ MonoBehaviour:
   jumpHeight: 1.5
   gravity: -20
   rotationSpeed: 6
+  sprintSpeed: 5.5
   cameraTransform: {fileID: 0}
   gameManager: {fileID: 173107298}
 --- !u!143 &864972470

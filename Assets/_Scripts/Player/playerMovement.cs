@@ -2,6 +2,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+public enum MovementState { Walking, Sprinting } // Movement states the player can be in. Public and outside the class so other scripts can read it.
+
 [RequireComponent(typeof(CharacterController))] // Ensures the GameObject this script is attached to has a CharacterController component. 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,6 +12,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpHeight = 1.5f;
     [SerializeField] private float gravity = -20f;
     [SerializeField] private float rotationSpeed = 10f; // Speed at which the player rotates to face the movement direction
+    [SerializeField] private float sprintSpeed = 5.5f;
+
+    private bool sprintHeld; // True while the sprint key is being held down
+    public MovementState CurrentState { get; private set; } = MovementState.Walking; // Other scripts can read it but not change it
 
     [Header("References")]
     [SerializeField] private Transform cameraTransform;
@@ -42,6 +48,9 @@ public class PlayerMovement : MonoBehaviour
         inputActions.Player.Move.performed += OnMovePerformed;
         inputActions.Player.Move.canceled += OnMoveCanceled;
         inputActions.Player.Jump.performed += OnJumpPerformed;
+        inputActions.Player.Sprint.performed += OnSprintPerformed;
+        inputActions.Player.Sprint.canceled += OnSprintCanceled;
+
     }
 
     private void OnDisable() // Turns on the input actions and connects the functions to the Move and Jump events
@@ -49,6 +58,8 @@ public class PlayerMovement : MonoBehaviour
         inputActions.Player.Move.performed -= OnMovePerformed;
         inputActions.Player.Move.canceled -= OnMoveCanceled;
         inputActions.Player.Jump.performed -= OnJumpPerformed;
+        inputActions.Player.Sprint.performed -= OnSprintPerformed;
+        inputActions.Player.Sprint.canceled -= OnSprintCanceled;
         inputActions.Player.Disable();
     }
 
@@ -62,6 +73,8 @@ public class PlayerMovement : MonoBehaviour
         moveInput = Vector2.zero; 
     }
 
+    private void OnSprintPerformed(InputAction.CallbackContext context) { sprintHeld = true; }
+    private void OnSprintCanceled(InputAction.CallbackContext context) { sprintHeld = false; }
     private void OnJumpPerformed(InputAction.CallbackContext context) // Mark that was requested to be jumped (a flag), to be processed later
     {
         if (gameManager.isMovementActive)
@@ -95,8 +108,13 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 moveDirection = camForward * moveInput.y + camRight * moveInput.x;
 
+        // Sprint only counts if the player is also moving, so standing still with Shift held stays as Walking
+        bool isSprinting = sprintHeld && moveInput.sqrMagnitude > 0.01f;
+        CurrentState = isSprinting ? MovementState.Sprinting : MovementState.Walking;
+        float currentSpeed = isSprinting ? sprintSpeed : moveSpeed;
+
         if (gameManager.isMovementActive)
-            controller.Move(moveDirection * moveSpeed * Time.deltaTime);
+            controller.Move(moveDirection * currentSpeed * Time.deltaTime);
 
         if (moveDirection.sqrMagnitude > 0.01f)
         {
