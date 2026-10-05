@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public enum MovementState { Walking, Sprinting } // Movement states the player can be in. Public and outside the class so other scripts can read it.
+public enum MovementState { Walking, Sprinting, Climbing } // Movement states the player can be in. Public and outside the class so other scripts can read it.
 
 [RequireComponent(typeof(CharacterController))] // Ensures the GameObject this script is attached to has a CharacterController component. 
 public class PlayerMovement : MonoBehaviour
@@ -21,7 +21,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float regenDelay = 1f; // Seconds to wait after sprinting before regenerating
     [SerializeField] private float minStaminaToSprint = 20f; // After running out, stamina needed to sprint again
 
+    [Header("Climbing")]
+    [SerializeField] private float climbSpeed = 3f; // Speed while moving along the wall
+    [SerializeField] private float climbDuration = 4f; // Max seconds the player can stay on a wall
+    [SerializeField] private float wallCheckDistance = 0.6f; // How far the wall ray looks
+    [SerializeField] private string climbableTag = "Climbable"; // Walls with this tag can be climbed
 
+    private float climbTimer; // Time left on the wall
+    private Vector3 wallNormal; // Points away from the wall, toward the player
+    private bool canClimb = true; // Set to false after leaving a wall, reset when touching the ground
     private float currentStamina;
     private float regenTimer;
     private bool exhausted; // True after hitting 0, until stamina recovers past the minimum
@@ -99,9 +107,17 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         HandleGroundCheck();
+
+        if (CurrentState == MovementState.Climbing) // While climbing, skip normal movement, jump and gravity
+        {
+            HandleClimb();
+            return;
+        }
+
         HandleMovement();
         HandleJump();
         ApplyGravity();
+        TryStartClimb();
     }
 
     private void HandleGroundCheck() // Check if player is touching ground
@@ -110,6 +126,76 @@ public class PlayerMovement : MonoBehaviour
 
         if (isGrounded && velocity.y < 0)
             velocity.y = -2f;
+
+        if (isGrounded)
+            canClimb = true; // Reset climbing ability when touching the ground
+    }
+
+    private Vector3 FeetRayOrigin() // Ray origin near the feet, so the ray stops hitting when the feet pass the top edge
+    {
+        Vector3 center = transform.TransformPoint(controller.center);
+        return center + Vector3.down * (controller.height * 0.5f - 0.1f);
+    }
+
+    private void TryStartClimb() // Grab a climbable wall if we are in the air and moving into it
+    {
+        if (isGrounded || !canClimb || moveInput.sqrMagnitude < 0.01f) return;
+
+        if (Physics.Raycast(FeetRayOrigin(), transform.forward, out RaycastHit hit, wallCheckDistance, ~0, QueryTriggerInteraction.Ignore) && hit.collider.CompareTag(climbableTag))
+
+        {
+            CurrentState = MovementState.Climbing;
+            climbTimer = climbDuration;
+            wallNormal = new Vector3(hit.normal.x, 0f, hit.normal.z).normalized; // Flatten, we assume vertical walls
+            velocity = Vector3.zero; // Cancel any falling or jumping speed
+        }
+    }
+
+    private void HandleClimb() // Runs every frame instead of the normal movement while climbing
+    {
+        climbTimer -= Time.deltaTime;
+
+        if (jumpRequested) // Jump off the wall
+        {
+            jumpRequested = false;
+            StopClimb();
+            controller.Move(wallNormal * 0.3f); // Small push away from the wall
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            return;
+        }
+
+        bool wallAhead = Physics.Raycast(FeetRayOrigin(), -wallNormal, wallCheckDistance,
+                                         ~0, QueryTriggerInteraction.Ignore);
+
+        if (!wallAhead) // The wall ended: the feet passed the top edge, so push up and forward onto it
+        {
+            controller.Move(-wallNormal * (controller.radius + 0.3f) + Vector3.up * 0.1f);
+            StopClimb();
+            return;
+        }
+
+        if (climbTimer <= 0f) // Time is up, fall
+        {
+            StopClimb();
+            return;
+        }
+
+        transform.rotation = Quaternion.LookRotation(-wallNormal); // Face the wall
+
+        Vector3 wallRight = Vector3.Cross(Vector3.up, -wallNormal); // Sideways direction along the wall
+        Vector3 climbMove = (Vector3.up * moveInput.y + wallRight * moveInput.x) * climbSpeed;
+
+        if (gameManager.isMovementActive)
+            controller.Move(climbMove * Time.deltaTime);
+
+        if (controller.isGrounded && moveInput.y < 0f) // Went back down to the floor
+            StopClimb();
+    }
+
+    private void StopClimb() // Gives control back to the normal movement
+    {
+        CurrentState = MovementState.Walking;
+        canClimb = false; // Can't grab again until touching the ground
     }
 
     private void UpdateStamina(bool isSprinting) // Drains stamina while sprinting and regenerates it after a short delay
@@ -125,6 +211,7 @@ public class PlayerMovement : MonoBehaviour
                 exhausted = true; // Block sprinting until stamina recovers past minStaminaToSprint
             }
         }
+
         else
         {
             if (regenTimer > 0f)

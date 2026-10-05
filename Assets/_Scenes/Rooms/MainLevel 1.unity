@@ -167582,6 +167582,15 @@ MonoBehaviour:
   gravity: -20
   rotationSpeed: 6
   sprintSpeed: 5.5
+  maxStamina: 100
+  staminaDrainPerSecond: 25
+  staminaRegenPerSecond: 15
+  regenDelay: 1
+  minStaminaToSprint: 20
+  climbSpeed: 2.5
+  climbDuration: 7
+  wallCheckDistance: 0.6
+  climbableTag: Climbable
   cameraTransform: {fileID: 0}
   gameManager: {fileID: 173107298}
 --- !u!143 &864972470
@@ -269601,7 +269610,7 @@ GameObject:
   - component: {fileID: 1477997673}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Climbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
