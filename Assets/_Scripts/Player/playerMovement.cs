@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -60,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager = GameManager.Instance; // Singleton access, no scene search needed
         if (cameraTransform == null && Camera.main != null) // If no cameraTransform is assigned in the inspector, try to find the main camera in the scene.
             cameraTransform = Camera.main.transform;
     }
@@ -137,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
         return center + Vector3.down * (controller.height * 0.5f - 0.1f);
     }
 
-    private void TryStartClimb() // Grab a climbable wall if we are in the air and moving into it
+    private void TryStartClimb() // Grab a climbable wall
     {
         if (isGrounded || !canClimb || moveInput.sqrMagnitude < 0.01f) return;
 
@@ -165,7 +164,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         bool wallAhead = Physics.Raycast(FeetRayOrigin(), -wallNormal, wallCheckDistance,
-                                         ~0, QueryTriggerInteraction.Ignore);
+                                         ~0, QueryTriggerInteraction.Ignore); // Check if the wall is still in front of the player, using the feet ray origin so it stops hitting when the feet pass the top edge
 
         if (!wallAhead) // The wall ended: the feet passed the top edge, so push up and forward onto it
         {

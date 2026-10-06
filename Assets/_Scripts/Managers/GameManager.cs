@@ -4,14 +4,15 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public bool isMovementActive;
-    private bool resetTimerActive;
     [SerializeField] private float resetTimer;
-    private float resetTimerOriginalValue;
     [SerializeField] private bool playerDetected;
     [SerializeField] private Vector3 startingPosition;
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private float fadeDuration = 5.0f;
+
+    public bool isMovementActive;
+    private bool resetTimerActive;
+    private float resetTimerOriginalValue;
     public GameObject player;
 
     public AudioSource audioSource;
@@ -23,6 +24,18 @@ public class GameManager : MonoBehaviour
     {
         get { return playerDetected; }
         set { playerDetected = value; }
+    }
+
+    public static GameManager Instance { get; private set; } // Anyone can read it, only this class can set it
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this) 
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
     }
 
 
@@ -86,7 +99,7 @@ public class GameManager : MonoBehaviour
         // Wait for the screen to fully fade to black before moving the player
         yield return StartFade(1f);
 
-        SceneManager.LoadScene("MainLevel");
+        SceneManager.LoadScene("MainLevel1");
 
         EnterPlayingState(); // Fades back in
     }
