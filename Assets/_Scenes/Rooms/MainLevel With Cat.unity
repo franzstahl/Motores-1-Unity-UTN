@@ -16262,7 +16262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &143818118
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16724,7 +16723,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &145344150
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20939,6 +20937,7 @@ GameObject:
   - component: {fileID: 164032078}
   - component: {fileID: 164032077}
   - component: {fileID: 164032076}
+  - component: {fileID: 164032080}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Untagged
@@ -20973,7 +20972,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &164032077
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -21054,6 +21052,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164032074}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &164032080
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164032074}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &166308352
 Mesh:
   m_ObjectHideFlags: 0
@@ -21460,7 +21485,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &170484245
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21820,6 +21844,7 @@ GameObject:
   - component: {fileID: 173107298}
   - component: {fileID: 173107302}
   - component: {fileID: 173107299}
+  - component: {fileID: 173107303}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -21974,6 +21999,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraManager
   target: {fileID: 864972473}
   offset: {x: 0, y: 0, z: 0}
+--- !u!114 &173107303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173107297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9350eafdc01da4eae9aefc44690938ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectionZoneManager
+  timeDetectionZoneLasts: 2
+  timerStartValue: 2
+  detectionZone: {fileID: 417710341}
 --- !u!1 &176469203
 GameObject:
   m_ObjectHideFlags: 0
@@ -25000,7 +25040,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &204309445
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25425,7 +25464,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &206453997
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -35835,7 +35873,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &282539211
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -42801,6 +42838,7 @@ GameObject:
   - component: {fileID: 384016695}
   - component: {fileID: 384016694}
   - component: {fileID: 384016693}
+  - component: {fileID: 384016697}
   m_Layer: 0
   m_Name: Obstacle (21)
   m_TagString: Untagged
@@ -42835,7 +42873,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &384016694
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -42916,6 +42953,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384016691}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &384016697
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384016691}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &388486750
 Mesh:
   m_ObjectHideFlags: 0
@@ -45530,6 +45594,8 @@ GameObject:
   - component: {fileID: 417710345}
   - component: {fileID: 417710344}
   - component: {fileID: 417710343}
+  - component: {fileID: 417710349}
+  - component: {fileID: 417710348}
   m_Layer: 0
   m_Name: Shoe rack
   m_TagString: Untagged
@@ -45567,11 +45633,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1510535607}
 --- !u!33 &417710344
@@ -45581,7 +45647,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417710341}
-  m_Mesh: {fileID: 1510535607}
+  m_Mesh: {fileID: 1932229739}
 --- !u!23 &417710345
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45866,12 +45932,51 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1510535607}
+  m_Mesh: {fileID: 1932229739}
   m_VersionIndex: 1551
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &417710348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417710341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3429fa240eeca4740bd18f7c92dc5ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InstakillObstacle
+--- !u!54 &417710349
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417710341}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &419232965
 Mesh:
   m_ObjectHideFlags: 0
@@ -47492,6 +47597,7 @@ GameObject:
   - component: {fileID: 442469199}
   - component: {fileID: 442469204}
   - component: {fileID: 442469205}
+  - component: {fileID: 442469206}
   m_Layer: 0
   m_Name: kid
   m_TagString: Untagged
@@ -81588,7 +81694,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &442469205
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -81612,6 +81717,33 @@ CapsuleCollider:
   m_Height: 7.53
   m_Direction: 2
   m_Center: {x: 0.0000009536743, y: -0.00000047683716, z: 0.00000047683716}
+--- !u!54 &442469206
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442469197}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &443183356
 Mesh:
   m_ObjectHideFlags: 0
@@ -85865,7 +85997,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &479466016
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -87294,6 +87425,7 @@ GameObject:
   - component: {fileID: 494608166}
   - component: {fileID: 494608165}
   - component: {fileID: 494608164}
+  - component: {fileID: 494608168}
   m_Layer: 0
   m_Name: Obstacle (6)
   m_TagString: Untagged
@@ -87328,7 +87460,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &494608165
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -87409,6 +87540,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494608162}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &494608168
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494608162}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &497068578
 GameObject:
   m_ObjectHideFlags: 0
@@ -91470,6 +91628,7 @@ GameObject:
   - component: {fileID: 522105560}
   - component: {fileID: 522105559}
   - component: {fileID: 522105558}
+  - component: {fileID: 522105562}
   m_Layer: 0
   m_Name: Obstacle (26)
   m_TagString: Untagged
@@ -91504,7 +91663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &522105559
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -91585,6 +91743,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522105556}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &522105562
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522105556}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &523642185
 Mesh:
   m_ObjectHideFlags: 0
@@ -91954,6 +92139,7 @@ GameObject:
   - component: {fileID: 531845466}
   - component: {fileID: 531845465}
   - component: {fileID: 531845464}
+  - component: {fileID: 531845468}
   m_Layer: 0
   m_Name: Obstacle (23)
   m_TagString: Untagged
@@ -91988,7 +92174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &531845465
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -92069,6 +92254,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531845462}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &531845468
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531845462}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &532390537
 Mesh:
   m_ObjectHideFlags: 0
@@ -108361,6 +108573,7 @@ GameObject:
   - component: {fileID: 566309741}
   - component: {fileID: 566309740}
   - component: {fileID: 566309739}
+  - component: {fileID: 566309743}
   m_Layer: 0
   m_Name: Obstacle (14)
   m_TagString: Untagged
@@ -108395,7 +108608,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &566309740
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -108476,6 +108688,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 566309737}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &566309743
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566309737}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &567703987
 GameObject:
   m_ObjectHideFlags: 0
@@ -108649,6 +108888,7 @@ GameObject:
   - component: {fileID: 569518417}
   - component: {fileID: 569518416}
   - component: {fileID: 569518415}
+  - component: {fileID: 569518419}
   m_Layer: 0
   m_Name: Obstacle (15)
   m_TagString: Untagged
@@ -108683,7 +108923,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &569518416
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -108764,6 +109003,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569518413}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &569518419
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569518413}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &575643499
 Mesh:
   m_ObjectHideFlags: 0
@@ -110381,6 +110647,7 @@ GameObject:
   - component: {fileID: 630004453}
   - component: {fileID: 630004452}
   - component: {fileID: 630004451}
+  - component: {fileID: 630004455}
   m_Layer: 0
   m_Name: Obstacle (18)
   m_TagString: Untagged
@@ -110415,7 +110682,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &630004452
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -110496,6 +110762,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 630004449}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &630004455
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630004449}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &630552834
 Mesh:
   m_ObjectHideFlags: 0
@@ -148796,7 +149089,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &682180095
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -150003,7 +150295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!54 &695882286
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -150732,7 +151023,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &701123435
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -151068,6 +151358,7 @@ GameObject:
   - component: {fileID: 701340562}
   - component: {fileID: 701340561}
   - component: {fileID: 701340567}
+  - component: {fileID: 701340568}
   m_Layer: 0
   m_Name: Cube (16)
   m_TagString: Untagged
@@ -151422,7 +151713,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
+--- !u!54 &701340568
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701340560}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &702461234
 GameObject:
   m_ObjectHideFlags: 0
@@ -152825,6 +153142,7 @@ GameObject:
   - component: {fileID: 724932067}
   - component: {fileID: 724932066}
   - component: {fileID: 724932065}
+  - component: {fileID: 724932069}
   m_Layer: 0
   m_Name: Obstacle (5)
   m_TagString: Untagged
@@ -152859,7 +153177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &724932066
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -152940,6 +153257,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724932063}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &724932069
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724932063}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &731156531
 Mesh:
   m_ObjectHideFlags: 0
@@ -157985,6 +158329,7 @@ GameObject:
   - component: {fileID: 796588610}
   - component: {fileID: 796588609}
   - component: {fileID: 796588608}
+  - component: {fileID: 796588612}
   m_Layer: 0
   m_Name: Obstacle (4)
   m_TagString: Untagged
@@ -158019,7 +158364,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &796588609
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -158100,6 +158444,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796588606}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &796588612
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796588606}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &796592623
 GameObject:
   m_ObjectHideFlags: 0
@@ -158177,7 +158548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &796592627
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -175932,7 +176302,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &941035750
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -176838,6 +177207,7 @@ GameObject:
   - component: {fileID: 954146122}
   - component: {fileID: 954146121}
   - component: {fileID: 954146120}
+  - component: {fileID: 954146124}
   m_Layer: 0
   m_Name: Obstacle (20)
   m_TagString: Untagged
@@ -176872,7 +177242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &954146121
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -176953,6 +177322,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954146118}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &954146124
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954146118}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &957732663
 Mesh:
   m_ObjectHideFlags: 0
@@ -177166,7 +177562,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!54 &959307759
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -179313,7 +179708,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!54 &982852857
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -183809,7 +184203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &1026117515
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -184977,6 +185370,7 @@ GameObject:
   - component: {fileID: 1034123621}
   - component: {fileID: 1034123620}
   - component: {fileID: 1034123619}
+  - component: {fileID: 1034123623}
   m_Layer: 0
   m_Name: Obstacle (25)
   m_TagString: Untagged
@@ -185011,7 +185405,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!135 &1034123620
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -185090,6 +185483,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034123617}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1034123623
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034123617}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &1035095716
 Mesh:
   m_ObjectHideFlags: 0
@@ -188133,6 +188553,7 @@ GameObject:
   - component: {fileID: 1078806619}
   - component: {fileID: 1078806618}
   - component: {fileID: 1078806623}
+  - component: {fileID: 1078806624}
   m_Layer: 0
   m_Name: Phone
   m_TagString: Untagged
@@ -188487,7 +188908,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
+--- !u!54 &1078806624
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078806616}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1079657454
 GameObject:
   m_ObjectHideFlags: 0
@@ -191521,7 +191968,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &1101758679
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -193957,6 +194403,7 @@ GameObject:
   - component: {fileID: 1112499088}
   - component: {fileID: 1112499087}
   - component: {fileID: 1112499086}
+  - component: {fileID: 1112499090}
   m_Layer: 0
   m_Name: Obstacle (13)
   m_TagString: Untagged
@@ -193991,7 +194438,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &1112499087
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -194072,6 +194518,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112499084}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1112499090
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112499084}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1112839958
 GameObject:
   m_ObjectHideFlags: 0
@@ -196900,6 +197373,7 @@ GameObject:
   - component: {fileID: 1134166371}
   - component: {fileID: 1134166370}
   - component: {fileID: 1134166376}
+  - component: {fileID: 1134166377}
   m_Layer: 0
   m_Name: Cube (12)
   m_TagString: Untagged
@@ -197254,7 +197728,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
+--- !u!54 &1134166377
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134166369}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &1135033462
 Mesh:
   m_ObjectHideFlags: 0
@@ -197877,6 +198377,7 @@ GameObject:
   - component: {fileID: 1155755962}
   - component: {fileID: 1155755961}
   - component: {fileID: 1155755960}
+  - component: {fileID: 1155755964}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Untagged
@@ -197911,7 +198412,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!135 &1155755961
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -197990,6 +198490,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155755958}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1155755964
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155755958}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &1162787739
 Mesh:
   m_ObjectHideFlags: 0
@@ -206212,6 +206739,7 @@ GameObject:
   - component: {fileID: 1207233457}
   - component: {fileID: 1207233456}
   - component: {fileID: 1207233455}
+  - component: {fileID: 1207233459}
   m_Layer: 0
   m_Name: Obstacle (11)
   m_TagString: Untagged
@@ -206246,7 +206774,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &1207233456
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -206327,6 +206854,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207233453}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1207233459
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207233453}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1208534949
 GameObject:
   m_ObjectHideFlags: 0
@@ -207232,6 +207786,7 @@ GameObject:
   - component: {fileID: 1217913614}
   - component: {fileID: 1217913613}
   - component: {fileID: 1217913619}
+  - component: {fileID: 1217913620}
   m_Layer: 0
   m_Name: Cube (15)
   m_TagString: Untagged
@@ -207586,7 +208141,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
+--- !u!54 &1217913620
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217913612}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1218526386
 GameObject:
   m_ObjectHideFlags: 0
@@ -208277,6 +208858,7 @@ GameObject:
   - component: {fileID: 1225162591}
   - component: {fileID: 1225162590}
   - component: {fileID: 1225162589}
+  - component: {fileID: 1225162593}
   m_Layer: 0
   m_Name: Obstacle (3)
   m_TagString: Untagged
@@ -208311,7 +208893,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!135 &1225162590
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -208390,6 +208971,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1225162587}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1225162593
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225162587}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1231045259
 GameObject:
   m_ObjectHideFlags: 0
@@ -212084,6 +212692,7 @@ GameObject:
   - component: {fileID: 1265646426}
   - component: {fileID: 1265646425}
   - component: {fileID: 1265646431}
+  - component: {fileID: 1265646432}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -246180,7 +246789,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
+--- !u!54 &1265646432
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265646424}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &1267759838
 Mesh:
   m_ObjectHideFlags: 0
@@ -247405,6 +248040,7 @@ GameObject:
   - component: {fileID: 1291872488}
   - component: {fileID: 1291872487}
   - component: {fileID: 1291872486}
+  - component: {fileID: 1291872490}
   m_Layer: 0
   m_Name: Obstacle (9)
   m_TagString: Untagged
@@ -247439,7 +248075,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &1291872487
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -247520,6 +248155,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291872484}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1291872490
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291872484}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &1297885999
 Mesh:
   m_ObjectHideFlags: 0
@@ -247711,6 +248373,7 @@ GameObject:
   - component: {fileID: 1302789374}
   - component: {fileID: 1302789373}
   - component: {fileID: 1302789372}
+  - component: {fileID: 1302789376}
   m_Layer: 0
   m_Name: Obstacle (24)
   m_TagString: Untagged
@@ -247745,7 +248408,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &1302789373
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -247826,6 +248488,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302789370}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1302789376
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302789370}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1304372401
 GameObject:
   m_ObjectHideFlags: 0
@@ -247842,6 +248531,7 @@ GameObject:
   - component: {fileID: 1304372403}
   - component: {fileID: 1304372408}
   - component: {fileID: 1304372409}
+  - component: {fileID: 1304372410}
   m_Layer: 0
   m_Name: Keyboard
   m_TagString: Untagged
@@ -248196,7 +248886,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &1304372409
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -248220,6 +248909,33 @@ CapsuleCollider:
   m_Height: 3.33
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1304372410
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304372401}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1305644076
 GameObject:
   m_ObjectHideFlags: 0
@@ -249395,7 +250111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &1332014474
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -250557,7 +251272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!54 &1346458969
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -253483,6 +254197,7 @@ GameObject:
   - component: {fileID: 1364567497}
   - component: {fileID: 1364567496}
   - component: {fileID: 1364567495}
+  - component: {fileID: 1364567499}
   m_Layer: 0
   m_Name: Obstacle (8)
   m_TagString: Untagged
@@ -253517,7 +254232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &1364567496
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -253598,6 +254312,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1364567493}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1364567499
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364567493}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1368319294
 GameObject:
   m_ObjectHideFlags: 0
@@ -254726,6 +255467,7 @@ GameObject:
   - component: {fileID: 1394750140}
   - component: {fileID: 1394750139}
   - component: {fileID: 1394750138}
+  - component: {fileID: 1394750142}
   m_Layer: 0
   m_Name: Obstacle (1)
   m_TagString: Untagged
@@ -254760,7 +255502,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!135 &1394750139
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -254839,6 +255580,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394750136}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1394750142
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394750136}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &1398784393
 Mesh:
   m_ObjectHideFlags: 0
@@ -256728,7 +257496,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &1422143434
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -268958,6 +269725,7 @@ GameObject:
   - component: {fileID: 1470666822}
   - component: {fileID: 1470666821}
   - component: {fileID: 1470666820}
+  - component: {fileID: 1470666824}
   m_Layer: 0
   m_Name: Obstacle (2)
   m_TagString: Untagged
@@ -268992,7 +269760,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!135 &1470666821
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -269071,6 +269838,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470666818}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1470666824
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470666818}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1472959421
 GameObject:
   m_ObjectHideFlags: 0
@@ -307384,6 +308178,7 @@ GameObject:
   - component: {fileID: 1529207141}
   - component: {fileID: 1529207140}
   - component: {fileID: 1529207139}
+  - component: {fileID: 1529207143}
   m_Layer: 0
   m_Name: Obstacle (17)
   m_TagString: Untagged
@@ -307418,7 +308213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &1529207140
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -307499,6 +308293,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529207137}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1529207143
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529207137}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &1530416336
 Mesh:
   m_ObjectHideFlags: 0
@@ -308936,6 +309757,7 @@ GameObject:
   - component: {fileID: 1540967616}
   - component: {fileID: 1540967615}
   - component: {fileID: 1540967614}
+  - component: {fileID: 1540967618}
   m_Layer: 0
   m_Name: Obstacle (19)
   m_TagString: Untagged
@@ -308970,7 +309792,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!135 &1540967615
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -309049,6 +309870,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540967612}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1540967618
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540967612}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1542497914
 GameObject:
   m_ObjectHideFlags: 0
@@ -313282,6 +314130,7 @@ GameObject:
   - component: {fileID: 1594766758}
   - component: {fileID: 1594766757}
   - component: {fileID: 1594766756}
+  - component: {fileID: 1594766760}
   m_Layer: 0
   m_Name: Obstacle (16)
   m_TagString: Untagged
@@ -313316,7 +314165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &1594766757
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -313397,6 +314245,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594766754}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1594766760
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594766754}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &1596281325
 Mesh:
   m_ObjectHideFlags: 0
@@ -320870,7 +321745,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &1669464513
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -321404,7 +322278,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!54 &1677832345
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -325440,7 +326313,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &1733806737
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -330520,7 +331392,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &1775954043
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -330945,7 +331816,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &1782202254
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -335113,7 +335983,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!54 &1826896180
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -338821,7 +339690,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &1851196246
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -339575,7 +340443,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &1855931070
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -340677,7 +341544,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &1861009430
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -341124,6 +341990,7 @@ GameObject:
   - component: {fileID: 1871103827}
   - component: {fileID: 1871103826}
   - component: {fileID: 1871103825}
+  - component: {fileID: 1871103829}
   m_Layer: 0
   m_Name: Obstacle (12)
   m_TagString: Untagged
@@ -341158,7 +342025,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &1871103826
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -341239,6 +342105,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871103823}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1871103829
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871103823}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1873020568
 GameObject:
   m_ObjectHideFlags: 0
@@ -343560,7 +344453,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &1884504262
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -347305,6 +348197,184 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1931329946}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!43 &1932229739
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: pb_Mesh53542
+  serializedVersion: 12
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 36
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 24
+    localAABB:
+      m_Center: {x: 0, y: -0.18246365, z: 0}
+      m_Extent: {x: 2.7775974, y: 0.8902899, z: 1.050664}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 24
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 40
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 1152
+    _typelessdata: 28c431c0fd4f89bf287c863f00000000000000000000803f000080bf0000000000000000000080bf28c4b14014d447bf28c43140fd4f89bf287c863f00000000000000000000803f000080bf0000000000000000000080bf0000000014d447bf28c431c01a34353f287c863f00000000000000000000803f000080bf0000000000000000000080bf28c4b1400000803f28c431401a34353f287c863f00000000000000000000803f000080bf0000000000000000000080bf000000000000803f28c43140fd4f89bf287c863f0000803f000000000000000000000000000000000000803f000080bf287c064014d447bf28c43140fd4f89bf287c86bf0000803f000000000000000000000000000000000000803f000080bf0000000014d447bf28c431401a34353f287c863f0000803f000000000000000000000000000000000000803f000080bf287c06400000803f28c431401a34353f287c86bf0000803f000000000000000000000000000000000000803f000080bf000000000000803f28c43140fd4f89bf287c86bf0000000000000000000080bf0000803f0000000000000000000080bf28c4b14014d447bf28c431c0fd4f89bf287c86bf0000000000000000000080bf0000803f0000000000000000000080bf0000000014d447bf28c431401a34353f287c86bf0000000000000000000080bf0000803f0000000000000000000080bf28c4b1400000803f28c431c01a34353f287c86bf0000000000000000000080bf0000803f0000000000000000000080bf000000000000803f28c431c0fd4f89bf287c86bf000080bf00000000000000000000000000000000000080bf000080bf287c064014d447bf28c431c0fd4f89bf287c863f000080bf00000000000000000000000000000000000080bf000080bf0000000014d447bf28c431c01a34353f287c86bf000080bf00000000000000000000000000000000000080bf000080bf287c06400000803f28c431c01a34353f287c863f000080bf00000000000000000000000000000000000080bf000080bf000000000000803f28c431c01a34353f287c863f000000000000803f000000000000803f0000000000000000000080bf000000000000803f28c431401a34353f287c863f000000000000803f000000000000803f0000000000000000000080bf28c4b1400000803f28c431c01a34353f287c86bf000000000000803f000000000000803f0000000000000000000080bf0000000050f88cbf28c431401a34353f287c86bf000000000000803f000000000000803f0000000000000000000080bf28c4b14050f88cbf28c431c0fd4f89bf287c86bf00000000000080bf00000000000080bf0000000000000000000080bf28c4b14050f88cbf28c43140fd4f89bf287c86bf00000000000080bf00000000000080bf0000000000000000000080bf0000000050f88cbf28c431c0fd4f89bf287c863f00000000000080bf00000000000080bf0000000000000000000080bf28c4b1400000803f28c43140fd4f89bf287c863f00000000000080bf00000000000080bf0000000000000000000080bf000000000000803f
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: -0.18246365, z: 0}
+    m_Extent: {x: 2.7775974, y: 0.8902899, z: 1.050664}
+  m_MeshUsageFlags: 0
+  m_CookingOptions: 30
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  'm_MeshMetrics[0]': 1
+  'm_MeshMetrics[1]': 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
+  m_MeshLodInfo:
+    serializedVersion: 2
+    m_LodSelectionCurve:
+      serializedVersion: 1
+      m_LodSlope: 0
+      m_LodBias: 0
+    m_NumLevels: 1
+    m_SubMeshes:
+    - serializedVersion: 2
+      m_Levels:
+      - serializedVersion: 1
+        m_IndexStart: 0
+        m_IndexCount: 0
 --- !u!1 &1939029661
 GameObject:
   m_ObjectHideFlags: 0
@@ -347701,7 +348771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!64 &1943414981
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -348062,6 +349131,7 @@ GameObject:
   - component: {fileID: 1946617064}
   - component: {fileID: 1946617063}
   - component: {fileID: 1946617062}
+  - component: {fileID: 1946617066}
   m_Layer: 0
   m_Name: Obstacle (22)
   m_TagString: Untagged
@@ -348096,7 +349166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &1946617063
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -348177,6 +349246,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946617060}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1946617066
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946617060}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &1949327436
 Mesh:
   m_ObjectHideFlags: 0
@@ -351314,6 +352410,7 @@ GameObject:
   - component: {fileID: 1964099381}
   - component: {fileID: 1964099380}
   - component: {fileID: 1964099379}
+  - component: {fileID: 1964099383}
   m_Layer: 0
   m_Name: Obstacle (7)
   m_TagString: Untagged
@@ -351348,7 +352445,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &1964099380
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -351429,6 +352525,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964099377}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1964099383
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964099377}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &1971317924
 Mesh:
   m_ObjectHideFlags: 0
@@ -367457,6 +368580,7 @@ GameObject:
   - component: {fileID: 2115941344}
   - component: {fileID: 2115941343}
   - component: {fileID: 2115941342}
+  - component: {fileID: 2115941346}
   m_Layer: 0
   m_Name: Obstacle (10)
   m_TagString: Untagged
@@ -367491,7 +368615,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  causesInstantLoss: 0
 --- !u!136 &2115941343
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -367572,6 +368695,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115941340}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2115941346
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115941340}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &2117288710
 Mesh:
   m_ObjectHideFlags: 0
