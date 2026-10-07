@@ -1,10 +1,9 @@
 using UnityEngine;
-
+[RequireComponent(typeof(Rigidbody))]
 public class Obstacle : MonoBehaviour
 {
-    GameManager gameManager;
-    NoiseMeter noiseMeter;
-    [SerializeField] private bool causesInstantLoss = false;
+    protected GameManager gameManager;
+    protected NoiseMeter noiseMeter;
     
     private void Start()
     {
@@ -12,15 +11,16 @@ public class Obstacle : MonoBehaviour
         noiseMeter = gameManager.GetComponent<NoiseMeter>();
     }
 
-    private void OnTriggerEnter(Collider collision)
+    public virtual void ObstacleEffect(Collider objectCollidedWith)
     {
-        if (causesInstantLoss && collision.gameObject.tag == "Player")
-        {
-            gameManager.PlayerDetected = true;
-        }
-        if(collision.gameObject.tag == "Ground")
+        if(objectCollidedWith.gameObject.tag == "Ground")
         {
             noiseMeter.IncreaseNoiseMeter();
         }
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        ObstacleEffect(collision);
     }
 }
