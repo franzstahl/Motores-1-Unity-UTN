@@ -47,6 +47,8 @@ public class PlayerMovement : MonoBehaviour
     private bool jumpRequested;
     private Vector3 velocity; // This will hold player's current velocity, including vertical movement due to gravity and jumping
     private bool isGrounded;
+    private Collider currentWall;
+    private Collider lastWall;
 
     [SerializeField] private GameManager gameManager;
 
@@ -128,6 +130,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (isGrounded)
             canClimb = true; // Reset climbing ability when touching the ground
+            lastWall = null; // Allow grabbing any wall again
     }
 
     private Vector3 FeetRayOrigin() // Ray origin near the feet, so the ray stops hitting when the feet pass the top edge
@@ -140,10 +143,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isGrounded || !canClimb || moveInput.sqrMagnitude < 0.01f) return;
 
-        if (Physics.Raycast(FeetRayOrigin(), transform.forward, out RaycastHit hit, wallCheckDistance, ~0, QueryTriggerInteraction.Ignore) && hit.collider.CompareTag(climbableTag))
+        if (Physics.Raycast(FeetRayOrigin(), transform.forward, out RaycastHit hit, wallCheckDistance, ~0, QueryTriggerInteraction.Ignore) && hit.collider.CompareTag(climbableTag) && hit.collider != lastWall)
 
         {
             CurrentState = MovementState.Climbing;
+            currentWall = hit.collider; // Remember which wall we are climbing so we can prevent grabbing it again until touching the ground
             climbTimer = climbDuration;
             wallNormal = new Vector3(hit.normal.x, 0f, hit.normal.z).normalized; // Flatten, we assume vertical walls
             velocity = Vector3.zero; // Cancel any falling or jumping speed
@@ -158,6 +162,8 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpRequested = false;
             StopClimb();
+            canClimb = true;
+            lastWall = currentWall; // Prevents grabbing the same wall again until touching the ground
             controller.Move(wallNormal * 0.3f); // Small push away from the wall
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             return;
