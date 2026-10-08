@@ -167902,7 +167902,7 @@ MonoBehaviour:
   minStaminaToSprint: 20
   climbSpeed: 2.5
   climbDuration: 7
-  wallCheckDistance: 0.6
+  wallCheckDistance: 0.5
   climbableTag: Climbable
   cameraTransform: {fileID: 0}
   gameManager: {fileID: 173107298}
@@ -167928,7 +167928,7 @@ CharacterController:
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.04
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &864972471

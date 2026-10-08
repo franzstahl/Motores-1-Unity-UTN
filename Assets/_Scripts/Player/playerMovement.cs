@@ -129,14 +129,20 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = -2f;
 
         if (isGrounded)
+        {
             canClimb = true; // Reset climbing ability when touching the ground
             lastWall = null; // Allow grabbing any wall again
+        }
+            
     }
 
+    // CharacterController radius and height are in local space, so the real size is multiplied by the transform scale
+    private float ScaledRadius => controller.radius * Mathf.Max(transform.lossyScale.x, transform.lossyScale.z);
+    private float ScaledHeight => controller.height * transform.lossyScale.y;
     private Vector3 FeetRayOrigin() // Ray origin near the feet, so the ray stops hitting when the feet pass the top edge
     {
         Vector3 center = transform.TransformPoint(controller.center);
-        return center + Vector3.down * (controller.height * 0.5f - 0.1f);
+        return center + Vector3.down * (ScaledHeight * 0.5f - 0.1f);
     }
 
     private void TryStartClimb() // Grab a climbable wall
@@ -150,7 +156,14 @@ public class PlayerMovement : MonoBehaviour
             currentWall = hit.collider; // Remember which wall we are climbing so we can prevent grabbing it again until touching the ground
             climbTimer = climbDuration;
             wallNormal = new Vector3(hit.normal.x, 0f, hit.normal.z).normalized; // Flatten, we assume vertical walls
+
+            float wallDistance = Vector3.Dot(hit.point - FeetRayOrigin(), -wallNormal); // Straight-line distance from the player's axis to the wall
+            float gap = wallDistance - ScaledRadius - controller.skinWidth; // Empty space between the capsule edge and the wall
+            if (gap > 0f)
+                controller.Move(-wallNormal * gap); // Slide the player against the wall
+
             velocity = Vector3.zero; // Cancel any falling or jumping speed
+            
         }
     }
 
@@ -174,7 +187,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (!wallAhead) // The wall ended: the feet passed the top edge, so push up and forward onto it
         {
-            controller.Move(-wallNormal * (controller.radius + 0.3f) + Vector3.up * 0.1f);
+            controller.Move(-wallNormal * (ScaledRadius + 0.3f) + Vector3.up * 0.1f);
             StopClimb();
             return;
         }
@@ -191,10 +204,16 @@ public class PlayerMovement : MonoBehaviour
         Vector3 climbMove = (Vector3.up * moveInput.y + wallRight * moveInput.x) * climbSpeed;
 
         if (gameManager.isMovementActive)
+        {
             controller.Move(climbMove * Time.deltaTime);
+        }
+           
 
         if (controller.isGrounded && moveInput.y < 0f) // Went back down to the floor
+        {
             StopClimb();
+        }
+           
     }
 
     private void StopClimb() // Gives control back to the normal movement
