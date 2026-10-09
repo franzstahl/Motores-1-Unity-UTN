@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerInteraction : MonoBehaviour
 {
 
-    public Transform shootPoint;
+    [SerializeField] private Transform shootPoint;
     [SerializeField] private float maxDistance;
 
     public void Shoot() // Handles the raycast shooting logic and interaction with objects

@@ -9,15 +9,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Vector3 startingPosition;
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private float fadeDuration = 5.0f;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip clip;
 
-    public bool isMovementActive;
+    public bool isMovementActive { get; private set; }
     private bool resetTimerActive;
     private float resetTimerOriginalValue;
     public GameObject player;
-
-    public AudioSource audioSource;
-    public AudioClip clip;
-
     private Coroutine fadeCoroutine;
 
     public bool PlayerDetected

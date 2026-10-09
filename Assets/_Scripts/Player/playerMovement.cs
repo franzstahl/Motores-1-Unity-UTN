@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
     private Collider currentWall;
     private Collider lastWall;
 
-    [SerializeField] private GameManager gameManager;
+    private GameManager gameManager;
 
     private void Awake()
     {
@@ -102,7 +102,9 @@ public class PlayerMovement : MonoBehaviour
     private void OnJumpPerformed(InputAction.CallbackContext context) // Mark that was requested to be jumped (a flag), to be processed later
     {
         if (gameManager.isMovementActive)
+        {
             jumpRequested = true;
+        }
     }
 
     private void Update()
@@ -126,7 +128,10 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = controller.isGrounded;
 
         if (isGrounded && velocity.y < 0)
+        {
             velocity.y = -2f;
+        }
+           
 
         if (isGrounded)
         {
@@ -160,7 +165,9 @@ public class PlayerMovement : MonoBehaviour
             float wallDistance = Vector3.Dot(hit.point - FeetRayOrigin(), -wallNormal); // Straight-line distance from the player's axis to the wall
             float gap = wallDistance - ScaledRadius - controller.skinWidth; // Empty space between the capsule edge and the wall
             if (gap > 0f)
+            {
                 controller.Move(-wallNormal * gap); // Slide the player against the wall
+            }
 
             velocity = Vector3.zero; // Cancel any falling or jumping speed
             
@@ -277,8 +284,10 @@ public class PlayerMovement : MonoBehaviour
         float currentSpeed = isSprinting ? sprintSpeed : moveSpeed;
 
         if (gameManager.isMovementActive)
+        {
             controller.Move(moveDirection * currentSpeed * Time.deltaTime);
-
+        }
+          
         if (moveDirection.sqrMagnitude > 0.01f)
         {
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);

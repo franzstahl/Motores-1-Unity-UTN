@@ -1,4 +1,3 @@
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,17 +10,17 @@ public class NoiseMeter : MonoBehaviour
     public float AmountOfNoise
     {
         get { return amountOfNoise; }
-        set { amountOfNoise = Mathf.Min(value, maxNoiseUntilDefeat); }
+        private set { amountOfNoise = Mathf.Min(value, maxNoiseUntilDefeat); }
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+   
+    private void Start()
     {
         gameManager = gameObject.GetComponent<GameManager>();
         noiseMeterImage.fillAmount = AmountOfNoise/maxNoiseUntilDefeat;
     }
 
-    // Update is called once per frame
-    void Update()
+    
+   private void Update()
     {
         noiseMeterImage.fillAmount = AmountOfNoise/maxNoiseUntilDefeat;
     }
@@ -29,7 +28,7 @@ public class NoiseMeter : MonoBehaviour
     {
         AmountOfNoise++;
         noiseMeterImage.fillAmount = AmountOfNoise/maxNoiseUntilDefeat;
-        if(AmountOfNoise == maxNoiseUntilDefeat)
+        if (AmountOfNoise == maxNoiseUntilDefeat)
         {
             gameManager.PlayerDetected = true;
         }

@@ -5,18 +5,18 @@ public class Cheese : MonoBehaviour, InteractibleInterface
 {
     private string nextSceneName = "Win";
 
-    [SerializeField] private GameManager gameManager;
+    
     [SerializeField] private float delayBeforeLoad = 1f;
-    public AudioSource audioSource;
-    public AudioClip victoryAudio;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip victoryAudio;
     
 
     public void Interact() // Handles the interaction with the cheese object
     {
-        if (gameManager != null)
+        if (GameManager.Instance != null)
         {
             audioSource.PlayOneShot(victoryAudio);
-            gameManager.FadeOut();
+            GameManager.Instance.FadeOut();
             Invoke(nameof(LoadNextScene), delayBeforeLoad);
         }
         else

@@ -6,19 +6,19 @@ public class DetectionZoneManager : MonoBehaviour
 
     [SerializeField] private float timeDetectionZoneLasts;
     [SerializeField] private float timer;
-    private bool timerActive;
     [SerializeField] private float timerStartValue;
     [SerializeField] private GameObject detectionZone;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    private bool timerActive;
+
+    private void Start()
     {
         timer = timerStartValue;
         timerActive = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    private void Update()
     {
         timer -= Time.deltaTime;
         if(timer <= 0 && timerActive)

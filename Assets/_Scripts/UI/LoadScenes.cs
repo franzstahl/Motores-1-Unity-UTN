@@ -3,19 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class LoadScenes : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void Loadscene(string scene)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public void  Loadscene(string scene)
-    {
+        Time.timeScale = 1;
         SceneManager.LoadScene(scene);
     }
     public void Pause()

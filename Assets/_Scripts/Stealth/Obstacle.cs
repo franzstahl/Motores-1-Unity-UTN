@@ -7,13 +7,13 @@ public class Obstacle : MonoBehaviour
     
     private void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager = GameManager.Instance;
         noiseMeter = gameManager.GetComponent<NoiseMeter>();
     }
 
     public virtual void ObstacleEffect(Collider objectCollidedWith)
     {
-        if(objectCollidedWith.gameObject.tag == "Ground")
+        if(objectCollidedWith.CompareTag("Ground"))
         {
             noiseMeter.IncreaseNoiseMeter();
         }
