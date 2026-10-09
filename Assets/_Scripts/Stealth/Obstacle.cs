@@ -9,6 +9,15 @@ public class Obstacle : MonoBehaviour
     {
         gameManager = GameManager.Instance;
         noiseMeter = gameManager.GetComponent<NoiseMeter>();
+        Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+        rb.mass = 0.0000001f;
+        Collider col = gameObject.GetComponent<Collider>();
+        ApplyColliderType(col);
+    }
+
+    public virtual void ApplyColliderType(Collider collider)
+    {
+        collider.isTrigger = false;
     }
 
     public virtual void ObstacleEffect(Collider objectCollidedWith)

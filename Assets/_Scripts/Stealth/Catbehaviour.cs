@@ -28,8 +28,9 @@ public class Catbehaviour : MonoBehaviour
         cat.SetDestination(mouse.position);
         if(catPosition.transform.position.y < mouse.position.y || Input.GetKeyDown(KeyCode.L))
         {
-            // This won't work if nav agent is active
+            cat.enabled = false;
             catRB.AddForce(jumpVector, ForceMode.Impulse);
+            cat.enabled = true;
         }
     }
 }
