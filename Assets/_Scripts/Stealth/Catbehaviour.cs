@@ -26,11 +26,11 @@ public class Catbehaviour : MonoBehaviour
     private void Update()
     {
         cat.SetDestination(mouse.position);
-        if(catPosition.transform.position.y < mouse.position.y || Input.GetKeyDown(KeyCode.L))
-        {
-            cat.enabled = false;
-            catRB.AddForce(jumpVector, ForceMode.Impulse);
-            cat.enabled = true;
-        }
+        // if(catPosition.transform.position.y < mouse.position.y || Input.GetKeyDown(KeyCode.L))
+        // {
+        //     cat.enabled = false;
+        //     catRB.AddForce(jumpVector, ForceMode.Impulse);
+        //     cat.enabled = true;
+        // }
     }
 }

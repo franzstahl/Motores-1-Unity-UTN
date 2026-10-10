@@ -73,3 +73,5 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/_Art/Persona en sillon.fbx.meta
+Assets/TextMesh Pro/Fonts/DaFont/MOUSE TRAP\! SDF.asset
