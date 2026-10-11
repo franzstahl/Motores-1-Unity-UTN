@@ -7578,7 +7578,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelTeleporter
   destination: {fileID: 315370163}
-  player: {fileID: 0}
 --- !u!1 &46976107
 GameObject:
   m_ObjectHideFlags: 0
@@ -20712,40 +20711,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533990749}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &162102864
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 162102865}
-  m_Layer: 0
-  m_Name: NoiseBar
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &162102865
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 162102864}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -411.2951, y: -540, z: 9466.85}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 276263908}
-  - {fileID: 2094998756}
-  - {fileID: 931961915}
-  m_Father: {fileID: 833742276}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &164032074
 GameObject:
   m_ObjectHideFlags: 0
@@ -21665,6 +21630,7 @@ GameObject:
   - component: {fileID: 173107301}
   - component: {fileID: 173107298}
   - component: {fileID: 173107302}
+  - component: {fileID: 173107303}
   - component: {fileID: 173107299}
   m_Layer: 0
   m_Name: GameManager
@@ -21690,10 +21656,9 @@ MonoBehaviour:
   startingPosition: {x: -26.08, y: 8.277, z: -9.15}
   canvasGroup: {fileID: 1950971030}
   fadeDuration: 5
-  isMovementActive: 0
-  player: {fileID: 864972468}
   audioSource: {fileID: 173107299}
   clip: {fileID: 8300000, guid: f09cdd78dc67b804a8d3b75186960fc1, type: 3}
+  player: {fileID: 864972468}
 --- !u!82 &173107299
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21820,6 +21785,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraManager
   target: {fileID: 864972473}
   offset: {x: 0, y: 0, z: 0}
+--- !u!114 &173107303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173107297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 158a83b0f7d164502ab52881d48daf20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NoiseMeter
+  noiseMeterImage: {fileID: 931961916}
+  noiseMeterColor:
+    serializedVersion: 2
+    key0: {r: 0.11779833, g: 1, b: 0, a: 1}
+    key1: {r: 1, g: 0.9728835, b: 0, a: 1}
+    key2: {r: 1, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 29298
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  noiseMeterFrame: {fileID: 276263909}
+  maxNoiseUntilDefeat: 10
+  amountOfNoise: 0
 --- !u!1 &176469203
 GameObject:
   m_ObjectHideFlags: 0
@@ -35471,7 +35482,7 @@ GameObject:
   - component: {fileID: 276263910}
   - component: {fileID: 276263909}
   m_Layer: 5
-  m_Name: Image
+  m_Name: bar frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35485,15 +35496,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276263907}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -9466.85}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 162102865}
+  m_Children:
+  - {fileID: 2094998756}
+  - {fileID: 931961915}
+  m_Father: {fileID: 833742276}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -380.7049, y: 540}
+  m_AnchoredPosition: {x: 167.99994, y: 0}
   m_SizeDelta: {x: 200.4749, y: 663.6912}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &276263909
@@ -35509,7 +35522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.043819427, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.043137312, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -41743,7 +41756,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelTeleporter
   destination: {fileID: 649324147}
-  player: {fileID: 0}
 --- !u!64 &380444167
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -90022,7 +90034,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelTeleporter
   destination: {fileID: 649324147}
-  player: {fileID: 0}
 --- !u!1 &510458480
 GameObject:
   m_ObjectHideFlags: 0
@@ -161828,7 +161839,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 559618774}
-  - {fileID: 162102865}
+  - {fileID: 276263908}
   - {fileID: 848270750}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -166858,7 +166869,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelTeleporter
   destination: {fileID: 649324147}
-  player: {fileID: 0}
 --- !u!64 &861638253
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -167905,7 +167915,6 @@ MonoBehaviour:
   wallCheckDistance: 0.6
   climbableTag: Climbable
   cameraTransform: {fileID: 0}
-  gameManager: {fileID: 173107298}
 --- !u!143 &864972470
 CharacterController:
   m_ObjectHideFlags: 0
@@ -174284,7 +174293,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d57221b30aa12346b672e0181d66c73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cheese
-  gameManager: {fileID: 173107298}
   delayBeforeLoad: 1
   audioSource: {fileID: 173107299}
   victoryAudio: {fileID: 8300000, guid: 08ce36178f8eb6c40b06d2a163f4c46e, type: 3}
@@ -174300,7 +174308,7 @@ GameObject:
   - component: {fileID: 931961917}
   - component: {fileID: 931961916}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -174314,15 +174322,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931961914}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -9466.85}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 162102865}
+  m_Father: {fileID: 276263908}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -380.7049, y: 540}
+  m_AnchoredPosition: {x: 100.23743, y: 0}
   m_SizeDelta: {x: 168.5025, y: 635.7674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &931961916
@@ -174350,7 +174358,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 0.5
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -349548,7 +349556,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelTeleporter
   destination: {fileID: 1700673447}
-  player: {fileID: 0}
 --- !u!64 &1952719631
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -367012,7 +367019,7 @@ GameObject:
   - component: {fileID: 2094998758}
   - component: {fileID: 2094998757}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -367026,15 +367033,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094998755}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -9466.85}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 162102865}
+  m_Father: {fileID: 276263908}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -380.7049, y: 540}
+  m_AnchoredPosition: {x: 100.23743, y: 0}
   m_SizeDelta: {x: 168.5025, y: 635.7674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2094998757
@@ -367061,7 +367068,7 @@ MonoBehaviour:
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 1
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
