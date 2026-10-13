@@ -167916,6 +167916,7 @@ MonoBehaviour:
   wallCheckDistance: 0.6
   climbableTag: Climbable
   cameraTransform: {fileID: 0}
+  animator: {fileID: 864972476}
 --- !u!143 &864972470
 CharacterController:
   m_ObjectHideFlags: 0

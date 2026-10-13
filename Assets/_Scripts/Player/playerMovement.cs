@@ -40,6 +40,16 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private Transform cameraTransform;
+    [SerializeField] private Animator animator;
+
+    private float horizontalSpeed; // Intended horizontal speed this frame, feeds the Animator "Speed" parameter
+
+    // Hashes are faster than using strings every frame. Names must match the Animator parameters exactly
+    private static readonly int SpeedHash = Animator.StringToHash("Speed");
+    private static readonly int VerticalVelocityHash = Animator.StringToHash("VerticalVelocity");
+    private static readonly int IsGroundedHash = Animator.StringToHash("isGrounded");
+    private static readonly int IsClimbingHash = Animator.StringToHash("isClimbing");
+    private static readonly int JumpHash = Animator.StringToHash("Jump");
 
     private CharacterController controller;
     private InputSystem_Actions inputActions; // This allows us to access the input actions defined in the Input System
@@ -55,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
+        if (animator == null) animator = GetComponentInChildren<Animator>(); // Works if the Animator ends up on the model child
         inputActions = new InputSystem_Actions();
         currentStamina = maxStamina; // Start with full stamina
     }
@@ -287,7 +298,9 @@ public class PlayerMovement : MonoBehaviour
         {
             controller.Move(moveDirection * currentSpeed * Time.deltaTime);
         }
-          
+
+        horizontalSpeed = gameManager.isMovementActive ? moveDirection.magnitude * currentSpeed : 0f; // 0 when movement is locked
+
         if (moveDirection.sqrMagnitude > 0.01f)
         {
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
@@ -300,6 +313,7 @@ public class PlayerMovement : MonoBehaviour
         if (jumpRequested && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            if (animator != null) animator.SetTrigger(JumpHash); // Skip if there is no Animator
         }
 
         jumpRequested = false;
@@ -309,5 +323,16 @@ public class PlayerMovement : MonoBehaviour
     {
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    private void LateUpdate() // Runs after Update, so it also covers the climbing early return
+    {
+        if (animator == null) return;
+
+        float speed = CurrentState == MovementState.Climbing ? 0f : horizontalSpeed; // No ground movement while on a wall
+        animator.SetFloat(SpeedHash, speed, 0.1f, Time.deltaTime); // Damped so the Blend Tree doesn't jump between values
+        animator.SetFloat(VerticalVelocityHash, velocity.y);
+        animator.SetBool(IsGroundedHash, isGrounded);
+        animator.SetBool(IsClimbingHash, CurrentState == MovementState.Climbing);
     }
 }
