@@ -1,4 +1,5 @@
 using UnityEngine;
+using Unity.Cinemachine;
 
 public class CameraCollision : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class CameraCollision : MonoBehaviour
         rotY = angles.x;
 
         Cursor.lockState = CursorLockMode.Locked;
+        gameObject.GetComponent<CinemachineBrain>().enabled = false;
     }
 
     void LateUpdate()
