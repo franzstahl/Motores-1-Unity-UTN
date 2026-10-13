@@ -15,7 +15,7 @@ public class CameraManager : MonoBehaviour
 {
     public Transform target;
     public Vector3 offset = new Vector3(0f, 1.6f, 0f); // roughly chest/head height
-
+    
     private void LateUpdate()
     {
         if (target == null) return;
