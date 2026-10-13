@@ -175763,6 +175763,7 @@ GameObject:
   - component: {fileID: 939342779}
   - component: {fileID: 939342782}
   - component: {fileID: 939342783}
+  - component: {fileID: 939342784}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -175920,6 +175921,28 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &939342784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939342778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688694d7f7440461f8b8e35919555058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraCollision
+  target: {fileID: 173107301}
+  distance: 6
+  height: 2
+  sensitivity: 2
+  minY: -20
+  maxY: 60
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  collisionRadius: 0.2
 --- !u!1 &940970721
 GameObject:
   m_ObjectHideFlags: 0
