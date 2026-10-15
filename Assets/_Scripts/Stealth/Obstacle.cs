@@ -4,13 +4,14 @@ public class Obstacle : MonoBehaviour
 {
     protected GameManager gameManager;
     protected NoiseMeter noiseMeter;
+    public GameObject destroyParticle;
     
     private void Start()
     {
         gameManager = GameManager.Instance;
         noiseMeter = gameManager.GetComponent<NoiseMeter>();
         Rigidbody rb = gameObject.GetComponent<Rigidbody>();
-        rb.mass = 0.0000001f;
+        rb.mass = 1f;
         Collider col = gameObject.GetComponent<Collider>();
         ApplyColliderType(col);
     }
@@ -19,12 +20,16 @@ public class Obstacle : MonoBehaviour
     {
         collider.isTrigger = false;
     }
-
+    
     public virtual void ObstacleEffect(Collider objectCollidedWith)
     {
         if(objectCollidedWith.CompareTag("Ground"))
         {
             noiseMeter.IncreaseNoiseMeter();
+            objectCollidedWith.GetComponent<AudioSource>().Play();
+            GameObject go = Instantiate(destroyParticle, gameObject.transform.position, Quaternion.Euler(-90f, 0f, 0f));
+            Destroy(go, 1f);
+            Destroy(gameObject, 1f);
         }
     }
 

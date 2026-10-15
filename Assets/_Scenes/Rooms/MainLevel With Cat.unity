@@ -16261,6 +16261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &143818118
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16722,6 +16723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &145344150
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20971,6 +20973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &164032077
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -21484,6 +21487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &170484245
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21844,6 +21848,7 @@ GameObject:
   - component: {fileID: 173107302}
   - component: {fileID: 173107299}
   - component: {fileID: 173107303}
+  - component: {fileID: 173107304}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -22013,6 +22018,52 @@ MonoBehaviour:
   timer: 0
   timerStartValue: 2
   detectionZone: {fileID: 417710341}
+--- !u!114 &173107304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173107297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 158a83b0f7d164502ab52881d48daf20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NoiseMeter
+  noiseMeterImage: {fileID: 931961916}
+  noiseMeterColor:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  noiseMeterFrame: {fileID: 2094998757}
+  maxNoiseUntilDefeat: 10
+  amountOfNoise: 0
 --- !u!1 &176469203
 GameObject:
   m_ObjectHideFlags: 0
@@ -25039,6 +25090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &204309445
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25463,6 +25515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &206453997
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -33713,6 +33766,7 @@ MonoBehaviour:
   jumpValue: 100000
   jumpVector: {x: 0, y: 0, z: 0}
   mouse: {fileID: 864972473}
+  canMove: 0
 --- !u!195 &248163225
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -35827,7 +35881,7 @@ Transform:
   m_GameObject: {fileID: 282539207}
   serializedVersion: 2
   m_LocalRotation: {x: 8.271806e-25, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.4841404, y: -7.989937, z: -11.747964}
+  m_LocalPosition: {x: -4.4841404, y: -7.981, z: -11.748}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35872,6 +35926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &282539211
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -42871,6 +42926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &384016694
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -45948,6 +46004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3429fa240eeca4740bd18f7c92dc5ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InstakillObstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &417710349
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -81692,6 +81749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &442469205
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -85995,6 +86053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &479466016
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -87458,6 +87517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &494608165
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -91660,6 +91720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &522105559
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -92171,6 +92232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &531845465
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -108591,6 +108653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &566309740
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -108906,6 +108969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &569518416
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -110665,6 +110729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &630004452
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -149072,6 +149137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &682180095
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -150278,6 +150344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &695882286
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -151006,6 +151073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &701123435
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -151696,6 +151764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &701340568
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -153160,6 +153229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &724932066
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -158347,6 +158417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &796588609
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -158531,6 +158602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &796592627
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -163581,184 +163653,6 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
---- !u!43 &845174155
-Mesh:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh82830
-  serializedVersion: 12
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 36
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 24
-    localAABB:
-      m_Center: {x: -5.8212204, y: -1.3781719, z: 5.9340553}
-      m_Extent: {x: 34.25992, y: 0.438838, z: 48.176697}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_BonesAABB: []
-  m_VariableBoneCountWeights:
-    m_Data: 
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
-  m_VertexData:
-    serializedVersion: 3
-    m_VertexCount: 24
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 40
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 1152
-    _typelessdata: 165320c2c893e8bf6971584200000000000000000000803f000080bf0000000000000000000080bf280a89420085fa3d7482e341c893e8bf6971584200000000000000000000803f000080bf0000000000000000000080bf000000000085fa3d165320c2307870bf6971584200000000000000000000803f000080bf0000000000000000000080bf280a89420000803f7482e341307870bf6971584200000000000000000000803f000080bf0000000000000000000080bf000000000000803f7482e341c893e8bf697158420000803f000000000000000000000000000000000000803f000080bff0b4c0420085fa3d7482e341c893e8bf77f828c20000803f000000000000000000000000000000000000803f000080bf000000000085fa3d7482e341307870bf697158420000803f000000000000000000000000000000000000803f000080bff0b4c0420000803f7482e341307870bf77f828c20000803f000000000000000000000000000000000000803f000080bf000000000000803f7482e341c893e8bf77f828c20000000000000000000080bf0000803f0000000000000000000080bf280a89420085fa3d165320c2c893e8bf77f828c20000000000000000000080bf0000803f0000000000000000000080bf000000000085fa3d7482e341307870bf77f828c20000000000000000000080bf0000803f0000000000000000000080bf280a89420000803f165320c2307870bf77f828c20000000000000000000080bf0000803f0000000000000000000080bf000000000000803f165320c2c893e8bf77f828c2000080bf00000000000000000000000000000000000080bf000080bff0b4c0420085fa3d165320c2c893e8bf69715842000080bf00000000000000000000000000000000000080bf000080bf000000000085fa3d165320c2307870bf77f828c2000080bf00000000000000000000000000000000000080bf000080bff0b4c0420000803f165320c2307870bf69715842000080bf00000000000000000000000000000000000080bf000080bf000000000000803f165320c2307870bf69715842000000000000803f000000000000803f0000000000000000000080bf000000000000803f7482e341307870bf69715842000000000000803f000000000000803f0000000000000000000080bf280a89420000803f165320c2307870bf77f828c2000000000000803f000000000000803f0000000000000000000080bf00000000f0b4bec27482e341307870bf77f828c2000000000000803f000000000000803f0000000000000000000080bf280a8942f0b4bec2165320c2c893e8bf77f828c200000000000080bf00000000000080bf0000000000000000000080bf280a8942f0b4bec27482e341c893e8bf77f828c200000000000080bf00000000000080bf0000000000000000000080bf00000000f0b4bec2165320c2c893e8bf6971584200000000000080bf00000000000080bf0000000000000000000080bf280a89420000803f7482e341c893e8bf6971584200000000000080bf00000000000080bf0000000000000000000080bf000000000000803f
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: -5.8212204, y: -1.3781719, z: 5.9340553}
-    m_Extent: {x: 34.25992, y: 0.438838, z: 48.176697}
-  m_MeshUsageFlags: 0
-  m_CookingOptions: 30
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  'm_MeshMetrics[0]': 1
-  'm_MeshMetrics[1]': 1
-  m_MeshOptimizationFlags: 1
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
-  m_MeshLodInfo:
-    serializedVersion: 2
-    m_LodSelectionCurve:
-      serializedVersion: 1
-      m_LodSlope: 0
-      m_LodBias: 0
-    m_NumLevels: 1
-    m_SubMeshes:
-    - serializedVersion: 2
-      m_Levels:
-      - serializedVersion: 1
-        m_IndexStart: 0
-        m_IndexCount: 0
 --- !u!43 &845833633
 Mesh:
   m_ObjectHideFlags: 0
@@ -168391,6 +168285,7 @@ GameObject:
   - component: {fileID: 864972474}
   - component: {fileID: 864972469}
   - component: {fileID: 864972475}
+  - component: {fileID: 864972476}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -168425,6 +168320,7 @@ MonoBehaviour:
   wallCheckDistance: 0.6
   climbableTag: Climbable
   cameraTransform: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!143 &864972470
 CharacterController:
   m_ObjectHideFlags: 0
@@ -168538,6 +168434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
   shootPoint: {fileID: 864972473}
   maxDistance: 2
+  pushPower: 10
 --- !u!114 &864972475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168652,6 +168549,33 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!54 &864972476
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864972468}
+  serializedVersion: 5
+  m_Mass: 10
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &865571386
 GameObject:
   m_ObjectHideFlags: 0
@@ -176318,6 +176242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &941035750
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -177258,6 +177183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &954146121
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -177578,6 +177504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &959307759
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -179724,6 +179651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &982852857
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -184219,6 +184147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &1026117515
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -185091,7 +185020,7 @@ PrefabInstance:
       objectReference: {fileID: 695879331}
     - target: {fileID: 3663862008260464346, guid: c4c86586bbbc06d4faaa040be2bb273b, type: 3}
       propertyPath: m_VersionIndex
-      value: 21
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 4114616967545847546, guid: c4c86586bbbc06d4faaa040be2bb273b, type: 3}
       propertyPath: m_Mesh
@@ -185107,7 +185036,7 @@ PrefabInstance:
       objectReference: {fileID: 289102765}
     - target: {fileID: 4992521856156842579, guid: c4c86586bbbc06d4faaa040be2bb273b, type: 3}
       propertyPath: m_VersionIndex
-      value: 21
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 6504052251153269459, guid: c4c86586bbbc06d4faaa040be2bb273b, type: 3}
       propertyPath: m_LocalScale.x
@@ -185421,6 +185350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!135 &1034123620
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -188867,6 +188797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &1078806624
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -191927,6 +191858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &1101758679
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -193619,9 +193551,11 @@ GameObject:
   - component: {fileID: 1111448173}
   - component: {fileID: 1111448172}
   - component: {fileID: 1111448178}
+  - component: {fileID: 1111448179}
+  - component: {fileID: 1111448180}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193647,7 +193581,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 845174155}
+  m_Mesh: {fileID: 1383456501}
 --- !u!33 &1111448173
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -193655,7 +193589,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111448171}
-  m_Mesh: {fileID: 845174155}
+  m_Mesh: {fileID: 1383456501}
 --- !u!23 &1111448174
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -193940,7 +193874,7 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 845174155}
+  m_Mesh: {fileID: 1383456501}
   m_VersionIndex: 7671
   m_IsSelectable: 1
   m_SelectedFaces: 
@@ -193994,6 +193928,124 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: bf1991f7304f24b35b0a4722653ed1db, type: 2}
   m_BuildHeightMesh: 0
+--- !u!82 &1111448179
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111448171}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 08ce36178f8eb6c40b06d2a163f4c46e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1.4307098
+  MaxDistance: 29.31
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!65 &1111448180
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111448171}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 68.51984, y: 2.05, z: 96.35339}
+  m_Center: {x: -5.8212204, y: -1.3781719, z: 5.9340553}
 --- !u!43 &1111970744
 Mesh:
   m_ObjectHideFlags: 0
@@ -194398,6 +194450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1112499087
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -197688,6 +197741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &1134166377
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -198372,6 +198426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!135 &1155755961
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -206734,6 +206789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1207233456
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -208101,6 +208157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &1217913620
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -208853,6 +208910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!135 &1225162590
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -246749,6 +246807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &1265646432
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -248035,6 +248094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1291872487
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -248368,6 +248428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1302789373
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -248846,6 +248907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1304372409
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -250071,6 +250133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &1332014474
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -251232,6 +251295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &1346458969
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -254192,6 +254256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1364567496
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -255367,6 +255432,184 @@ Transform:
   m_Children: []
   m_Father: {fileID: 23118303}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!43 &1383456501
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: pb_Mesh55510
+  serializedVersion: 12
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 36
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 24
+    localAABB:
+      m_Center: {x: -5.8212204, y: -1.3781719, z: 5.9340553}
+      m_Extent: {x: 34.25992, y: 0.438838, z: 48.176697}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 24
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 40
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 1152
+    _typelessdata: 165320c2c893e8bf6971584200000000000000000000803f000080bf0000000000000000000080bf280a89420085fa3d7482e341c893e8bf6971584200000000000000000000803f000080bf0000000000000000000080bf000000000085fa3d165320c2307870bf6971584200000000000000000000803f000080bf0000000000000000000080bf280a89420000803f7482e341307870bf6971584200000000000000000000803f000080bf0000000000000000000080bf000000000000803f7482e341c893e8bf697158420000803f000000000000000000000000000000000000803f000080bff0b4c0420085fa3d7482e341c893e8bf77f828c20000803f000000000000000000000000000000000000803f000080bf000000000085fa3d7482e341307870bf697158420000803f000000000000000000000000000000000000803f000080bff0b4c0420000803f7482e341307870bf77f828c20000803f000000000000000000000000000000000000803f000080bf000000000000803f7482e341c893e8bf77f828c20000000000000000000080bf0000803f0000000000000000000080bf280a89420085fa3d165320c2c893e8bf77f828c20000000000000000000080bf0000803f0000000000000000000080bf000000000085fa3d7482e341307870bf77f828c20000000000000000000080bf0000803f0000000000000000000080bf280a89420000803f165320c2307870bf77f828c20000000000000000000080bf0000803f0000000000000000000080bf000000000000803f165320c2c893e8bf77f828c2000080bf00000000000000000000000000000000000080bf000080bff0b4c0420085fa3d165320c2c893e8bf69715842000080bf00000000000000000000000000000000000080bf000080bf000000000085fa3d165320c2307870bf77f828c2000080bf00000000000000000000000000000000000080bf000080bff0b4c0420000803f165320c2307870bf69715842000080bf00000000000000000000000000000000000080bf000080bf000000000000803f165320c2307870bf69715842000000000000803f000000000000803f0000000000000000000080bf000000000000803f7482e341307870bf69715842000000000000803f000000000000803f0000000000000000000080bf280a89420000803f165320c2307870bf77f828c2000000000000803f000000000000803f0000000000000000000080bf00000000f0b4bec27482e341307870bf77f828c2000000000000803f000000000000803f0000000000000000000080bf280a8942f0b4bec2165320c2c893e8bf77f828c200000000000080bf00000000000080bf0000000000000000000080bf280a8942f0b4bec27482e341c893e8bf77f828c200000000000080bf00000000000080bf0000000000000000000080bf00000000f0b4bec2165320c2c893e8bf6971584200000000000080bf00000000000080bf0000000000000000000080bf280a89420000803f7482e341c893e8bf6971584200000000000080bf00000000000080bf0000000000000000000080bf000000000000803f
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: -5.8212204, y: -1.3781719, z: 5.9340553}
+    m_Extent: {x: 34.25992, y: 0.438838, z: 48.176697}
+  m_MeshUsageFlags: 0
+  m_CookingOptions: 30
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  'm_MeshMetrics[0]': 1
+  'm_MeshMetrics[1]': 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
+  m_MeshLodInfo:
+    serializedVersion: 2
+    m_LodSelectionCurve:
+      serializedVersion: 1
+      m_LodSlope: 0
+      m_LodBias: 0
+    m_NumLevels: 1
+    m_SubMeshes:
+    - serializedVersion: 2
+      m_Levels:
+      - serializedVersion: 1
+        m_IndexStart: 0
+        m_IndexCount: 0
 --- !u!1 &1385893755
 GameObject:
   m_ObjectHideFlags: 0
@@ -255462,6 +255705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!135 &1394750139
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -257456,6 +257700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &1422143434
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -269689,6 +269934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!135 &1470666821
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -307964,6 +308210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1529207140
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -309543,6 +309790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!135 &1540967615
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -313916,6 +314164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1594766757
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -321496,6 +321745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &1669464513
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -322029,6 +322279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &1677832345
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -326064,6 +326315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &1733806737
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -331143,6 +331395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &1775954043
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -331567,6 +331820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &1782202254
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -335734,6 +335988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &1826896180
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -339441,6 +339696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &1851196246
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -340194,6 +340450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &1855931070
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -341295,6 +341552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &1861009430
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -341776,6 +342034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1871103826
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -344204,6 +344463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &1884504262
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -348522,6 +348782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 5557114090993982152, guid: 842855bf04bf34c8da8b13344152c03b, type: 3}
 --- !u!64 &1943414981
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -348917,6 +349178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1946617063
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -352195,6 +352457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1964099380
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -368365,6 +368628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &2115941343
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -371992,7 +372256,7 @@ PrefabInstance:
       objectReference: {fileID: 1531230414}
     - target: {fileID: 3134155175921878505, guid: 5106cf9494c231f469254c24b468a29a, type: 3}
       propertyPath: m_VersionIndex
-      value: 3175
+      value: 3178
       objectReference: {fileID: 0}
     - target: {fileID: 4185485344324263076, guid: 5106cf9494c231f469254c24b468a29a, type: 3}
       propertyPath: m_Mesh
