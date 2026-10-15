@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set; } // Anyone can read it, only this class can set it
+
     [SerializeField] private float resetTimer;
     [SerializeField] private bool playerDetected;
     [SerializeField] private Vector3 startingPosition;
@@ -12,19 +14,25 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip clip;
 
-    public bool isMovementActive { get; private set; }
     private bool resetTimerActive;
     private float resetTimerOriginalValue;
     public GameObject player;
     private Coroutine fadeCoroutine;
+
+    public bool isMovementActive { get; private set; }
+
+    public bool hasKey { get; private set; }
+
+    public void CollectKey()
+    {
+        hasKey = true;
+    }
 
     public bool PlayerDetected
     {
         get { return playerDetected; }
         set { playerDetected = value; }
     }
-
-    public static GameManager Instance { get; private set; } // Anyone can read it, only this class can set it
 
     private void Awake()
     {

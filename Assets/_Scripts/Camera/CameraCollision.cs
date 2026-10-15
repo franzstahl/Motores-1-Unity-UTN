@@ -18,7 +18,7 @@ public class CameraCollision : MonoBehaviour
     private float rotX;
     private float rotY;
 
-    void Start()
+    private void Start()
     {
         Vector3 angles = transform.eulerAngles;
 
@@ -29,7 +29,7 @@ public class CameraCollision : MonoBehaviour
         gameObject.GetComponent<CinemachineBrain>().enabled = false;
     }
 
-    void LateUpdate()
+    private void LateUpdate()
     {
         if (!target) return;
 
