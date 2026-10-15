@@ -7,13 +7,22 @@ public class Obstacle : MonoBehaviour
     
     private void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager = GameManager.Instance;
         noiseMeter = gameManager.GetComponent<NoiseMeter>();
+        Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+        rb.mass = 0.0000001f;
+        Collider col = gameObject.GetComponent<Collider>();
+        ApplyColliderType(col);
+    }
+
+    public virtual void ApplyColliderType(Collider collider)
+    {
+        collider.isTrigger = false;
     }
 
     public virtual void ObstacleEffect(Collider objectCollidedWith)
     {
-        if(objectCollidedWith.gameObject.tag == "Ground")
+        if(objectCollidedWith.CompareTag("Ground"))
         {
             noiseMeter.IncreaseNoiseMeter();
         }

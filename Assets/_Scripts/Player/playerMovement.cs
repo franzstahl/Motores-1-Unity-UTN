@@ -40,6 +40,16 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private Transform cameraTransform;
+    [SerializeField] private Animator animator;
+
+    private float horizontalSpeed; // Intended horizontal speed this frame, feeds the Animator "Speed" parameter
+
+    // Hashes are faster than using strings every frame. Names must match the Animator parameters exactly
+    private static readonly int SpeedHash = Animator.StringToHash("Speed");
+    private static readonly int VerticalVelocityHash = Animator.StringToHash("VerticalVelocity");
+    private static readonly int IsGroundedHash = Animator.StringToHash("isGrounded");
+    private static readonly int IsClimbingHash = Animator.StringToHash("isClimbing");
+    private static readonly int JumpHash = Animator.StringToHash("Jump");
 
     private CharacterController controller;
     private InputSystem_Actions inputActions; // This allows us to access the input actions defined in the Input System
@@ -47,12 +57,15 @@ public class PlayerMovement : MonoBehaviour
     private bool jumpRequested;
     private Vector3 velocity; // This will hold player's current velocity, including vertical movement due to gravity and jumping
     private bool isGrounded;
+    private Collider currentWall;
+    private Collider lastWall;
 
-    [SerializeField] private GameManager gameManager;
+    private GameManager gameManager;
 
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
+        if (animator == null) animator = GetComponentInChildren<Animator>(); // Works if the Animator ends up on the model child
         inputActions = new InputSystem_Actions();
         currentStamina = maxStamina; // Start with full stamina
     }
@@ -100,7 +113,9 @@ public class PlayerMovement : MonoBehaviour
     private void OnJumpPerformed(InputAction.CallbackContext context) // Mark that was requested to be jumped (a flag), to be processed later
     {
         if (gameManager.isMovementActive)
+        {
             jumpRequested = true;
+        }
     }
 
     private void Update()
@@ -124,29 +139,49 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = controller.isGrounded;
 
         if (isGrounded && velocity.y < 0)
+        {
             velocity.y = -2f;
+        }
+           
 
         if (isGrounded)
+        {
             canClimb = true; // Reset climbing ability when touching the ground
+            lastWall = null; // Allow grabbing any wall again
+        }
+            
     }
 
+    // CharacterController radius and height are in local space, so the real size is multiplied by the transform scale
+    private float ScaledRadius => controller.radius * Mathf.Max(transform.lossyScale.x, transform.lossyScale.z);
+    private float ScaledHeight => controller.height * transform.lossyScale.y;
     private Vector3 FeetRayOrigin() // Ray origin near the feet, so the ray stops hitting when the feet pass the top edge
     {
         Vector3 center = transform.TransformPoint(controller.center);
-        return center + Vector3.down * (controller.height * 0.5f - 0.1f);
+        return center + Vector3.down * (ScaledHeight * 0.5f - 0.1f);
     }
 
     private void TryStartClimb() // Grab a climbable wall
     {
         if (isGrounded || !canClimb || moveInput.sqrMagnitude < 0.01f) return;
 
-        if (Physics.Raycast(FeetRayOrigin(), transform.forward, out RaycastHit hit, wallCheckDistance, ~0, QueryTriggerInteraction.Ignore) && hit.collider.CompareTag(climbableTag))
+        if (Physics.Raycast(FeetRayOrigin(), transform.forward, out RaycastHit hit, wallCheckDistance, ~0, QueryTriggerInteraction.Ignore) && hit.collider.CompareTag(climbableTag) && hit.collider != lastWall)
 
         {
             CurrentState = MovementState.Climbing;
+            currentWall = hit.collider; // Remember which wall we are climbing so we can prevent grabbing it again until touching the ground
             climbTimer = climbDuration;
             wallNormal = new Vector3(hit.normal.x, 0f, hit.normal.z).normalized; // Flatten, we assume vertical walls
+
+            float wallDistance = Vector3.Dot(hit.point - FeetRayOrigin(), -wallNormal); // Straight-line distance from the player's axis to the wall
+            float gap = wallDistance - ScaledRadius - controller.skinWidth; // Empty space between the capsule edge and the wall
+            if (gap > 0f)
+            {
+                controller.Move(-wallNormal * gap); // Slide the player against the wall
+            }
+
             velocity = Vector3.zero; // Cancel any falling or jumping speed
+            
         }
     }
 
@@ -158,6 +193,8 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpRequested = false;
             StopClimb();
+            canClimb = true;
+            lastWall = currentWall; // Prevents grabbing the same wall again until touching the ground
             controller.Move(wallNormal * 0.3f); // Small push away from the wall
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             return;
@@ -168,7 +205,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (!wallAhead) // The wall ended: the feet passed the top edge, so push up and forward onto it
         {
-            controller.Move(-wallNormal * (controller.radius + 0.3f) + Vector3.up * 0.1f);
+            controller.Move(-wallNormal * (ScaledRadius + 0.3f) + Vector3.up * 0.1f);
             StopClimb();
             return;
         }
@@ -185,10 +222,16 @@ public class PlayerMovement : MonoBehaviour
         Vector3 climbMove = (Vector3.up * moveInput.y + wallRight * moveInput.x) * climbSpeed;
 
         if (gameManager.isMovementActive)
+        {
             controller.Move(climbMove * Time.deltaTime);
+        }
+           
 
         if (controller.isGrounded && moveInput.y < 0f) // Went back down to the floor
+        {
             StopClimb();
+        }
+           
     }
 
     private void StopClimb() // Gives control back to the normal movement
@@ -252,7 +295,11 @@ public class PlayerMovement : MonoBehaviour
         float currentSpeed = isSprinting ? sprintSpeed : moveSpeed;
 
         if (gameManager.isMovementActive)
+        {
             controller.Move(moveDirection * currentSpeed * Time.deltaTime);
+        }
+
+        horizontalSpeed = gameManager.isMovementActive ? moveDirection.magnitude * currentSpeed : 0f; // 0 when movement is locked
 
         if (moveDirection.sqrMagnitude > 0.01f)
         {
@@ -266,6 +313,7 @@ public class PlayerMovement : MonoBehaviour
         if (jumpRequested && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            if (animator != null) animator.SetTrigger(JumpHash); // Skip if there is no Animator
         }
 
         jumpRequested = false;
@@ -275,5 +323,16 @@ public class PlayerMovement : MonoBehaviour
     {
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    private void LateUpdate() // Runs after Update, so it also covers the climbing early return
+    {
+        if (animator == null) return;
+
+        float speed = CurrentState == MovementState.Climbing ? 0f : horizontalSpeed; // No ground movement while on a wall
+        animator.SetFloat(SpeedHash, speed, 0.1f, Time.deltaTime); // Damped so the Blend Tree doesn't jump between values
+        animator.SetFloat(VerticalVelocityHash, velocity.y);
+        animator.SetBool(IsGroundedHash, isGrounded);
+        animator.SetBool(IsClimbingHash, CurrentState == MovementState.Climbing);
     }
 }
