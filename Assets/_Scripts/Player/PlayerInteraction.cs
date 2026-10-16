@@ -5,7 +5,7 @@ public class PlayerInteraction : MonoBehaviour
 
     [SerializeField] private Transform shootPoint;
     [SerializeField] private float maxDistance;
-    public float pushPower = 2f;
+    [SerializeField] private float pushPower = 2f;
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {

@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
 
     public bool hasKey { get; private set; }
 
+    public void SetMovementActive(bool active) // Lets other scripts (like the intro cinematic) lock or unlock movement
+    {
+        isMovementActive = active;
+    }
     public void CollectKey()
     {
         hasKey = true;
@@ -115,7 +119,7 @@ public class GameManager : MonoBehaviour
     public void FadeIn() => StartFade(0f);
     public void FadeOut() => StartFade(1f);
 
-    private Coroutine StartFade(float target)
+    private Coroutine StartFade(float target) // Starts the fade coroutine and returns it
     {
         if (canvasGroup == null)
         {
@@ -128,7 +132,7 @@ public class GameManager : MonoBehaviour
         return fadeCoroutine;
     }
 
-    private IEnumerator FadeCanvasGroup(float start, float end, float duration)
+    private IEnumerator FadeCanvasGroup(float start, float end, float duration) // Coroutine to fade the canvas group
     {
         float elapsedTime = 0f;
         while (elapsedTime < duration)

@@ -1,4 +1,5 @@
 using UnityEngine;
+
 [RequireComponent(typeof(Rigidbody))]
 public class Obstacle : MonoBehaviour
 {
@@ -21,9 +22,9 @@ public class Obstacle : MonoBehaviour
         collider.isTrigger = false;
     }
     
-    public virtual void ObstacleEffect(Collider objectCollidedWith)
+    public virtual void ObstacleEffect(Collider objectCollidedWith) // Called when the obstacle collides with another object
     {
-        if(objectCollidedWith.CompareTag("Ground"))
+        if (objectCollidedWith.CompareTag("Ground"))
         {
             noiseMeter.IncreaseNoiseMeter();
             objectCollidedWith.GetComponent<AudioSource>().Play();

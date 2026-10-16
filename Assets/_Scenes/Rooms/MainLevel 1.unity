@@ -16083,6 +16083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &143818118
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16544,6 +16545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &145344150
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20759,6 +20761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &164032077
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -21272,6 +21275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &170484245
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -24857,6 +24861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &204309445
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25281,6 +25286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &206453997
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -35802,6 +35808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &282539211
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -42801,6 +42808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &384016694
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -81581,6 +81589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &442469205
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -85884,6 +85893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &479466016
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -87347,6 +87357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &494608165
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -91580,6 +91591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &522105559
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -92091,6 +92103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &531845465
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -108525,6 +108538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &566309740
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -108840,6 +108854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &569518416
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -110599,6 +110614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &630004452
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -149006,6 +149022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &682180095
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -150212,6 +150229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &695882286
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -150940,6 +150958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &701123435
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -151630,6 +151649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &701340568
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -153094,6 +153114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &724932066
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -158103,6 +158124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &796588609
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -158287,6 +158309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &796592627
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -161793,7 +161816,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &833742273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168061,6 +168084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
   shootPoint: {fileID: 864972473}
   maxDistance: 2
+  pushPower: 2
 --- !u!114 &864972475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175342,7 +175366,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 70
+  field of view: 60.000004
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -175368,8 +175392,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939342778}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.15212336, y: 0, z: 0, w: 0.98836154}
-  m_LocalPosition: {x: -5.44, y: 7.0652566, z: -39.27762}
+  m_LocalRotation: {x: 0.049021352, y: -0.839577, z: 0.07640682, w: 0.53560185}
+  m_LocalPosition: {x: 20.97805, y: 27.195602, z: -37.103218}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -175443,7 +175467,7 @@ MonoBehaviour:
     DefaultMode: 2
   DefaultBlend:
     Style: 1
-    Time: 2
+    Time: 6
     CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -175884,6 +175908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &941035750
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -176824,6 +176849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &954146121
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -177144,6 +177170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &959307759
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -179290,6 +179317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &982852857
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -183785,6 +183813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &1026117515
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -184987,6 +185016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!135 &1034123620
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -188433,6 +188463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &1078806624
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -191416,6 +191447,54 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &1099329597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1099329598}
+  - component: {fileID: 1099329599}
+  m_Layer: 0
+  m_Name: IntroCinematic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1099329598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099329597}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1496.4156, y: -0.00001, z: -918.57935}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1099329599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099329597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086debd58e3f86b4380684d561c2d1bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IntroCinematic
+  cinematicCamera: {fileID: 1376023787}
+  hud: {fileID: 833742272}
+  holdDuration: 5
+  blendDuration: 6
 --- !u!43 &1100564790
 Mesh:
   m_ObjectHideFlags: 0
@@ -191671,6 +191750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &1101758679
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -194108,6 +194188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1112499087
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -197398,6 +197479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &1134166377
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -198082,6 +198164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!135 &1155755961
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -206444,6 +206527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1207233456
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -207811,6 +207895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &1217913620
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -208563,6 +208648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!135 &1225162590
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -246459,6 +246545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &1265646432
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -247745,6 +247832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1291872487
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -248109,6 +248197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1302789373
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -248587,6 +248676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1304372409
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -249812,6 +249902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &1332014474
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -250973,6 +251064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &1346458969
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -253933,6 +254025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1364567496
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -254396,6 +254489,81 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &1376023787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1376023789}
+  - component: {fileID: 1376023788}
+  m_Layer: 0
+  m_Name: FridgeCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1376023788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376023787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
+  Priority:
+    Enabled: 1
+    m_Value: 20
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 0}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 60.000004
+    OrthographicSize: 5
+    NearClipPlane: 0.3
+    FarClipPlane: 1000
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
+--- !u!4 &1376023789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376023787}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.049021352, y: -0.839577, z: 0.07640682, w: 0.53560185}
+  m_LocalPosition: {x: 20.97805, y: 27.195602, z: -37.103218}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1376168573
 Mesh:
   m_ObjectHideFlags: 0
@@ -255203,6 +255371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!135 &1394750139
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -257375,6 +257544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &1422143434
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -269430,6 +269600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!135 &1470666821
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -307932,6 +308103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1529207140
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -309511,6 +309683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!135 &1540967615
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -313884,6 +314057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1594766757
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -321495,6 +321669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &1669464513
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -322028,6 +322203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &1677832345
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -326063,6 +326239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &1733806737
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -331320,6 +331497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &1775954043
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -331744,6 +331922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &1782202254
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -335911,6 +336090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!54 &1826896180
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -339618,6 +339798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &1851196246
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -340371,6 +340552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &1855931070
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -341472,6 +341654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &1861009430
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -341953,6 +342136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1871103826
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -344381,6 +344565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &1884504262
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -348552,6 +348737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!64 &1943414981
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -348947,6 +349133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1946617063
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -352225,6 +352412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &1964099380
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -368395,6 +368583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
 --- !u!136 &2115941343
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -373667,3 +373856,5 @@ SceneRoots:
   - {fileID: 23118303}
   - {fileID: 974488525462296023}
   - {fileID: 1508575024}
+  - {fileID: 1376023789}
+  - {fileID: 1099329598}
