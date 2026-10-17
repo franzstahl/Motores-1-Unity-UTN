@@ -240,6 +240,15 @@ public class PlayerMovement : MonoBehaviour
         canClimb = false; // Can't grab again until touching the ground
     }
 
+    public void ResetMovementState() // Called after a respawn teleport so no old state carries over
+    {
+        velocity = Vector3.zero; // Cancel any falling or jumping speed
+        jumpRequested = false; // Drop a jump that was queued before being caught
+        CurrentState = MovementState.Walking; // Leave climbing if we were on a wall
+        currentWall = null;
+        lastWall = null;
+    }
+
     private void UpdateStamina(bool isSprinting) // Drains stamina while sprinting and regenerates it after a short delay
     {
         if (isSprinting)

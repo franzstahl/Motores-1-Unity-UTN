@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,7 +7,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private float resetTimer;
     [SerializeField] private bool playerDetected;
-    [SerializeField] private Vector3 startingPosition;
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private float fadeDuration = 5.0f;
     [SerializeField] private AudioSource audioSource;
@@ -18,6 +16,7 @@ public class GameManager : MonoBehaviour
     private float resetTimerOriginalValue;
     public GameObject player;
     private Coroutine fadeCoroutine;
+    private Vector3 startingPosition;
 
     public bool isMovementActive { get; private set; }
 
@@ -52,6 +51,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Player");
+        startingPosition = player.transform.position;
         resetTimerActive = false;
         resetTimerOriginalValue = resetTimer;
         EnterPlayingState();
@@ -109,9 +109,19 @@ public class GameManager : MonoBehaviour
         // Wait for the screen to fully fade to black before moving the player
         yield return StartFade(1f);
 
-        SceneManager.LoadScene("MainLevel 1");
+        TeleportPlayerToStart(); // Move the player back to the starting position
 
         EnterPlayingState(); // Fades back in
+    }
+
+    private void TeleportPlayerToStart() 
+    {
+        CharacterController controller = player.GetComponent<CharacterController>();
+        controller.enabled = false;
+        player.transform.position = startingPosition;
+        controller.enabled = true;
+
+        player.GetComponent<PlayerMovement>().ResetMovementState(); // Reset the player's state
     }
 
     // Opacity control
