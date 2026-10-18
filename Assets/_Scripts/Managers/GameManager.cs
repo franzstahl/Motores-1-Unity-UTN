@@ -18,9 +18,13 @@ public class GameManager : MonoBehaviour
     private Coroutine fadeCoroutine;
     private Vector3 startingPosition;
 
+    private NoiseMeter noiseMeter;
+
     public bool isMovementActive { get; private set; }
 
     public bool hasKey { get; private set; }
+
+    public event System.Action OnPlayerRespawn;
 
     public void SetMovementActive(bool active) // Lets other scripts (like the intro cinematic) lock or unlock movement
     {
@@ -54,6 +58,7 @@ public class GameManager : MonoBehaviour
         startingPosition = player.transform.position;
         resetTimerActive = false;
         resetTimerOriginalValue = resetTimer;
+        noiseMeter = GetComponent<NoiseMeter>();
         EnterPlayingState();
     }
 
@@ -110,6 +115,10 @@ public class GameManager : MonoBehaviour
         yield return StartFade(1f);
 
         TeleportPlayerToStart(); // Move the player back to the starting position
+
+        noiseMeter.ResetNoise();
+
+        OnPlayerRespawn?.Invoke();
 
         EnterPlayingState(); // Fades back in
     }

@@ -21896,7 +21896,7 @@ MonoBehaviour:
   noiseMeterImage: {fileID: 931961916}
   noiseMeterColor:
     serializedVersion: 2
-    key0: {r: 0.11779833, g: 1, b: 0, a: 1}
+    key0: {r: 0.05534149, g: 0.46226418, b: 0, a: 1}
     key1: {r: 1, g: 0.9728835, b: 0, a: 1}
     key2: {r: 1, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
@@ -35580,7 +35580,7 @@ GameObject:
   - component: {fileID: 276263910}
   - component: {fileID: 276263909}
   m_Layer: 5
-  m_Name: bar frame
+  m_Name: NoiseBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35595,7 +35595,7 @@ RectTransform:
   m_GameObject: {fileID: 276263907}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2094998756}
@@ -35620,7 +35620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.043137312, a: 1}
+  m_Color: {r: 0.0047169924, g: 1, b: 0.04694108, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -174494,8 +174494,8 @@ RectTransform:
   m_GameObject: {fileID: 931961914}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1.044, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 276263908}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -191585,7 +191585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IntroCinematic
   cinematicCamera: {fileID: 1376023787}
   hud: {fileID: 833742272}
-  holdDuration: 5.5
+  holdDuration: 7
   blendDuration: 6
 --- !u!43 &1100564790
 Mesh:
@@ -193536,7 +193536,7 @@ GameObject:
   - component: {fileID: 1111448172}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -349708,7 +349708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!225 &1950971030
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -352486,8 +352486,8 @@ Transform:
   m_GameObject: {fileID: 1964099377}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.3971851, w: 0.9177386}
-  m_LocalPosition: {x: -5.551095, y: 2.62996, z: 12.470586}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -5.43, y: 2.28, z: 12.04}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 792555368}

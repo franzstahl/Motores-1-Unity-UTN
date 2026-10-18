@@ -42,4 +42,9 @@ public class NoiseMeter : MonoBehaviour
             gameManager.PlayerDetected = true;
         }
     }
+
+    public void ResetNoise()
+    {
+        AmountOfNoise = 0f;
+    }
 }
