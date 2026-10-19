@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
             EnterRestartingState();
     }
 
-    public void EnterPlayingState()
+    public void EnterPlayingState() // Resets the game state to normal gameplay
     {
         FadeIn();
         isMovementActive = true;
@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour
         resetTimer = resetTimerOriginalValue;
     }
 
-    public void EnterDetectedState()
+    public void EnterDetectedState() // Called when the player is detected
     {
         Debug.Log("Jugador detectado");
         audioSource.PlayOneShot(clip);
@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
         resetTimerActive = true;
     }
 
-    public void EnterRestartingState()
+    public void EnterRestartingState() 
     {
         resetTimerActive = false; // Stop timer immediately so this can't re-trigger
         StartCoroutine(RestartRoutine());
@@ -123,7 +123,7 @@ public class GameManager : MonoBehaviour
         EnterPlayingState(); // Fades back in
     }
 
-    private void TeleportPlayerToStart() 
+    private void TeleportPlayerToStart() // Moves the player back to the starting position and resets their movement state
     {
         CharacterController controller = player.GetComponent<CharacterController>();
         controller.enabled = false;
@@ -134,7 +134,6 @@ public class GameManager : MonoBehaviour
     }
 
     // Opacity control
-
     public void FadeIn() => StartFade(0f);
     public void FadeOut() => StartFade(1f);
 

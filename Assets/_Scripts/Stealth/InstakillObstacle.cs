@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class InstakillObstacle : Obstacle
@@ -10,7 +9,7 @@ public class InstakillObstacle : Obstacle
     }
     public override void ObstacleEffect(Collider objectCollidedWith)
     {
-        if(objectCollidedWith.gameObject.tag == "Player")
+        if (objectCollidedWith.gameObject.tag == "Player")
         {
             gameManager.EnterDetectedState();
         }
