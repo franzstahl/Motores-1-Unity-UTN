@@ -5,15 +5,15 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; } // Anyone can read it, only this class can set it
 
-    [SerializeField] private float resetTimer;
     [SerializeField] private bool playerDetected;
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private float fadeDuration = 5.0f;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip clip;
 
-    private bool resetTimerActive;
-    private float resetTimerOriginalValue;
+    private bool isCaught;
+    private CaughtSequence caughtSequence;
+   
     public GameObject player;
     private Coroutine fadeCoroutine;
     private Vector3 startingPosition;
@@ -24,8 +24,14 @@ public class GameManager : MonoBehaviour
 
     public bool hasKey { get; private set; }
 
+    public RoomLight CurrentRoomLight { get; private set; }
+
     public event System.Action OnPlayerRespawn;
 
+    public void SetCurrentRoomLight(RoomLight roomLight)
+    {
+        CurrentRoomLight = roomLight;
+    }
     public void SetMovementActive(bool active) // Lets other scripts (like the intro cinematic) lock or unlock movement
     {
         isMovementActive = active;
@@ -56,9 +62,8 @@ public class GameManager : MonoBehaviour
     {
         player = GameObject.Find("Player");
         startingPosition = player.transform.position;
-        resetTimerActive = false;
-        resetTimerOriginalValue = resetTimer;
         noiseMeter = GetComponent<NoiseMeter>();
+        caughtSequence = GetComponent<CaughtSequence>();
         EnterPlayingState();
     }
 
@@ -79,11 +84,6 @@ public class GameManager : MonoBehaviour
             playerDetected = false;
         }
 
-        if (resetTimerActive)
-            resetTimer -= Time.deltaTime;
-
-        if (resetTimer < 0 && resetTimerActive)
-            EnterRestartingState();
     }
 
     public void EnterPlayingState() // Resets the game state to normal gameplay
@@ -91,21 +91,35 @@ public class GameManager : MonoBehaviour
         FadeIn();
         isMovementActive = true;
         playerDetected = false;
-        resetTimerActive = false;
-        resetTimer = resetTimerOriginalValue;
+        isCaught = false;
+
     }
 
     public void EnterDetectedState() // Called when the player is detected
     {
+        if (isCaught) return; // Prevents re-triggering if already caught
+
+        isCaught = true;
+
         Debug.Log("Jugador detectado");
         audioSource.PlayOneShot(clip);
         isMovementActive = false;
-        resetTimerActive = true;
+        StartCoroutine(DetectedRoutine());
+       
+    }
+
+    private IEnumerator DetectedRoutine()
+    {
+        if (caughtSequence != null)
+        {
+            yield return StartCoroutine(caughtSequence.Play());
+        }
+
+        EnterRestartingState(); // After the sequence, restart the game
     }
 
     public void EnterRestartingState() 
     {
-        resetTimerActive = false; // Stop timer immediately so this can't re-trigger
         StartCoroutine(RestartRoutine());
     }
 
@@ -133,7 +147,7 @@ public class GameManager : MonoBehaviour
         player.GetComponent<PlayerMovement>().ResetMovementState(); // Reset the player's state
     }
 
-    // Opacity control
+    // Opacity control 
     public void FadeIn() => StartFade(0f);
     public void FadeOut() => StartFade(1f);
 

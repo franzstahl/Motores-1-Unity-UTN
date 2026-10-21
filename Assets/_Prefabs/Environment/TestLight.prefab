@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7348901147897457892}
   - component: {fileID: 631077152456702563}
   m_Layer: 0
-  m_Name: InteriorLight
+  m_Name: TestLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
