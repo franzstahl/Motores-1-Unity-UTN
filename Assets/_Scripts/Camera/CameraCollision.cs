@@ -4,12 +4,12 @@ using Unity.Cinemachine;
 public class CameraCollision : MonoBehaviour
 {
     [SerializeField] private Transform target;
-    [SerializeField] private float distance = 6f;
-    [SerializeField] private float height = 2f;
-    [SerializeField] private float sensitivity = 2f;
+    [SerializeField] private float distance;
+    [SerializeField] private float height;
+    [SerializeField] private float sensitivity;
 
-    [SerializeField] private float minY = -20f;
-    [SerializeField] private float maxY = 60f;
+    [SerializeField] private float minY;
+    [SerializeField] private float maxY;
 
     [Header("Camera Collision")]
     [SerializeField] private LayerMask collisionMask;
@@ -42,11 +42,11 @@ public class CameraCollision : MonoBehaviour
         // Rotación de la cámara
         Quaternion rotation = Quaternion.Euler(rotY, rotX, 0);
 
+
+        Vector3 pivot = target.position + Vector3.up * height;
+
         // Posición ideal de la cámara
-        Vector3 desiredPosition =
-            target.position +
-            Vector3.up * height -
-            rotation * Vector3.forward * distance;
+        Vector3 desiredPosition = pivot - rotation * Vector3.forward * distance;
 
         // Dirección desde el personaje hacia la cámara
         Vector3 direction = desiredPosition - target.position;
@@ -56,16 +56,18 @@ public class CameraCollision : MonoBehaviour
 
         Vector3 finalPosition = desiredPosition;
 
-        // Detectar obstáculos
-        if (Physics.Raycast(
-            target.position,
+        // SphereCast instead of Raycast: the camera has volume, a thin ray lets it poke into walls
+        if (Physics.SphereCast(
+            pivot,
+            collisionRadius,
             direction,
             out RaycastHit hit,
             desiredDistance,
-            collisionMask))
+            collisionMask,
+            QueryTriggerInteraction.Ignore)) // Triggers (room zones, etc.) must not push the camera
         {
-            // Acercar la cámara antes de la pared
-            finalPosition = hit.point - direction * collisionRadius;
+            // hit.distance is where the sphere's center stops, so no extra offset is needed
+            finalPosition = pivot + direction * hit.distance;
         }
 
         // Aplicar posición y rotación

@@ -21868,9 +21868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ff66610d6eeaa04d9afd2f2195a1b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  resetTimer: 0
   playerDetected: 0
-  startingPosition: {x: -26.08, y: 8.277, z: -9.15}
   canvasGroup: {fileID: 1950971030}
   fadeDuration: 5
   audioSource: {fileID: 173107299}
@@ -170588,7 +170586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889407586}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.15212336, y: 0, z: 0, w: 0.98836154}
+  m_LocalRotation: {x: 0.29210362, y: -0.0000744222, z: 0.000022730339, w: 0.95638674}
   m_LocalPosition: {x: -5.44, y: 7.0652566, z: -39.27762}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -175704,7 +175702,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939342778}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.15212336, y: 0, z: 0, w: 0.98836154}
+  m_LocalRotation: {x: 0.29210362, y: -0.0000744222, z: 0.000022730339, w: 0.95638674}
   m_LocalPosition: {x: -5.44, y: 7.0652566, z: -39.27762}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

@@ -97044,7 +97044,6 @@ Transform:
   - {fileID: 761117870}
   - {fileID: 1385893756}
   - {fileID: 23118303}
-  - {fileID: 1508575024}
   - {fileID: 1705382197}
   - {fileID: 515907416}
   - {fileID: 2113367878}
@@ -136077,7 +136076,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &644081263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159199,7 +159198,7 @@ MonoBehaviour:
   Lens:
     FieldOfView: 70
     OrthographicSize: 5
-    NearClipPlane: 0.3
+    NearClipPlane: 0.1
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
@@ -163465,6 +163464,7 @@ GameObject:
   - component: {fileID: 939342779}
   - component: {fileID: 939342782}
   - component: {fileID: 939342783}
+  - component: {fileID: 939342784}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -163511,9 +163511,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -163539,8 +163539,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939342778}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.049021352, y: -0.839577, z: 0.07640682, w: 0.53560185}
-  m_LocalPosition: {x: 20.97805, y: 27.195602, z: -37.103218}
+  m_LocalRotation: {x: 0.15212336, y: 0, z: 0, w: 0.98836154}
+  m_LocalPosition: {x: -5.44, y: 7.3092566, z: -41.477615}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -163622,6 +163622,28 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &939342784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939342778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688694d7f7440461f8b8e35919555058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraCollision
+  target: {fileID: 173107301}
+  distance: 2
+  height: 0.3
+  sensitivity: 1.2
+  minY: -20
+  maxY: 60
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  collisionRadius: 0.2
 --- !u!1 &940970721
 GameObject:
   m_ObjectHideFlags: 0
@@ -245288,7 +245310,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1281137968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269957,7 +269979,7 @@ Transform:
   m_GameObject: {fileID: 1508575023}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.60237, y: -22.38846, z: -19.365398}
+  m_LocalPosition: {x: 1.22564, y: 1.3292694, z: -41.54704}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -269965,7 +269987,7 @@ Transform:
   - {fileID: 1918665455}
   - {fileID: 1621386108}
   - {fileID: 508438162}
-  m_Father: {fileID: 479334198}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1508575025
 MonoBehaviour:
@@ -568697,3 +568719,4 @@ SceneRoots:
   - {fileID: 2023087608}
   - {fileID: 1281137969}
   - {fileID: 644081264}
+  - {fileID: 1508575024}
