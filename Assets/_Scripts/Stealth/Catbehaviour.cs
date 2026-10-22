@@ -7,11 +7,11 @@ public class Catbehaviour : MonoBehaviour
 {
     [SerializeField] private NavMeshAgent cat;
     [SerializeField] private float jumpValue;
-    [SerializeField] private Vector3 jumpVector;
+    private Vector3 prevPosition;
     [SerializeField] private Transform mouse;
 
     private Transform catPosition;
-    private Rigidbody catRB;
+    private Animator catAnimator;
     [SerializeField] private bool canMove;
     public bool CanMove
     {
@@ -22,22 +22,39 @@ public class Catbehaviour : MonoBehaviour
     private void Start()
     {
         catPosition = gameObject.transform;
-        catRB = gameObject.GetComponent<Rigidbody>();
+        catAnimator = gameObject.GetComponent<Animator>();
         GameObject target = GameObject.FindGameObjectWithTag("Player");
         mouse = target.transform;
-        jumpVector = new Vector3(0, jumpValue, 0);
+        prevPosition = transform.position;
     }
 
    
     private void Update()
     {
-        if(canMove)
+        if (canMove)
+        {
+            prevPosition = transform.position;
             cat.SetDestination(mouse.position);
-        // if(catPosition.transform.position.y < mouse.position.y || Input.GetKeyDown(KeyCode.L))
-        // {
-        //     cat.enabled = false;
-        //     catRB.AddForce(jumpVector, ForceMode.Impulse);
-        //     cat.enabled = true;
-        // }
+            if (prevPosition.y > transform.position.y)
+            {
+                catAnimator.SetTrigger("Falling");
+            }
+            if ((prevPosition.x != transform.position.x || prevPosition.z != transform.position.z) && prevPosition.y == transform.position.y)
+            {
+                catAnimator.SetTrigger("Walking");
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Navmesh jump"))
+        {
+            catAnimator.SetTrigger("Jumped");
+        }
+        else if (other.CompareTag("Sitting zone"))
+        {
+            catAnimator.SetBool("Sitting", true);
+        }
     }
 }
