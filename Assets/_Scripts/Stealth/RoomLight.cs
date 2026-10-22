@@ -3,7 +3,7 @@ using UnityEngine;
 // Ceiling light of a room. Knows how to turn itself on and off
 public class RoomLight : MonoBehaviour
 {
-    [SerializeField] private Light roomLight;
+    [SerializeField] private Light[] roomLights;
 
     private void Start()
     {
@@ -22,11 +22,17 @@ public class RoomLight : MonoBehaviour
 
     public void TurnOn()
     {
-        roomLight.enabled = true;
+        foreach(Light light in roomLights)
+        {
+            light.enabled = true;
+        }
     }
 
     public void TurnOff()
     {
-        roomLight.enabled = false;
+        foreach (Light light in roomLights)
+        {
+            light.enabled = false;
+        }
     }
 }

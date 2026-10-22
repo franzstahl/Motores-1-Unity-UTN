@@ -5140,7 +5140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5900e941307f7ee4f8700d51835ffbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
-  roomLight: {fileID: 37435816}
+  roomLights:
+  - {fileID: 37435816}
 --- !u!43 &39890782
 Mesh:
   m_ObjectHideFlags: 0
@@ -10061,7 +10062,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5900e941307f7ee4f8700d51835ffbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
-  roomLight: {fileID: 80527190}
+  roomLights:
+  - {fileID: 80527190}
 --- !u!43 &82678218
 Mesh:
   m_ObjectHideFlags: 0
@@ -49392,7 +49394,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5900e941307f7ee4f8700d51835ffbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
-  roomLight: {fileID: 353903533}
+  roomLights:
+  - {fileID: 353903533}
 --- !u!1 &354581779
 GameObject:
   m_ObjectHideFlags: 0
@@ -58500,7 +58503,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5900e941307f7ee4f8700d51835ffbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
-  roomLight: {fileID: 412461442}
+  roomLights:
+  - {fileID: 412461442}
 --- !u!43 &414419859
 Mesh:
   m_ObjectHideFlags: 0
@@ -97765,7 +97769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5900e941307f7ee4f8700d51835ffbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
-  roomLight: {fileID: 485783840}
+  roomLights: []
 --- !u!1001 &485844650
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -111873,7 +111877,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5900e941307f7ee4f8700d51835ffbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
-  roomLight: {fileID: 497558570}
+  roomLights:
+  - {fileID: 497558570}
+  - {fileID: 698348976}
+  - {fileID: 485783840}
 --- !u!43 &500490651
 Mesh:
   m_ObjectHideFlags: 0
@@ -140271,7 +140278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5900e941307f7ee4f8700d51835ffbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
-  roomLight: {fileID: 698348976}
+  roomLights: []
 --- !u!1 &701123431
 GameObject:
   m_ObjectHideFlags: 0
@@ -185395,7 +185402,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5900e941307f7ee4f8700d51835ffbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
-  roomLight: {fileID: 1132238072}
+  roomLights:
+  - {fileID: 1132238072}
 --- !u!43 &1133238123
 Mesh:
   m_ObjectHideFlags: 0
@@ -208570,7 +208578,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5900e941307f7ee4f8700d51835ffbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
-  roomLight: {fileID: 1238213685}
+  roomLights:
+  - {fileID: 1238213685}
 --- !u!43 &1239580305
 Mesh:
   m_ObjectHideFlags: 0
@@ -245050,7 +245059,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5900e941307f7ee4f8700d51835ffbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
-  roomLight: {fileID: 1275130862}
+  roomLights:
+  - {fileID: 1275130862}
 --- !u!43 &1279837539
 Mesh:
   m_ObjectHideFlags: 0
@@ -252031,7 +252041,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5900e941307f7ee4f8700d51835ffbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
-  roomLight: {fileID: 1362933761}
+  roomLights:
+  - {fileID: 1362933761}
 --- !u!1001 &1363788245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -354699,7 +354710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1951472625}
   m_Layer: 0
-  m_Name: pictures
+  m_Name: Pictures
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
