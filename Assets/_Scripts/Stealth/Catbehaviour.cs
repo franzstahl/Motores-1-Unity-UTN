@@ -3,19 +3,18 @@ using Unity.AI;
 using System;
 using UnityEngine.AI;
 
-public class Catbehaviour : MonoBehaviour
+public class CatBehaviour : MonoBehaviour
 {
     [SerializeField] private NavMeshAgent cat;
     [SerializeField] private float jumpValue;
-    private Vector3 prevPosition;
     [SerializeField] private Transform mouse;
-
+    [SerializeField] private bool canMove;
+    private Vector3 prevPosition;
     private Transform catPosition;
     private Animator catAnimator;
-    [SerializeField] private bool canMove;
     public bool CanMove
     {
-        get {return canMove; }
+        get { return canMove; }
         set { canMove = value; }
     }
 
@@ -28,8 +27,9 @@ public class Catbehaviour : MonoBehaviour
         prevPosition = transform.position;
     }
 
-   
-    private void Update()
+    // This method makes the cat follow the mouse's position using the NavMeshAgent component.
+    // It also checks if the cat is falling or walking based on its previous and current positions, and triggers the appropriate animations.
+    private void Update() 
     {
         if (canMove)
         {

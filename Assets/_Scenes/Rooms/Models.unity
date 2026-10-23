@@ -704,6 +704,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Kitchen_Wall_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7904708905795608736, guid: b054a3723d1cd4c9dbe73c1d731e2c04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7765,6 +7769,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Table_Coffee_04
       objectReference: {fileID: 0}
+    - target: {fileID: 4505136800294127038, guid: 70dcaa356ca1e4f3fae9d2add82e569d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5533847835590245996, guid: 70dcaa356ca1e4f3fae9d2add82e569d, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.333333
@@ -9555,6 +9563,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 904e50e48dcd21e8184b84011d13efe8, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Bath_Vanity_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 904e50e48dcd21e8184b84011d13efe8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17059,6 +17071,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Open_DoorLeaf_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7655035173468732645, guid: bf66dc95b8a3e44789ff5ea3ee746beb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19817,6 +19833,10 @@ PrefabInstance:
     - target: {fileID: 7089438267738876238, guid: 4c3c48b4afe174bd9bc06c01fb995521, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Bed_Double_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089438267738876238, guid: 4c3c48b4afe174bd9bc06c01fb995521, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25635,6 +25655,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Open_Window_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7753003537075405740, guid: a80409680cfb94675ba3e14221c4b353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26124,6 +26148,10 @@ PrefabInstance:
     - target: {fileID: 7904708905795608736, guid: b054a3723d1cd4c9dbe73c1d731e2c04, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Kitchen_Wall_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7904708905795608736, guid: b054a3723d1cd4c9dbe73c1d731e2c04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27719,6 +27747,10 @@ PrefabInstance:
     - target: {fileID: 6614566434219504540, guid: b911ad003ef364719bb0ac13f9e7e019, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Kitchen_Base_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614566434219504540, guid: b911ad003ef364719bb0ac13f9e7e019, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30061,6 +30093,10 @@ PrefabInstance:
     - target: {fileID: 2150077310652676046, guid: a15947d899f60469c8422114dab0c23c, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Appl_Hob_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150077310652676046, guid: a15947d899f60469c8422114dab0c23c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7762711960735654804, guid: a15947d899f60469c8422114dab0c23c, type: 3}
       propertyPath: m_LocalScale.x
@@ -43421,6 +43457,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Light_Sconce_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1778573126577146216, guid: 34bf7a0b769e1418395eae908b5f6521, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4091495296275748191, guid: 34bf7a0b769e1418395eae908b5f6521, type: 3}
       propertyPath: m_LocalScale.x
       value: 7
@@ -49538,6 +49578,10 @@ PrefabInstance:
     - target: {fileID: 8913411564344927867, guid: 287664d0709514c9fa8d8eacd3efea9e, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Stair_FlightBoxed_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913411564344927867, guid: 287664d0709514c9fa8d8eacd3efea9e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -114262,6 +114306,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Decor_HookRail_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7971139886465976696, guid: c3a01916966ff418f98dfbb8e1bdbba2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -130448,9 +130496,9 @@ Mesh:
       format: 0
       dimension: 2
     - stream: 0
-      offset: 0
+      offset: 48
       format: 0
-      dimension: 0
+      dimension: 2
     - stream: 0
       offset: 0
       format: 0
@@ -130483,8 +130531,8 @@ Mesh:
       offset: 0
       format: 0
       dimension: 0
-    m_DataSize: 1152
-    _typelessdata: 303755c07d32bec00aa75b4000000000000000000000803f000080bf0000000000000000000080bf046fe03f7d322ec15cffc9bf7d32bec00aa75b4000000000000000000000803f000080bf0000000000000000000080bf000000007d322ec1303755c07d32be400aa75b4000000000000000000000803f000080bf0000000000000000000080bf046fe03f0000803f5cffc9bf7d32be400aa75b4000000000000000000000803f000080bf0000000000000000000080bf000000000000803f5cffc9bf7d32bec00aa75b400000803f000000000000000000000000000000000000803f000080bfa045923e7d322ec15cffc9bf7d32bec0565e49400000803f000000000000000000000000000000000000803f000080bf000000007d322ec15cffc9bf7d32be400aa75b400000803f000000000000000000000000000000000000803f000080bfa045923e0000803f5cffc9bf7d32be40565e49400000803f000000000000000000000000000000000000803f000080bf000000000000803f5cffc9bf7d32bec0565e49400000000000000000000080bf0000803f0000000000000000000080bf046fe03f7d322ec1303755c07d32bec0565e49400000000000000000000080bf0000803f0000000000000000000080bf000000007d322ec15cffc9bf7d32be40565e49400000000000000000000080bf0000803f0000000000000000000080bf046fe03f0000803f303755c07d32be40565e49400000000000000000000080bf0000803f0000000000000000000080bf000000000000803f303755c07d32bec0565e4940000080bf00000000000000000000000000000000000080bf000080bfa045923e7d322ec1303755c07d32bec00aa75b40000080bf00000000000000000000000000000000000080bf000080bf000000007d322ec1303755c07d32be40565e4940000080bf00000000000000000000000000000000000080bf000080bfa045923e0000803f303755c07d32be400aa75b40000080bf00000000000000000000000000000000000080bf000080bf000000000000803f303755c07d32be400aa75b40000000000000803f000000000000803f0000000000000000000080bf000000000000803f5cffc9bf7d32be400aa75b40000000000000803f000000000000803f0000000000000000000080bf046fe03f0000803f303755c07d32be40565e4940000000000000803f000000000000803f0000000000000000000080bf0000000030dd363f5cffc9bf7d32be40565e4940000000000000803f000000000000803f0000000000000000000080bf046fe03f30dd363f303755c07d32bec0565e494000000000000080bf00000000000080bf0000000000000000000080bf046fe03f30dd363f5cffc9bf7d32bec0565e494000000000000080bf00000000000080bf0000000000000000000080bf0000000030dd363f303755c07d32bec00aa75b4000000000000080bf00000000000080bf0000000000000000000080bf046fe03f0000803f5cffc9bf7d32bec00aa75b4000000000000080bf00000000000080bf0000000000000000000080bf000000000000803f
+    m_DataSize: 1344
+    _typelessdata: 303755c07d32bec00aa75b4000000000000000000000803f000080bf0000000000000000000080bf046fe03f7d322ec11b467b3f0bd7a33c5cffc9bf7d32bec00aa75b4000000000000000000000803f000080bf0000000000000000000080bf000000007d322ec11b467b3f16b6253e303755c07d32be400aa75b4000000000000000000000803f000080bf0000000000000000000080bf046fe03f0000803f0bd7a33c0bd7a33c5cffc9bf7d32be400aa75b4000000000000000000000803f000080bf0000000000000000000080bf000000000000803f18d7a33c16b6253e5cffc9bf7d32bec00aa75b400000803f000000000000000000000000000000000000803f000080bfa045923e7d322ec111d7a33c6bc8bb3e5cffc9bf7d32bec0565e49400000803f000000000000000000000000000000000000803f000080bf000000007d322ec10bd7a33c87f3af3e5cffc9bf7d32be400aa75b400000803f000000000000000000000000000000000000803f000080bfa045923e0000803f10467b3f6bc8bb3e5cffc9bf7d32be40565e49400000803f000000000000000000000000000000000000803f000080bf000000000000803f10467b3f87f3af3e5cffc9bf7d32bec0565e49400000000000000000000080bf0000803f0000000000000000000080bf046fe03f7d322ec118d7a33c16b6a53e303755c07d32bec0565e49400000000000000000000080bf0000803f0000000000000000000080bf000000007d322ec10bd7a33cf7303a3e5cffc9bf7d32be40565e49400000000000000000000080bf0000803f0000000000000000000080bf046fe03f0000803f1b467b3f16b6a53e303755c07d32be40565e49400000000000000000000080bf0000803f0000000000000000000080bf000000000000803f1b467b3ff7303a3e303755c07d32bec0565e4940000080bf00000000000000000000000000000000000080bf000080bfa045923e7d322ec110467b3fdb05c63e303755c07d32bec00aa75b40000080bf00000000000000000000000000000000000080bf000080bf000000007d322ec110467b3fbfdad13e303755c07d32be40565e4940000080bf00000000000000000000000000000000000080bf000080bfa045923e0000803f0bd7a33cdb05c63e303755c07d32be400aa75b40000080bf00000000000000000000000000000000000080bf000080bf000000000000803f11d7a33cbfdad13e303755c07d32be400aa75b40000000000000803f000000000000803f0000000000000000000080bf000000000000803f16b6253e14ede73e5cffc9bf7d32be400aa75b40000000000000803f000000000000803f0000000000000000000080bf046fe03f0000803f0bd7a33c14ede73e303755c07d32be40565e4940000000000000803f000000000000803f0000000000000000000080bf0000000030dd363f1db6253e3018dc3e5cffc9bf7d32be40565e4940000000000000803f000000000000803f0000000000000000000080bf046fe03f30dd363f45d7a33c3018dc3e303755c07d32bec0565e494000000000000080bf00000000000080bf0000000000000000000080bf046fe03f30dd363f45d7a33c852af23e5cffc9bf7d32bec0565e494000000000000080bf00000000000080bf0000000000000000000080bf0000000030dd363f1db6253e852af23e303755c07d32bec00aa75b4000000000000080bf00000000000080bf0000000000000000000080bf046fe03f0000803f0bd7a33c69fffd3e5cffc9bf7d32bec00aa75b4000000000000080bf00000000000080bf0000000000000000000080bf000000000000803f16b6253e69fffd3e
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -130545,7 +130593,7 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   'm_MeshMetrics[0]': 1
-  'm_MeshMetrics[1]': 1
+  'm_MeshMetrics[1]': 152.8394
   m_MeshOptimizationFlags: 1
   m_StreamData:
     serializedVersion: 2
@@ -130836,6 +130884,10 @@ PrefabInstance:
     - target: {fileID: 562327070018325356, guid: 6afc5dffa0f894393806a935542d5436, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 562327070018325356, guid: 6afc5dffa0f894393806a935542d5436, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7794739169940438887, guid: 6afc5dffa0f894393806a935542d5436, type: 3}
       propertyPath: m_LocalScale.x
@@ -136461,7 +136513,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &654691004
 Transform:
@@ -138617,6 +138669,10 @@ PrefabInstance:
     - target: {fileID: 7655035173468732645, guid: bf66dc95b8a3e44789ff5ea3ee746beb, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Open_DoorLeaf_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655035173468732645, guid: bf66dc95b8a3e44789ff5ea3ee746beb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -147161,6 +147217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Kitchen_Base_01
       objectReference: {fileID: 0}
+    - target: {fileID: 6614566434219504540, guid: b911ad003ef364719bb0ac13f9e7e019, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -147238,6 +147298,10 @@ PrefabInstance:
     - target: {fileID: 5554156096032585440, guid: 43810abe9148b4b328e11829eaa41565, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Kitchen_Extractor_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554156096032585440, guid: 43810abe9148b4b328e11829eaa41565, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -158008,6 +158072,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Storage_Wardrobe_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1943946343885074679, guid: 79c6d7774b559408591dab74590b1c67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1948756004095241544, guid: 79c6d7774b559408591dab74590b1c67, type: 3}
       propertyPath: m_LocalScale.x
       value: 7.05
@@ -158263,6 +158331,10 @@ PrefabInstance:
     - target: {fileID: 1778573126577146216, guid: 34bf7a0b769e1418395eae908b5f6521, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Light_Sconce_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778573126577146216, guid: 34bf7a0b769e1418395eae908b5f6521, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4091495296275748191, guid: 34bf7a0b769e1418395eae908b5f6521, type: 3}
       propertyPath: m_LocalScale.x
@@ -159960,6 +160032,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Util_LitterTray_01
       objectReference: {fileID: 0}
+    - target: {fileID: 4246159036870295638, guid: 4bbf52a10be9741f197a43635e6e83e5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5379818620741740653, guid: 4bbf52a10be9741f197a43635e6e83e5, type: 3}
       propertyPath: m_LocalScale.x
       value: 7.98
@@ -160827,6 +160903,10 @@ PrefabInstance:
     - target: {fileID: 7455029232711089626, guid: 4fd41e2c77c6e4383a3a498d7922f7f8, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Storage_Sideboard_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7455029232711089626, guid: 4fd41e2c77c6e4383a3a498d7922f7f8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8574703099838289796, guid: 4fd41e2c77c6e4383a3a498d7922f7f8, type: 3}
       propertyPath: m_LocalScale.x
@@ -162432,6 +162512,10 @@ PrefabInstance:
     - target: {fileID: 7655035173468732645, guid: bf66dc95b8a3e44789ff5ea3ee746beb, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655035173468732645, guid: bf66dc95b8a3e44789ff5ea3ee746beb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -164386,6 +164470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Util_PetBowl_01
       objectReference: {fileID: 0}
+    - target: {fileID: 5776998271260365962, guid: 17f074e9e0c1b4828a2c1a059a7c32b2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -165205,6 +165293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Bath_ShowerHead_01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4b839ce30205b0368a48c63998d172bf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -165964,6 +166056,10 @@ PrefabInstance:
     - target: {fileID: 4694647106362745161, guid: 267bc948953dc4fb5a31fa4879e493e0, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Office_Desk_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694647106362745161, guid: 267bc948953dc4fb5a31fa4879e493e0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -166865,6 +166961,10 @@ PrefabInstance:
     - target: {fileID: 7904708905795608736, guid: b054a3723d1cd4c9dbe73c1d731e2c04, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Kitchen_Wall_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7904708905795608736, guid: b054a3723d1cd4c9dbe73c1d731e2c04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -173247,6 +173347,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c1d26939c07e2b0b4dfd13ed4ac60acb, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Bath_Toilet_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c1d26939c07e2b0b4dfd13ed4ac60acb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -194410,6 +194514,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Storage_TVUnit_01
       objectReference: {fileID: 0}
+    - target: {fileID: 8068123728368777766, guid: f11ff1b41863b44d2aab3d7a14f2bf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -194719,6 +194827,10 @@ PrefabInstance:
     - target: {fileID: 7904708905795608736, guid: b054a3723d1cd4c9dbe73c1d731e2c04, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Kitchen_Wall_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7904708905795608736, guid: b054a3723d1cd4c9dbe73c1d731e2c04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -205741,6 +205853,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 332926437002613516, guid: ea546ff44eae44e6a8fc5d969369852a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5327224943649006265, guid: ea546ff44eae44e6a8fc5d969369852a, type: 3}
       propertyPath: m_LocalScale.x
       value: 5.158628
@@ -206564,6 +206680,10 @@ PrefabInstance:
     - target: {fileID: 7655035173468732645, guid: bf66dc95b8a3e44789ff5ea3ee746beb, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Open_DoorLeaf_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655035173468732645, guid: bf66dc95b8a3e44789ff5ea3ee746beb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -245009,6 +245129,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Kitchen_Base_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6614566434219504540, guid: b911ad003ef364719bb0ac13f9e7e019, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -245265,6 +245389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Bath_Mirror_01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 236b7b87fcd5542304d2672c1120292a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -245442,6 +245570,10 @@ PrefabInstance:
     - target: {fileID: 1778573126577146216, guid: 34bf7a0b769e1418395eae908b5f6521, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Light_Sconce_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778573126577146216, guid: 34bf7a0b769e1418395eae908b5f6521, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4091495296275748191, guid: 34bf7a0b769e1418395eae908b5f6521, type: 3}
       propertyPath: m_LocalScale.x
@@ -247357,6 +247489,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Appl_Dishwasher_01
       objectReference: {fileID: 0}
+    - target: {fileID: 393124046177475141, guid: ededc5caee7884fe699d6bdf94a97ad7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -247438,6 +247574,10 @@ PrefabInstance:
     - target: {fileID: 7655035173468732645, guid: bf66dc95b8a3e44789ff5ea3ee746beb, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655035173468732645, guid: bf66dc95b8a3e44789ff5ea3ee746beb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -251339,6 +251479,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ef53c3a32b1bbf3838e5bc99ddd8dfd0, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Bath_Brush_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef53c3a32b1bbf3838e5bc99ddd8dfd0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -255983,6 +256127,10 @@ PrefabInstance:
     - target: {fileID: 7904708905795608736, guid: b054a3723d1cd4c9dbe73c1d731e2c04, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Kitchen_Wall_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7904708905795608736, guid: b054a3723d1cd4c9dbe73c1d731e2c04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -311092,6 +311240,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Bath_RollHolder_01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dbbbdf860859fe76588e058b4939a3e9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -313751,6 +313903,10 @@ PrefabInstance:
     - target: {fileID: 842290793388794140, guid: 832321541c20d42ccb17434ab73cea84, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Office_ChairTask_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 842290793388794140, guid: 832321541c20d42ccb17434ab73cea84, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4184207499908488492, guid: 832321541c20d42ccb17434ab73cea84, type: 3}
       propertyPath: m_LocalScale.x
@@ -324265,6 +324421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Kitchen_Base_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6614566434219504540, guid: b911ad003ef364719bb0ac13f9e7e019, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -331760,6 +331920,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Decor_WallClock_01
       objectReference: {fileID: 0}
+    - target: {fileID: 5176682075892231350, guid: ba0e9ee4a04e24e4ca76b4af63fc08a5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5743698487368395935, guid: ba0e9ee4a04e24e4ca76b4af63fc08a5, type: 3}
       propertyPath: m_LocalScale.x
       value: 8.08
@@ -332301,6 +332465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Kids_Chest_01
       objectReference: {fileID: 0}
+    - target: {fileID: 5800075998211106384, guid: e61fee129c21a4e158f41e004f90e643, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7074316601270223401, guid: e61fee129c21a4e158f41e004f90e643, type: 3}
       propertyPath: m_LocalScale.x
       value: 9.019001
@@ -332323,7 +332491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7074316601270223401, guid: e61fee129c21a4e158f41e004f90e643, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.108072
+      value: -13.03
       objectReference: {fileID: 0}
     - target: {fileID: 7074316601270223401, guid: e61fee129c21a4e158f41e004f90e643, type: 3}
       propertyPath: m_LocalRotation.w
@@ -336403,6 +336571,10 @@ PrefabInstance:
     - target: {fileID: 7904708905795608736, guid: b054a3723d1cd4c9dbe73c1d731e2c04, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Kitchen_Wall_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7904708905795608736, guid: b054a3723d1cd4c9dbe73c1d731e2c04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -357540,6 +357712,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Kitchen_SinkBase_01
       objectReference: {fileID: 0}
+    - target: {fileID: 4087553345036700923, guid: 01e12d1e3be414a11b4187ed8d5fbdd3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5654022387118414443, guid: 01e12d1e3be414a11b4187ed8d5fbdd3, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.0183997
@@ -369503,6 +369679,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Storage_Wardrobe_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1943946343885074679, guid: 79c6d7774b559408591dab74590b1c67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1948756004095241544, guid: 79c6d7774b559408591dab74590b1c67, type: 3}
       propertyPath: m_LocalScale.x
       value: 7.05
@@ -369658,6 +369838,10 @@ PrefabInstance:
     - target: {fileID: 1778573126577146216, guid: 34bf7a0b769e1418395eae908b5f6521, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Light_Sconce_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778573126577146216, guid: 34bf7a0b769e1418395eae908b5f6521, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4091495296275748191, guid: 34bf7a0b769e1418395eae908b5f6521, type: 3}
       propertyPath: m_LocalScale.x
@@ -373953,6 +374137,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Open_DoorSet_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1543073336713130591, guid: d4898ea32e99042f998bc37e4a5f8f6e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8402277654809129176, guid: d4898ea32e99042f998bc37e4a5f8f6e, type: 3}
       propertyPath: m_LocalScale.x
       value: 5.97
@@ -374322,6 +374510,10 @@ PrefabInstance:
     - target: {fileID: 4239740260657536715, guid: cdb3cb879dfca405db41d6b4a514d384, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Util_ColumnRad_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239740260657536715, guid: cdb3cb879dfca405db41d6b4a514d384, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5299162501209934599, guid: cdb3cb879dfca405db41d6b4a514d384, type: 3}
       propertyPath: m_LocalScale.x
@@ -375846,6 +376038,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LPI_Kids_Bed_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1749269129761410164, guid: f90e68c5693624de5bd84df217318fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5328531069465881284, guid: f90e68c5693624de5bd84df217318fb6, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.5514574
@@ -376101,6 +376297,10 @@ PrefabInstance:
     - target: {fileID: 4032343735357809858, guid: d4139710f66a4489a8cfc60601c7ca66, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Kids_Wardrobe_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4032343735357809858, guid: d4139710f66a4489a8cfc60601c7ca66, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7802544918666411412, guid: d4139710f66a4489a8cfc60601c7ca66, type: 3}
       propertyPath: m_LocalScale.x
@@ -407699,7 +407899,7 @@ Transform:
   m_GameObject: {fileID: 5210737406408559075}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
-  m_LocalPosition: {x: 20, y: 0.35, z: 13.3}
+  m_LocalPosition: {x: 20.714, y: 0.35, z: 13.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -490234,7 +490434,7 @@ Transform:
   m_GameObject: {fileID: 4298139615475420764}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26, y: 0.35, z: -5.3}
+  m_LocalPosition: {x: 25.14, y: 0.35, z: -5.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -490324,7 +490524,7 @@ Transform:
   m_GameObject: {fileID: 4298139616028157526}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
-  m_LocalPosition: {x: 6, y: 0.35, z: 5.3}
+  m_LocalPosition: {x: 4.38, y: 0.35, z: 5.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -504630,7 +504830,7 @@ Transform:
   m_GameObject: {fileID: 5782956511503705103}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
-  m_LocalPosition: {x: 44, y: 0.35, z: 13.3}
+  m_LocalPosition: {x: 45.16, y: 0.35, z: 16.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -550617,7 +550817,7 @@ Transform:
   m_GameObject: {fileID: 3194165044343649326}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 89.6, y: 0.2346, z: -12.7}
+  m_LocalPosition: {x: 87, y: 0.2346, z: -12.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -550692,7 +550892,7 @@ Transform:
   m_GameObject: {fileID: 3194165044992121391}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64.6, y: 0.2346, z: -12.7}
+  m_LocalPosition: {x: 61.52, y: 0.2346, z: -12.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -560927,7 +561127,7 @@ Transform:
   m_GameObject: {fileID: 7044535116558158791}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 92, y: 0, z: -12.3}
+  m_LocalPosition: {x: 90, y: 0, z: -12.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -561242,7 +561442,7 @@ Transform:
   m_GameObject: {fileID: 7044535115788523553}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 92, y: 0, z: -8.3}
+  m_LocalPosition: {x: 90, y: 0, z: -8.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -561572,7 +561772,7 @@ Transform:
   m_GameObject: {fileID: 7044535116262287678}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 29, y: 0, z: 8.3}
+  m_LocalPosition: {x: 30.946, y: 0, z: 8.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -561782,7 +561982,7 @@ Transform:
   m_GameObject: {fileID: 7044535115490004848}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 29, y: 0, z: 12.3}
+  m_LocalPosition: {x: 30.96, y: 0, z: 12.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -561992,7 +562192,7 @@ Transform:
   m_GameObject: {fileID: 7044535115535125221}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 67, y: 0, z: -12.3}
+  m_LocalPosition: {x: 65.03, y: 0, z: -12.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -562172,7 +562372,7 @@ Transform:
   m_GameObject: {fileID: 7044535115720674292}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 54, y: 0, z: 8.3}
+  m_LocalPosition: {x: 55.95, y: 0, z: 8.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -562292,7 +562492,7 @@ Transform:
   m_GameObject: {fileID: 7044535114738109765}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 67, y: 0, z: -8.3}
+  m_LocalPosition: {x: 65.04, y: 0, z: -8.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -562637,7 +562837,7 @@ Transform:
   m_GameObject: {fileID: 7044535115047739975}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 54, y: 0, z: 12.3}
+  m_LocalPosition: {x: 55.93, y: 0, z: 12.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

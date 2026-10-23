@@ -3,27 +3,27 @@ using UnityEngine;
 
 public class HallwayParticles : MonoBehaviour
 {
-    [Header("Particulas")]
+    [Header("Particles")]
     [SerializeField] private GameObject objective1;
     [SerializeField] private GameObject objective2;
-    private int currentObjective;
-    [Header("Componente en Player")]
+  
+    [Header("Component in Player")]
     [SerializeField] private RoomTracker roomTracker;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    private int currentObjective;
 
-    // Update is called once per frame
-    void Update()
+    //void Start()
+    //{
+
+    //}
+
+    private void Update()
     {
-        if(roomTracker.CurrentRoom >= 3 && roomTracker.CurrentRoom != 0)
+        if (roomTracker.CurrentRoom >= 3 && roomTracker.CurrentRoom != 0)
         {
             currentObjective = 2;
         }
-        if(roomTracker.CurrentRoom <= 2 && roomTracker.CurrentRoom != 0)
+        if (roomTracker.CurrentRoom <= 2 && roomTracker.CurrentRoom != 0)
         {
             currentObjective = 1;
         }
@@ -46,7 +46,7 @@ public class HallwayParticles : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if(currentObjective == 1)
+            if (currentObjective == 1)
             {
                 objective1.gameObject.SetActive(false);
             }

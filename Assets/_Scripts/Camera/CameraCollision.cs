@@ -33,22 +33,22 @@ public class CameraCollision : MonoBehaviour
     {
         if (!target) return;
 
-        // Rotación con mouse
+        // Rotation with mouse input
         rotX += Input.GetAxis("Mouse X") * sensitivity;
         rotY -= Input.GetAxis("Mouse Y") * sensitivity;
 
         rotY = Mathf.Clamp(rotY, minY, maxY);
 
-        // Rotación de la cámara
+        // Rotation of the camera
         Quaternion rotation = Quaternion.Euler(rotY, rotX, 0);
 
 
         Vector3 pivot = target.position + Vector3.up * height;
 
-        // Posición ideal de la cámara
+        // Ideal position of the camera based on rotation and distance
         Vector3 desiredPosition = pivot - rotation * Vector3.forward * distance;
 
-        // Dirección desde el personaje hacia la cámara
+        // Direction from the character to the camera
         Vector3 direction = desiredPosition - target.position;
         float desiredDistance = direction.magnitude;
 
@@ -70,7 +70,7 @@ public class CameraCollision : MonoBehaviour
             finalPosition = pivot + direction * hit.distance;
         }
 
-        // Aplicar posición y rotación
+        // Apply the final position and rotation to the camera
         transform.position = finalPosition;
         transform.rotation = rotation;
     }
