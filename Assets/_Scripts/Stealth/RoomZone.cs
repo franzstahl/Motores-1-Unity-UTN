@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class RoomZone : MonoBehaviour
 {
+    [SerializeField] private int roomNumber;
+    public int RoomNumber => roomNumber;
     [SerializeField] private RoomLight roomLight;
 
     private void OnTriggerEnter(Collider other)
