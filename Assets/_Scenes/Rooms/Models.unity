@@ -163638,7 +163638,7 @@ MonoBehaviour:
   distance: 2
   height: 0.3
   sensitivity: 1.2
-  minY: -20
+  minY: -15
   maxY: 60
   collisionMask:
     serializedVersion: 2
