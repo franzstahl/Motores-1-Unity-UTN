@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Climbable
   - RoomZone
+  - Navmesh jumped
   layers:
   - Default
   - TransparentFX
