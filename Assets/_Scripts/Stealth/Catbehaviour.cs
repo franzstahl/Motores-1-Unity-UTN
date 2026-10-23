@@ -37,12 +37,16 @@ public class CatBehaviour : MonoBehaviour
             cat.SetDestination(mouse.position);
             if (prevPosition.y > transform.position.y)
             {
-                catAnimator.SetTrigger("Falling");
+                catAnimator.SetBool("Falling", true);
             }
+            else
+                catAnimator.SetBool("Falling", false);
             if ((prevPosition.x != transform.position.x || prevPosition.z != transform.position.z) && prevPosition.y == transform.position.y)
             {
-                catAnimator.SetTrigger("Walking");
+                catAnimator.SetBool("Walking", true);
             }
+            else
+                catAnimator.SetBool("Walking", false);
         }
     }
 
