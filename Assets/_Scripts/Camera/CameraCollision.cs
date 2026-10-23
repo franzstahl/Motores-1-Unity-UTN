@@ -14,7 +14,9 @@ public class CameraCollision : MonoBehaviour
     [Header("Camera Collision")]
     [SerializeField] private LayerMask collisionMask;
     [SerializeField] private float collisionRadius = 0.2f;
+    [SerializeField] private float recoverSpeed;
 
+    private float currentDistance;
     private float rotX;
     private float rotY;
 
@@ -27,6 +29,7 @@ public class CameraCollision : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         gameObject.GetComponent<CinemachineBrain>().enabled = false;
+        currentDistance = distance;
     }
 
     private void LateUpdate()
@@ -49,12 +52,12 @@ public class CameraCollision : MonoBehaviour
         Vector3 desiredPosition = pivot - rotation * Vector3.forward * distance;
 
         // Direction from the character to the camera
-        Vector3 direction = desiredPosition - target.position;
+        Vector3 direction = desiredPosition - pivot;
         float desiredDistance = direction.magnitude;
 
         direction.Normalize();
 
-        Vector3 finalPosition = desiredPosition;
+        float targetDistance = desiredDistance;
 
         // SphereCast instead of Raycast: the camera has volume, a thin ray lets it poke into walls
         if (Physics.SphereCast(
@@ -67,8 +70,19 @@ public class CameraCollision : MonoBehaviour
             QueryTriggerInteraction.Ignore)) // Triggers (room zones, etc.) must not push the camera
         {
             // hit.distance is where the sphere's center stops, so no extra offset is needed
-            finalPosition = pivot + direction * hit.distance;
+            targetDistance = hit.distance;
         }
+
+        if (targetDistance < currentDistance)
+        {
+            currentDistance = targetDistance;
+        }
+        else
+        {
+            currentDistance = Mathf.MoveTowards(currentDistance, targetDistance, recoverSpeed * Time.deltaTime);
+        }
+
+        Vector3 finalPosition = pivot + direction * currentDistance;
 
         // Apply the final position and rotation to the camera
         transform.position = finalPosition;
