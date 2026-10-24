@@ -60,6 +60,8 @@ public class PlayerMovement : MonoBehaviour
     private Collider currentWall;
     private Collider lastWall;
 
+    private Transform armature;
+
     private GameManager gameManager;
 
     private void Awake()
@@ -68,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
         if (animator == null) animator = GetComponentInChildren<Animator>(); // Works if the Animator ends up on the model child
         inputActions = new InputSystem_Actions();
         currentStamina = maxStamina; // Start with full stamina
+        armature = transform.Find("Armature");
     }
 
     private void Start()
@@ -120,6 +123,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        
         HandleGroundCheck();
 
         if (CurrentState == MovementState.Climbing) // While climbing, skip normal movement, jump and gravity
@@ -343,5 +347,6 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat(VerticalVelocityHash, velocity.y);
         animator.SetBool(IsGroundedHash, isGrounded);
         animator.SetBool(IsClimbingHash, CurrentState == MovementState.Climbing);
+        armature.localRotation = Quaternion.Euler(-90f, 180f, 0f); //Import error caused wrong rotation, this should solve it
     }
 }

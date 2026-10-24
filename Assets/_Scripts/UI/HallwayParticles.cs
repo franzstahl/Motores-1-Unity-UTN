@@ -12,10 +12,10 @@ public class HallwayParticles : MonoBehaviour
 
     private int currentObjective;
 
-    //void Start()
-    //{
-
-    //}
+    void Awake()
+    {
+        roomTracker = FindFirstObjectByType<RoomTracker>();
+    }
 
     private void Update()
     {
