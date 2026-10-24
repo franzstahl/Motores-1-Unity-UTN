@@ -3,7 +3,12 @@ guid: 379f30c8cfcb8f34fad108c4692a0a89
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LPollyPallete
+    second: {fileID: 2100000, guid: 5074fd741f0478c4a90234c731aca4cb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

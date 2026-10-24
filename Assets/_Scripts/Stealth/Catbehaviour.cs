@@ -11,7 +11,7 @@ public class CatBehaviour : MonoBehaviour
     [SerializeField] private bool canMove;
     private Vector3 prevPosition;
     private Transform catPosition;
-    private Animator catAnimator;
+    [SerializeField] private Animator catAnimator;
     public bool CanMove
     {
         get { return canMove; }
@@ -33,20 +33,22 @@ public class CatBehaviour : MonoBehaviour
     {
         if (canMove)
         {
-            prevPosition = transform.position;
             cat.SetDestination(mouse.position);
             if (prevPosition.y > transform.position.y)
             {
+                Debug.Log("Cae");
                 catAnimator.SetBool("Falling", true);
             }
             else
                 catAnimator.SetBool("Falling", false);
             if ((prevPosition.x != transform.position.x || prevPosition.z != transform.position.z) && prevPosition.y == transform.position.y)
             {
+                Debug.Log("Se mueve");
                 catAnimator.SetBool("Walking", true);
             }
             else
                 catAnimator.SetBool("Walking", false);
+            prevPosition = transform.position;
         }
     }
 
@@ -54,6 +56,7 @@ public class CatBehaviour : MonoBehaviour
     {
         if (other.CompareTag("Navmesh jump"))
         {
+            Debug.Log("Salta");
             catAnimator.SetTrigger("Jumped");
         }
         else if (other.CompareTag("Sitting zone"))
