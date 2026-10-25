@@ -268123,9 +268123,11 @@ MonoBehaviour:
   regenDelay: 1
   minStaminaToSprint: 20
   climbSpeed: 2.5
-  climbDuration: 7
+  climbDuration: 30
   wallCheckDistance: 0.6
   climbableTag: Climbable
+  climbArmaturePosition: {x: 0.0086, y: 0.3522, z: 0.9}
+  climbRotationSpeed: 2
   cameraTransform: {fileID: 939342781}
   animator: {fileID: 1411934244}
 --- !u!114 &1411934248
@@ -268167,7 +268169,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.04
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.51, z: -0.24}
+  m_Center: {x: 0, y: 0.66, z: -0.24}
 --- !u!114 &1411934250
 MonoBehaviour:
   m_ObjectHideFlags: 0

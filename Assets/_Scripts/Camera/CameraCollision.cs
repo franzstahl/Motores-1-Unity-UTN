@@ -14,9 +14,9 @@ public class CameraCollision : MonoBehaviour
     [Header("Camera Collision")]
     [SerializeField] private LayerMask collisionMask;
     [SerializeField] private float collisionRadius = 0.2f;
-    [SerializeField] private float recoverSpeed;
+    [SerializeField] private float recoverSpeed; // Speed at which the camera returns to its original distance after being pushed in by a collision
 
-    private float currentDistance;
+    private float currentDistance; // The current distance of the camera from the target, which may be less than the desired distance due to collisions
     private float rotX;
     private float rotY;
 
@@ -69,20 +69,21 @@ public class CameraCollision : MonoBehaviour
             collisionMask,
             QueryTriggerInteraction.Ignore)) // Triggers (room zones, etc.) must not push the camera
         {
-            // hit.distance is where the sphere's center stops, so no extra offset is needed
+            // If the SphereCast hits something, we set the target distance to the hit distance
             targetDistance = hit.distance;
         }
 
+        // Smoothly adjust the current distance towards the target distance
         if (targetDistance < currentDistance)
         {
             currentDistance = targetDistance;
         }
         else
         {
-            currentDistance = Mathf.MoveTowards(currentDistance, targetDistance, recoverSpeed * Time.deltaTime);
+            currentDistance = Mathf.MoveTowards(currentDistance, targetDistance, recoverSpeed * Time.deltaTime); // Smoothly recover to the original distance when not colliding
         }
 
-        Vector3 finalPosition = pivot + direction * currentDistance;
+        Vector3 finalPosition = pivot + direction * currentDistance; // Calculate the final position of the camera based on the current distance
 
         // Apply the final position and rotation to the camera
         transform.position = finalPosition;

@@ -26,6 +26,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float wallCheckDistance = 0.6f; // How far the wall ray looks
     [SerializeField] private string climbableTag = "Climbable"; // Walls with this tag can be climbed
 
+    [SerializeField] private Vector3 climbArmaturePosition = new Vector3(0.0086f, 0.3522f, -0.9f); // Armature local position while climbing, tune it in Play mode
+    [SerializeField] private float climbRotationSpeed; // How fast the body turns toward the climb direction
+    private float climbRoll; // Current roll of the model around the wall axis, in degrees
+    private Vector3 armatureDefaultPosition; // Armature position while walking
+    private bool wasClimbing;
+
     private float climbTimer; // Time left on the wall
     private Vector3 wallNormal; // Points away from the wall, toward the player
     private bool canClimb = true; // Set to false after leaving a wall, reset when touching the ground
@@ -71,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
         inputActions = new InputSystem_Actions();
         currentStamina = maxStamina; // Start with full stamina
         armature = transform.Find("Armature");
+        armatureDefaultPosition = armature.localPosition; // Remember the walking position
     }
 
     private void Start()
@@ -179,6 +186,8 @@ public class PlayerMovement : MonoBehaviour
 
             float wallDistance = Vector3.Dot(hit.point - FeetRayOrigin(), -wallNormal); // Straight-line distance from the player's axis to the wall
             float gap = wallDistance - ScaledRadius - controller.skinWidth; // Empty space between the capsule edge and the wall
+
+            
             if (gap > 0f)
             {
                 controller.Move(-wallNormal * gap); // Slide the player against the wall
@@ -342,11 +351,36 @@ public class PlayerMovement : MonoBehaviour
     {
         if (animator == null) return;
 
-        float speed = CurrentState == MovementState.Climbing ? 0f : horizontalSpeed; // No ground movement while on a wall
+        bool climbing = CurrentState == MovementState.Climbing;
+        bool climbMoving = moveInput.sqrMagnitude > 0.01f && gameManager.isMovementActive; // Same input check the climb movement uses
+
+        float speed = climbing ? 0f : horizontalSpeed; // No ground movement while on a wall
+
         animator.SetFloat(SpeedHash, speed, 0.1f, Time.deltaTime); // Damped so the Blend Tree doesn't jump between values
         animator.SetFloat(VerticalVelocityHash, velocity.y);
         animator.SetBool(IsGroundedHash, isGrounded);
         animator.SetBool(IsClimbingHash, CurrentState == MovementState.Climbing);
-        armature.localRotation = Quaternion.Euler(-90f, 180f, 0f); //Import error caused wrong rotation, this should solve it
+
+        if (climbing)
+        {
+            if (climbMoving) // Keep the last angle while hanging still
+            {
+                float targetRoll = Mathf.Atan2(-moveInput.x, moveInput.y) * Mathf.Rad2Deg; // 0 = up, -90 = right, 90 = left, 180 = down
+                climbRoll = Mathf.LerpAngle(climbRoll, targetRoll, climbRotationSpeed * Time.deltaTime);
+            }
+        }
+        else climbRoll = 0f; // Back to normal when not climbing
+
+        armature.localRotation = Quaternion.AngleAxis(climbRoll, Vector3.forward) * Quaternion.Euler(-90f, 180f, 0f); // Roll around the Player's forward, then apply the import fix
+
+        if (climbing)
+            armature.localPosition = climbArmaturePosition; // Override the clip's position while climbing
+        else if (wasClimbing)
+            armature.localPosition = armatureDefaultPosition; // Restore once when leaving the wall
+
+        wasClimbing = climbing;
+
+        animator.speed = (climbing && !climbMoving) ? 0f : 1f; // Freeze the pose while hanging still on the wall
     }
 }
+
