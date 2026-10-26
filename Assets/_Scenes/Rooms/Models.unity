@@ -155602,63 +155602,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2977845233603753149, guid: b911ad003ef364719bb0ac13f9e7e019, type: 3}
   m_PrefabInstance: {fileID: 790114233}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &791348353
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.405715
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.121553
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -34.936207
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
-      propertyPath: m_Name
-      value: Rat idle
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
 --- !u!1001 &791916268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -604222,4 +604165,3 @@ SceneRoots:
   - {fileID: 644081264}
   - {fileID: 1508575024}
   - {fileID: 1463046688}
-  - {fileID: 791348353}
