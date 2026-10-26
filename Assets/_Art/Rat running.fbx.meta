@@ -36,11 +36,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Running anim
-      takeName: Armature|ArmatureAction.001
+      name: Running anim rat
+      takeName: Armature.001|Armature|ArmatureAction
       internalID: -1422011007694221501
       firstFrame: 0
-      lastFrame: 12
+      lastFrame: 10
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
