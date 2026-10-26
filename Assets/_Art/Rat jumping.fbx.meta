@@ -34,7 +34,7 @@ ModelImporter:
       name: Jumping anim rat
       takeName: Armature|Armature|ArmatureAction.004
       internalID: -5535559788440599605
-      firstFrame: 0
+      firstFrame: 1
       lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0

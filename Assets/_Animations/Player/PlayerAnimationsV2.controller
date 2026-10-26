@@ -32,9 +32,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.05
+  m_TransitionDuration: 0.003956821
   m_TransitionOffset: 0
-  m_ExitTime: 0
+  m_ExitTime: 8.278422e-10
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -116,9 +116,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.1
+  m_TransitionDuration: 0.071052656
   m_TransitionOffset: 0
-  m_ExitTime: 0
+  m_ExitTime: 0.021492787
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -304,7 +304,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 4781951162920444690, guid: 6c414da028ff90a4ba9dac1412eb1659, type: 3}
+  m_Motion: {fileID: 7400000, guid: e2809b818bbffda4099546a22a442125, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -508,7 +508,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Idle anim
-  m_Speed: 0.01
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 4355936570929203035}
@@ -523,7 +523,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: eb7ca8dca8f88c9488eb8f0f5fd6d5b2, type: 2}
+  m_Motion: {fileID: -8278699494888114409, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
