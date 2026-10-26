@@ -184436,7 +184436,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 796695111}
 --- !u!33 &1061476968
@@ -277870,7 +277870,7 @@ MonoBehaviour:
   minStaminaToSprint: 20
   climbSpeed: 2.5
   climbDuration: 30
-  wallCheckDistance: 0.6
+  wallCheckDistance: 0.9
   climbableTag: Climbable
   climbArmaturePosition: {x: 0.0086, y: 0.3522, z: 0.9}
   climbRotationSpeed: 2
@@ -277971,7 +277971,7 @@ MonoBehaviour:
     m_Bits: 119
   maxPushPerFrame: 0.3
   iterations: 2
-  ignoreWhileClimbing: 0
+  ignoreWhileClimbing: 1
 --- !u!43 &1412721534
 Mesh:
   m_ObjectHideFlags: 0
@@ -368114,7 +368114,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1971317924}
 --- !u!33 &1836839654
@@ -400998,7 +400998,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1195618870}
 --- !u!33 &2041891483
@@ -411526,7 +411526,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 135497948}
 --- !u!33 &2117606969

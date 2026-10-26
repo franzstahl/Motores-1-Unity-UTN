@@ -44,6 +44,7 @@ public class HeadAndTailCOllision : MonoBehaviour
             // Respect the total cap across all iterations
             Vector3 remaining = Vector3.ClampMagnitude(totalPush + pushThisPass, maxPushPerFrame) - totalPush;
             controller.Move(remaining);
+            remaining.y = 0f; // Head and tail only push horizontally, never fight gravity
             totalPush += remaining;
             Physics.SyncTransforms(); // Colliders moved with the transform, make the physics world aware
         }

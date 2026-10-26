@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     private float currentStamina;
     private float regenTimer;
     private bool exhausted; // True after hitting 0, until stamina recovers past the minimum
+    private bool groundedAfterGravity; // Grounded result from the gravity Move only, so other Moves can't overwrite it
 
     public float StaminaNormalized => currentStamina / maxStamina; // 0 to 1, for the UI later
 
@@ -147,7 +148,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleGroundCheck() // Check if player is touching ground
     {
-        isGrounded = controller.isGrounded;
+        isGrounded = groundedAfterGravity;
 
         if (isGrounded && velocity.y < 0)
         {
@@ -345,6 +346,7 @@ public class PlayerMovement : MonoBehaviour
     {
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+        groundedAfterGravity = controller.isGrounded;
     }
 
     private void LateUpdate() // Runs after Update, so it also covers the climbing early return
