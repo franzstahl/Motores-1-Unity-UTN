@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float gravity = -20f;
     [SerializeField] private float rotationSpeed = 10f; // Speed at which the player rotates to face the movement direction
     [SerializeField] private float sprintSpeed = 5.5f;
+    [SerializeField] private float fallAnimDelay = 0.2f;
 
     [Header("Stamina")]
     [SerializeField] private float maxStamina = 100f;
@@ -31,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     private float climbRoll; // Current roll of the model around the wall axis, in degrees
     private Vector3 armatureDefaultPosition; // Armature position while walking
     private bool wasClimbing;
+    private float airTime;
 
     private float climbTimer; // Time left on the wall
     private Vector3 wallNormal; // Points away from the wall, toward the player
@@ -360,7 +362,8 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat(SpeedHash, speed, 0.1f, Time.deltaTime); // Damped so the Blend Tree doesn't jump between values
         animator.SetFloat(VerticalVelocityHash, velocity.y);
-        animator.SetBool(IsGroundedHash, isGrounded);
+        airTime = isGrounded ? 0f : airTime + Time.deltaTime; // Time spent off the ground
+        animator.SetBool(IsGroundedHash, isGrounded || airTime < fallAnimDelay); // Short drops (keyboard, small steps) keep the grounded pose
         animator.SetBool(IsClimbingHash, CurrentState == MovementState.Climbing);
 
         if (climbing)

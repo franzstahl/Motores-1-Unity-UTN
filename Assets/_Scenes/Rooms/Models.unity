@@ -161932,7 +161932,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 778821089}
 --- !u!33 &857212652
@@ -168713,7 +168713,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 852913343}
 --- !u!33 &902508298
@@ -171493,14 +171493,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraCollision
   target: {fileID: 173107301}
-  distance: 2
+  distance: 2.5
   height: 0.3
   sensitivity: 1.2
   minY: -15
   maxY: 60
   collisionMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   collisionRadius: 0.1
   recoverSpeed: 4
 --- !u!43 &939356078
@@ -192388,7 +192388,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 838746711}
 --- !u!33 &1091177285
@@ -277863,6 +277863,7 @@ MonoBehaviour:
   gravity: -20
   rotationSpeed: 6
   sprintSpeed: 5.5
+  fallAnimDelay: 0.2
   maxStamina: 100
   staminaDrainPerSecond: 25
   staminaRegenPerSecond: 15
@@ -290597,7 +290598,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 39890782}
 --- !u!33 &1477997674
@@ -334107,6 +334108,7 @@ MonoBehaviour:
   gravity: -20
   rotationSpeed: 6
   sprintSpeed: 5.5
+  fallAnimDelay: 0.2
   maxStamina: 100
   staminaDrainPerSecond: 25
   staminaRegenPerSecond: 15
@@ -368114,7 +368116,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1971317924}
 --- !u!33 &1836839654
@@ -393272,6 +393274,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1481503690}
     m_Modifications:
+    - target: {fileID: 3728729784135595932, guid: faadae46065044b91aecea98914c6336, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4737694728737500081, guid: faadae46065044b91aecea98914c6336, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.3590407
