@@ -124299,7 +124299,7 @@ Transform:
   m_GameObject: {fileID: 508438161}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.812, y: 0.086, z: 11.365}
+  m_LocalPosition: {x: 2.743, y: 25.556, z: 48.578}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -192285,7 +192285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8771611294320767655, guid: 28dc2a6c1e8e54e4e85ff2f08ca94c87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3798714
+      value: 4.13
       objectReference: {fileID: 0}
     - target: {fileID: 8771611294320767655, guid: 28dc2a6c1e8e54e4e85ff2f08ca94c87, type: 3}
       propertyPath: m_LocalPosition.z
@@ -263119,7 +263119,7 @@ Transform:
   m_GameObject: {fileID: 1295767702}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.468, y: 0, z: 4.045}
+  m_LocalPosition: {x: 38.8, y: 0, z: 34.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -277871,7 +277871,7 @@ MonoBehaviour:
   minStaminaToSprint: 20
   climbSpeed: 2.5
   climbDuration: 30
-  wallCheckDistance: 0.9
+  wallCheckDistance: 0.8
   climbableTag: Climbable
   climbArmaturePosition: {x: 0.0086, y: 0.3522, z: 0.9}
   climbRotationSpeed: 2
@@ -292517,7 +292517,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1508575024
 Transform:
   m_ObjectHideFlags: 0
@@ -338668,7 +338668,7 @@ Transform:
   m_GameObject: {fileID: 1621386107}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.922, y: 0, z: 8.698}
+  m_LocalPosition: {x: 9.756, y: -0.456, z: 26.156}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -377927,7 +377927,7 @@ Transform:
   m_GameObject: {fileID: 1918665454}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.06, y: 1.505, z: 1.699}
+  m_LocalPosition: {x: 38.15, y: -0.522, z: 56.018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

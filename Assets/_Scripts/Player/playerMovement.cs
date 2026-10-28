@@ -46,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool sprintHeld; // True while the sprint key is being held down
     public MovementState CurrentState { get; private set; } = MovementState.Walking; // Other scripts can read it but not change it
+    
 
     [Header("References")]
     [SerializeField] private Transform cameraTransform;
@@ -133,7 +134,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        
         HandleGroundCheck();
 
         if (CurrentState == MovementState.Climbing) // While climbing, skip normal movement, jump and gravity
@@ -183,6 +183,7 @@ public class PlayerMovement : MonoBehaviour
 
         {
             CurrentState = MovementState.Climbing;
+            if (animator != null) animator.CrossFadeInFixedTime("Climbing anim", 0.1f); // Jump straight to the climb state even if another transition is still running
             currentWall = hit.collider; // Remember which wall we are climbing so we can prevent grabbing it again until touching the ground
             climbTimer = climbDuration;
             wallNormal = new Vector3(hit.normal.x, 0f, hit.normal.z).normalized; // Flatten, we assume vertical walls
@@ -190,7 +191,9 @@ public class PlayerMovement : MonoBehaviour
             float wallDistance = Vector3.Dot(hit.point - FeetRayOrigin(), -wallNormal); // Straight-line distance from the player's axis to the wall
             float gap = wallDistance - ScaledRadius - controller.skinWidth; // Empty space between the capsule edge and the wall
 
-            
+            AnimatorStateInfo st = animator.GetCurrentAnimatorStateInfo(0); // Temporary debug
+            Debug.Log($"Climb grab | wall: {hit.collider.name} | gap: {gap:F2} | fromFall: {st.IsName("Falling anim rat")} | inTransition: {animator.IsInTransition(0)}"); // Temporary debug, remove after testing
+
             if (gap > 0f)
             {
                 controller.Move(-wallNormal * gap); // Slide the player against the wall
