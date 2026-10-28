@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float gravity = -20f;
     [SerializeField] private float rotationSpeed = 10f; // Speed at which the player rotates to face the movement direction
     [SerializeField] private float sprintSpeed = 5.5f;
-    [SerializeField] private float fallAnimDelay = 0.2f;
+    [SerializeField] private float fallAnimDelay = 0.2f; // Time in seconds to keep the grounded pose after leaving the ground, so small drops don't trigger the falling animation
 
     [Header("Stamina")]
     [SerializeField] private float maxStamina = 100f;
@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float climbDuration = 4f; // Max seconds the player can stay on a wall
     [SerializeField] private float wallCheckDistance = 0.6f; // How far the wall ray looks
     [SerializeField] private string climbableTag = "Climbable"; // Walls with this tag can be climbed
+    
 
     [SerializeField] private Vector3 climbArmaturePosition = new Vector3(0.0086f, 0.3522f, -0.9f); // Armature local position while climbing, tune it in Play mode
     [SerializeField] private float climbRotationSpeed; // How fast the body turns toward the climb direction
@@ -188,16 +189,12 @@ public class PlayerMovement : MonoBehaviour
             climbTimer = climbDuration;
             wallNormal = new Vector3(hit.normal.x, 0f, hit.normal.z).normalized; // Flatten, we assume vertical walls
 
-            float wallDistance = Vector3.Dot(hit.point - FeetRayOrigin(), -wallNormal); // Straight-line distance from the player's axis to the wall
-            float gap = wallDistance - ScaledRadius - controller.skinWidth; // Empty space between the capsule edge and the wall
+            transform.rotation = Quaternion.LookRotation(-wallNormal); // Face the wall BEFORE measuring: the capsule center is offset from the pivot, so turning later drags the capsule through the wall
+            Physics.SyncTransforms(); // Make the controller aware of the new rotation before moving it
 
-            AnimatorStateInfo st = animator.GetCurrentAnimatorStateInfo(0); // Temporary debug
-            Debug.Log($"Climb grab | wall: {hit.collider.name} | gap: {gap:F2} | fromFall: {st.IsName("Falling anim rat")} | inTransition: {animator.IsInTransition(0)}"); // Temporary debug, remove after testing
-
-            if (gap > 0f)
-            {
-                controller.Move(-wallNormal * gap); // Slide the player against the wall
-            }
+            float wallDistance = Vector3.Dot(hit.point - FeetRayOrigin(), -wallNormal); // Measured after the turn, from the final capsule position
+            float gap = wallDistance - ScaledRadius - controller.skinWidth; // Positive = empty space, negative = the capsule is inside the wall
+            controller.Move(-wallNormal * gap); // Close the gap, or push out if the capsule ended up inside the wall
 
             velocity = Vector3.zero; // Cancel any falling or jumping speed
             
@@ -216,11 +213,12 @@ public class PlayerMovement : MonoBehaviour
             lastWall = currentWall; // Prevents grabbing the same wall again until touching the ground
             controller.Move(wallNormal * 0.3f); // Small push away from the wall
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            if (animator != null) animator.CrossFadeInFixedTime("Jumping anim rat", 0.05f); // Wall jump plays the jump animation instead of dropping into Fall
             return;
         }
 
         bool wallAhead = Physics.Raycast(FeetRayOrigin(), -wallNormal, wallCheckDistance,
-                                         ~0, QueryTriggerInteraction.Ignore); // Check if the wall is still in front of the player, using the feet ray origin so it stops hitting when the feet pass the top edge
+                                  ~0, QueryTriggerInteraction.Ignore); // Check if the wall is still in front of the player, using the feet ray origin so it stops hitting when the feet pass the top edge
 
         if (!wallAhead) // The wall ended: the feet passed the top edge, so push up and forward onto it
         {
@@ -244,7 +242,6 @@ public class PlayerMovement : MonoBehaviour
         {
             controller.Move(climbMove * Time.deltaTime);
         }
-           
 
         if (controller.isGrounded && moveInput.y < 0f) // Went back down to the floor
         {
@@ -388,7 +385,8 @@ public class PlayerMovement : MonoBehaviour
 
         wasClimbing = climbing;
 
-        animator.speed = (climbing && !climbMoving) ? 0f : 1f; // Freeze the pose while hanging still on the wall
+        bool settling = animator.IsInTransition(0); // Never freeze in the middle of a blend, or the pose stays half Jump and half Climb
+        animator.speed = (climbing && !climbMoving && !settling) ? 0f : 1f; // Freeze the pose only once the climb pose is fully reached
     }
 }
 
