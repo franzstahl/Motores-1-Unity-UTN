@@ -26,7 +26,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float climbDuration = 4f; // Max seconds the player can stay on a wall
     [SerializeField] private float wallCheckDistance = 0.6f; // How far the wall ray looks
     [SerializeField] private string climbableTag = "Climbable"; // Walls with this tag can be climbed
-    
+    [SerializeField] private float minClimbHeightAboveGround = 0.6f; // Ray length from the feet origin; going down is blocked when the ground is closer than this
+    [SerializeField] private float minClimbHeightBelowCeiling = 0.6f; // Ray length from the head origin; going up is blocked when a ceiling is closer than this (tune in Play)
+
 
     [SerializeField] private Vector3 climbArmaturePosition = new Vector3(0.0086f, 0.3522f, -0.9f); // Armature local position while climbing, tune it in Play mode
     [SerializeField] private float climbRotationSpeed; // How fast the body turns toward the climb direction
@@ -176,6 +178,11 @@ public class PlayerMovement : MonoBehaviour
         return center + Vector3.down * (ScaledHeight * 0.5f - 0.1f);
     }
 
+    private Vector3 HeadRayOrigin() // Ray origin near the top of the capsule, mirrors FeetRayOrigin
+    {
+        Vector3 center = transform.TransformPoint(controller.center);
+        return center + Vector3.up * (ScaledHeight * 0.5f - 0.1f);
+    }
     private void TryStartClimb() // Grab a climbable wall
     {
         if (isGrounded || !canClimb || moveInput.sqrMagnitude < 0.01f) return;
@@ -237,6 +244,14 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 wallRight = Vector3.Cross(Vector3.up, -wallNormal); // Sideways direction along the wall
         Vector3 climbMove = (Vector3.up * moveInput.y + wallRight * moveInput.x) * climbSpeed;
+
+        // Block going further down when the ground is close, so the mouse never reaches the floor upside down
+        if (moveInput.y < 0f && Physics.Raycast(FeetRayOrigin(), Vector3.down, minClimbHeightAboveGround, ~0, QueryTriggerInteraction.Ignore))
+            climbMove.y = 0f; // Only cancels the vertical part, sideways movement still works
+
+        // Block going further up when a ceiling is close, so the head never goes through it
+        if (moveInput.y > 0f && Physics.Raycast(HeadRayOrigin(), Vector3.up, minClimbHeightBelowCeiling, ~0, QueryTriggerInteraction.Ignore))
+            climbMove.y = 0f; // Only cancels the vertical part, sideways movement still works
 
         if (gameManager.isMovementActive)
         {
