@@ -4,13 +4,32 @@ using UnityEngine.InputSystem;
 
 public class LoadScenes : MonoBehaviour
 {
+    [Header("Player scripts")]
     [SerializeField] private MonoBehaviour movementScript;
     [SerializeField] private MonoBehaviour playerCamera;
     [SerializeField] private PlayerInput playerInput;
+    [Header("Menu panels")]
+    [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject pauseMenu;
+    [Header("Cameras")]
+    [SerializeField] private GameObject menuCamera;
+    [SerializeField] private GameObject gameCamera;
     private bool isPaused;
-    public void StartGame()
+    private void Awake()
     {
-        Time.timeScale = 1;
+        if (mainMenu != null)
+        {
+            mainMenu.SetActive(true);
+        }
+        if (menuCamera != null)
+        {
+            menuCamera.SetActive(true);
+        }
+        if (gameCamera != null)
+        {
+            gameCamera.SetActive(false);
+        }
+        Pause();
     }
     private void Update()
     {
@@ -19,6 +38,19 @@ public class LoadScenes : MonoBehaviour
             TogglePause();
         }
     }
+    public void StartGame()
+    {
+        if (menuCamera != null)
+        {
+            menuCamera.SetActive(false);
+        }
+        if (gameCamera != null)
+        {
+            gameCamera.SetActive(true);
+        }
+        mainMenu.SetActive(false);
+        Resume();
+    }
     public void TogglePause()
     {
         isPaused = !isPaused;
@@ -26,10 +58,12 @@ public class LoadScenes : MonoBehaviour
         if (isPaused == true)
         {
             Pause();
+            OpenPauseMenu();
         }
         else
         {
             Resume();
+            ClosePauseMenu();
         }
     }
     public void Pause()
@@ -59,5 +93,13 @@ public class LoadScenes : MonoBehaviour
         {
             playerCamera.enabled = true;
         }
+    }
+    public void OpenPauseMenu()
+    {
+        pauseMenu.SetActive(true);
+    }
+    public void ClosePauseMenu()
+    {
+        pauseMenu.SetActive(false);
     }
 }
