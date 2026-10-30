@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; } // Anyone can read it, only this class can set it
