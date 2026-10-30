@@ -11634,7 +11634,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &79693491
 MeshCollider:
@@ -17698,6 +17698,10 @@ PrefabInstance:
     - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Floor_PlankOak_03 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -23800,6 +23804,10 @@ PrefabInstance:
       value: SM_LPI_Floor_PlankOak_03 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -23880,6 +23888,10 @@ PrefabInstance:
     - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Floor_PlankOak_03 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -24691,6 +24703,10 @@ PrefabInstance:
     - target: {fileID: 105538721357017591, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Struct_Floor_06 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105538721357017591, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 105538721357017591, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -30834,6 +30850,10 @@ PrefabInstance:
     - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Floor_PlankOak_03 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -49801,6 +49821,10 @@ PrefabInstance:
       value: SM_LPI_Floor_PlankOak_03
       objectReference: {fileID: 0}
     - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -52170,6 +52194,51 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &286094463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3964684090539026661, guid: 0138202dabb0b4f8190312d74f44a13d, type: 3}
+  m_PrefabInstance: {fileID: 2023087608}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &286094467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286094463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
+--- !u!54 &286094468
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286094463}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &287169167 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7760266135278935768, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
@@ -52701,6 +52770,10 @@ PrefabInstance:
     - target: {fileID: 8460580496782989107, guid: a7d40b2ded49e451ba984b4c2cf9c428, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Floor_PlankLight_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460580496782989107, guid: a7d40b2ded49e451ba984b4c2cf9c428, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 8460580496782989107, guid: a7d40b2ded49e451ba984b4c2cf9c428, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -59736,6 +59809,10 @@ PrefabInstance:
     - target: {fileID: 105538721357017591, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Struct_Floor_06 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105538721357017591, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 105538721357017591, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -74728,6 +74805,10 @@ PrefabInstance:
       value: SM_LPI_Floor_PlankOak_03 (18)
       objectReference: {fileID: 0}
     - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -75109,6 +75190,10 @@ PrefabInstance:
     - target: {fileID: 8460580496782989107, guid: a7d40b2ded49e451ba984b4c2cf9c428, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460580496782989107, guid: a7d40b2ded49e451ba984b4c2cf9c428, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 8460580496782989107, guid: a7d40b2ded49e451ba984b4c2cf9c428, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -113541,7 +113626,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &484328417
 MeshCollider:
@@ -131363,6 +131448,10 @@ PrefabInstance:
       value: SM_LPI_Struct_Floor_06
       objectReference: {fileID: 0}
     - target: {fileID: 105538721357017591, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 105538721357017591, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -140896,7 +140985,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &575564887
 MeshCollider:
@@ -146430,6 +146519,51 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &622509977 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5632383465056079461, guid: 7b585c124e1ee4dccb4ce55a8fe514a2, type: 3}
+  m_PrefabInstance: {fileID: 1368448726}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &622509978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622509977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 081d250d3ca65bb4d997d9cdac8f89a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyParticle: {fileID: 0}
+--- !u!54 &622509979
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622509977}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &623919002
 Mesh:
   m_ObjectHideFlags: 0
@@ -153679,6 +153813,10 @@ PrefabInstance:
       value: SM_LPI_Floor_ParquetOak_03
       objectReference: {fileID: 0}
     - target: {fileID: 2742115676912558494, guid: b6609acd8219c485eafdf9fbd4f3e9cf, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2742115676912558494, guid: b6609acd8219c485eafdf9fbd4f3e9cf, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -157738,6 +157876,10 @@ PrefabInstance:
       value: SM_LPI_Floor_PlankLight_03 (6)
       objectReference: {fileID: 0}
     - target: {fileID: 8460580496782989107, guid: a7d40b2ded49e451ba984b4c2cf9c428, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460580496782989107, guid: a7d40b2ded49e451ba984b4c2cf9c428, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -157953,6 +158095,10 @@ PrefabInstance:
     - target: {fileID: 2742115676912558494, guid: b6609acd8219c485eafdf9fbd4f3e9cf, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Floor_ParquetOak_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2742115676912558494, guid: b6609acd8219c485eafdf9fbd4f3e9cf, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 2742115676912558494, guid: b6609acd8219c485eafdf9fbd4f3e9cf, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -162130,6 +162276,10 @@ PrefabInstance:
     - target: {fileID: 105538721357017591, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Struct_Floor_06 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105538721357017591, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 105538721357017591, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -169521,6 +169671,10 @@ PrefabInstance:
       value: SM_LPI_Floor_PlankOak_03 (6)
       objectReference: {fileID: 0}
     - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -170308,6 +170462,10 @@ PrefabInstance:
     - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Floor_PlankOak_03 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -173993,6 +174151,10 @@ PrefabInstance:
       value: SM_LPI_Struct_Floor_06 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 105538721357017591, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 105538721357017591, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -176907,6 +177069,10 @@ PrefabInstance:
     - target: {fileID: 7163590310916045024, guid: eccaeb1afd9e641e8974d0be5bfaa4f4, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Text_RugRunner_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7163590310916045024, guid: eccaeb1afd9e641e8974d0be5bfaa4f4, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 7163590310916045024, guid: eccaeb1afd9e641e8974d0be5bfaa4f4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -221519,6 +221685,10 @@ PrefabInstance:
     - target: {fileID: 105538721357017591, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Struct_Floor_06 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105538721357017591, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 105538721357017591, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -277315,7 +277485,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &1312300612
 MeshCollider:
@@ -277849,7 +278019,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &1320644732
 MeshCollider:
@@ -285630,13 +285800,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1481503690}
     m_Modifications:
+    - target: {fileID: 5395020154001228987, guid: 7b585c124e1ee4dccb4ce55a8fe514a2, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5632383465056079461, guid: 7b585c124e1ee4dccb4ce55a8fe514a2, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Office_Stapler_01
       objectReference: {fileID: 0}
     - target: {fileID: 5632383465056079461, guid: 7b585c124e1ee4dccb4ce55a8fe514a2, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5951074358661550909, guid: 7b585c124e1ee4dccb4ce55a8fe514a2, type: 3}
       propertyPath: m_LocalScale.x
@@ -285697,7 +285871,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5632383465056079461, guid: 7b585c124e1ee4dccb4ce55a8fe514a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 622509979}
+    - targetCorrespondingSourceObject: {fileID: 5632383465056079461, guid: 7b585c124e1ee4dccb4ce55a8fe514a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 622509978}
   m_SourcePrefab: {fileID: 100100000, guid: 7b585c124e1ee4dccb4ce55a8fe514a2, type: 3}
 --- !u!1 &1374065238
 GameObject:
@@ -295983,6 +296163,10 @@ PrefabInstance:
       value: SM_LPI_Floor_PlankOak_03 (8)
       objectReference: {fileID: 0}
     - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -297131,6 +297315,10 @@ PrefabInstance:
     - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Floor_PlankOak_03 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -304433,6 +304621,10 @@ PrefabInstance:
     - target: {fileID: 105538721357017591, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Struct_Floor_06 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105538721357017591, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 105538721357017591, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -344007,6 +344199,10 @@ PrefabInstance:
       value: SM_LPI_Floor_PlankOak_03 (15)
       objectReference: {fileID: 0}
     - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -349692,7 +349888,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &1593565625
 MeshCollider:
@@ -353988,11 +354184,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7584207590346069363, guid: bd5a6f17f142449a38efae14ab774da2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.113125
+      value: -10.102
       objectReference: {fileID: 0}
     - target: {fileID: 7584207590346069363, guid: bd5a6f17f142449a38efae14ab774da2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.8577175
+      value: -12.992
       objectReference: {fileID: 0}
     - target: {fileID: 7584207590346069363, guid: bd5a6f17f142449a38efae14ab774da2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -355946,6 +356142,10 @@ PrefabInstance:
     - target: {fileID: 8460580496782989107, guid: a7d40b2ded49e451ba984b4c2cf9c428, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Floor_PlankLight_03 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460580496782989107, guid: a7d40b2ded49e451ba984b4c2cf9c428, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 8460580496782989107, guid: a7d40b2ded49e451ba984b4c2cf9c428, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -358266,7 +358466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5910893486026188185, guid: 6827eac5e8d2a4aaf977d2615af2578c, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9006305047495039279, guid: 6827eac5e8d2a4aaf977d2615af2578c, type: 3}
       propertyPath: m_LocalScale.x
@@ -377235,7 +377435,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &1784220308
 MeshCollider:
@@ -390533,6 +390733,10 @@ PrefabInstance:
       value: SM_LPI_Floor_PlankOak_03 (12)
       objectReference: {fileID: 0}
     - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652543680728795635, guid: 55deeb98afa5b42ab9096d396bff4523, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -394171,6 +394375,10 @@ PrefabInstance:
     - target: {fileID: 7163590310916045024, guid: eccaeb1afd9e641e8974d0be5bfaa4f4, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Text_RugRunner_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7163590310916045024, guid: eccaeb1afd9e641e8974d0be5bfaa4f4, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 7163590310916045024, guid: eccaeb1afd9e641e8974d0be5bfaa4f4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -405444,6 +405652,10 @@ PrefabInstance:
       value: SM_LPI_Floor_ParquetOak_03 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 2742115676912558494, guid: b6609acd8219c485eafdf9fbd4f3e9cf, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2742115676912558494, guid: b6609acd8219c485eafdf9fbd4f3e9cf, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -410586,6 +410798,10 @@ PrefabInstance:
       value: SM_LPI_Floor_PlankLight_03 (7)
       objectReference: {fileID: 0}
     - target: {fileID: 8460580496782989107, guid: a7d40b2ded49e451ba984b4c2cf9c428, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460580496782989107, guid: a7d40b2ded49e451ba984b4c2cf9c428, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -415638,18 +415854,28 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3277251002875768848, guid: 0138202dabb0b4f8190312d74f44a13d, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3964684090539026661, guid: 0138202dabb0b4f8190312d74f44a13d, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Office_PenPot_01
       objectReference: {fileID: 0}
     - target: {fileID: 3964684090539026661, guid: 0138202dabb0b4f8190312d74f44a13d, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3964684090539026661, guid: 0138202dabb0b4f8190312d74f44a13d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 286094468}
+    - targetCorrespondingSourceObject: {fileID: 3964684090539026661, guid: 0138202dabb0b4f8190312d74f44a13d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 286094467}
   m_SourcePrefab: {fileID: 100100000, guid: 0138202dabb0b4f8190312d74f44a13d, type: 3}
 --- !u!43 &2026547221
 Mesh:
@@ -416018,6 +416244,10 @@ PrefabInstance:
     - target: {fileID: 2742115676912558494, guid: b6609acd8219c485eafdf9fbd4f3e9cf, type: 3}
       propertyPath: m_Name
       value: SM_LPI_Floor_ParquetOak_03 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2742115676912558494, guid: b6609acd8219c485eafdf9fbd4f3e9cf, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 2742115676912558494, guid: b6609acd8219c485eafdf9fbd4f3e9cf, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -416805,11 +417035,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 441415043383026009, guid: ba4f3f8def46bff4e8bdc9a8b8ede0f6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 962312254086193149, guid: ba4f3f8def46bff4e8bdc9a8b8ede0f6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997801573464267837, guid: ba4f3f8def46bff4e8bdc9a8b8ede0f6, type: 3}
       propertyPath: m_Pivot.x
@@ -416891,13 +417121,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2765261849009313904, guid: ba4f3f8def46bff4e8bdc9a8b8ede0f6, type: 3}
+      propertyPath: gameCamera
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765261849009313904, guid: ba4f3f8def46bff4e8bdc9a8b8ede0f6, type: 3}
+      propertyPath: menuCamera
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765261849009313904, guid: ba4f3f8def46bff4e8bdc9a8b8ede0f6, type: 3}
+      propertyPath: startPaused
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8505746027805471635, guid: ba4f3f8def46bff4e8bdc9a8b8ede0f6, type: 3}
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
     - target: {fileID: 8505746027805471635, guid: ba4f3f8def46bff4e8bdc9a8b8ede0f6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

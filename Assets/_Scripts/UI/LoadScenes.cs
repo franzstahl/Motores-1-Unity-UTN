@@ -1,4 +1,3 @@
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,16 +6,17 @@ public class LoadScenes : MonoBehaviour
     [Header("Player scripts")]
     [SerializeField] private MonoBehaviour movementScript;
     [SerializeField] private MonoBehaviour playerCamera;
-    [SerializeField] private PlayerInput playerInput;
     [Header("Menu panels")]
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private bool startPaused = true; // Uncheck in scenes without a main menu, so the game doesn't start frozen
     [Header("Cameras")]
     [SerializeField] private GameObject menuCamera;
     [SerializeField] private GameObject gameCamera;
     private bool isPaused;
     private void Awake()
     {
+        if (!startPaused) return;
         if (mainMenu != null)
         {
             mainMenu.SetActive(true);
@@ -33,7 +33,8 @@ public class LoadScenes : MonoBehaviour
     }
     private void Update()
     {
-        if (playerInput.actions["Pause"].triggered)
+        // Read the pause key directly, no PlayerInput component needed
+        if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             TogglePause();
         }
@@ -53,35 +54,29 @@ public class LoadScenes : MonoBehaviour
     }
     public void TogglePause()
     {
-        isPaused = !isPaused;
+        if (mainMenu != null && mainMenu.activeSelf) return; // Don't open the pause menu over the main menu
 
-        if (isPaused == true)
-        {
-            Pause();
-            OpenPauseMenu();
-        }
-        else
-        {
-            Resume();
-            ClosePauseMenu();
-        }
+        if (isPaused) { Resume(); ClosePauseMenu(); }
+        else { Pause(); OpenPauseMenu(); }
     }
     public void Pause()
     {
+        isPaused = true;
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        if (movementScript != null )
+        if (movementScript != null)
         {
             movementScript.enabled = false;
         }
-        if (playerCamera != null )
+        if (playerCamera != null)
         {
             playerCamera.enabled = false;
         }
     }
     public void Resume()
     {
+        isPaused = false;
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
