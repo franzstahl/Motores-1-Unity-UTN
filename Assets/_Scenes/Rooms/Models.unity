@@ -179840,6 +179840,8 @@ MonoBehaviour:
   delayBeforeLoad: 1
   audioSource: {fileID: 173107299}
   victoryAudio: {fileID: 8300000, guid: 08ce36178f8eb6c40b06d2a163f4c46e, type: 3}
+  cheesesToSpawn: []
+  currentCheese: {fileID: 0}
 --- !u!1 &939342778
 GameObject:
   m_ObjectHideFlags: 0
@@ -289694,6 +289696,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6d3927c7-9964-4be8-bf79-567d57da12c8
+    m_ActionName: 'Player/Pause[/Keyboard/q]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -289728,6 +289734,8 @@ MonoBehaviour:
   climbableTag: Climbable
   minClimbHeightAboveGround: 1
   minClimbHeightBelowCeiling: 0.7
+  climbCastRadius: 0.2
+  headReachSide: 2
   climbArmaturePosition: {x: 0.0086, y: 0.3522, z: 0.9}
   climbRotationSpeed: 2
   cameraTransform: {fileID: 939342781}
@@ -347792,6 +347800,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6d3927c7-9964-4be8-bf79-567d57da12c8
+    m_ActionName: 'Player/Pause[/Keyboard/q]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -347826,6 +347838,8 @@ MonoBehaviour:
   climbableTag: Climbable
   minClimbHeightAboveGround: 0.6
   minClimbHeightBelowCeiling: 0.6
+  climbCastRadius: 0.2
+  headReachSide: 0.6
   climbArmaturePosition: {x: 0.0086, y: 0.3522, z: 0.9}
   climbRotationSpeed: 2
   cameraTransform: {fileID: 939342781}
@@ -417814,6 +417828,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 441415043383026009, guid: ba4f3f8def46bff4e8bdc9a8b8ede0f6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 962312254086193149, guid: ba4f3f8def46bff4e8bdc9a8b8ede0f6, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}

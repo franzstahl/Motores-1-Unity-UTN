@@ -28,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private string climbableTag = "Climbable"; // Walls with this tag can be climbed
     [SerializeField] private float minClimbHeightAboveGround = 0.6f; // Ray length from the feet origin; going down is blocked when the ground is closer than this
     [SerializeField] private float minClimbHeightBelowCeiling = 0.6f; // Ray length from the head origin; going up is blocked when a ceiling is closer than this (tune in Play)
+    [SerializeField] private float climbCastRadius = 0.2f; // Thickness of the obstacle check, so thin edges can't slip through
+    [SerializeField] private float headReachSide = 0.6f; // Reach when moving sideways (tune in Play)
 
 
     [SerializeField] private Vector3 climbArmaturePosition = new Vector3(0.0086f, 0.3522f, -0.9f); // Armature local position while climbing, tune it in Play mode
@@ -245,14 +247,21 @@ public class PlayerMovement : MonoBehaviour
         Vector3 wallRight = Vector3.Cross(Vector3.up, -wallNormal); // Sideways direction along the wall
         Vector3 climbMove = (Vector3.up * moveInput.y + wallRight * moveInput.x) * climbSpeed;
 
-        // Block going further down when the ground is close, so the mouse never reaches the floor upside down
-        if (moveInput.y < 0f && Physics.Raycast(FeetRayOrigin(), Vector3.down, minClimbHeightAboveGround, ~0, QueryTriggerInteraction.Ignore))
-            climbMove.y = 0f; // Only cancels the vertical part, sideways movement still works
+        // Stop before any obstacle in the direction we are moving, keeping the floor and ceiling values
+        if (climbMove.sqrMagnitude > 0.001f)
+        {
+            Vector3 dir = climbMove.normalized;
+            Vector3 origin;
+            float reach;
 
-        // Block going further up when a ceiling is close, so the head never goes through it
-        if (moveInput.y > 0f && Physics.Raycast(HeadRayOrigin(), Vector3.up, minClimbHeightBelowCeiling, ~0, QueryTriggerInteraction.Ignore))
-            climbMove.y = 0f; // Only cancels the vertical part, sideways movement still works
+            if (dir.y > 0.5f) { origin = HeadRayOrigin(); reach = minClimbHeightBelowCeiling; } // Mostly up: ceiling
+            else if (dir.y < -0.5f) { origin = FeetRayOrigin(); reach = minClimbHeightAboveGround; } // Mostly down: floor
+            else { origin = transform.TransformPoint(controller.center); reach = headReachSide; } // Sideways
 
+            // SphereCast distance is measured to the sphere center, so subtract the radius to match the old Raycast values
+            if (Physics.SphereCast(origin, climbCastRadius, dir, out RaycastHit obstacle, Mathf.Max(0f, reach - climbCastRadius), ~0, QueryTriggerInteraction.Ignore))
+                climbMove = Vector3.ProjectOnPlane(climbMove, obstacle.normal); // Slide along the obstacle instead of stopping dead
+        }
         if (gameManager.isMovementActive)
         {
             controller.Move(climbMove * Time.deltaTime);
