@@ -37,10 +37,7 @@ public class NoiseMeter : MonoBehaviour
     {
         UpdateMeterVisuals();
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            IncreaseNoiseMeter();
-        }
+        
         // cuando el sistema de obstaculos ande bien lo sacamos
     }
 
