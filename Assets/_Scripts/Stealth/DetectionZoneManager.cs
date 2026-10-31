@@ -8,6 +8,7 @@ public class DetectionZoneManager : MonoBehaviour
     [SerializeField] private float timer;
     [SerializeField] private float timerStartValue;
     [SerializeField] private GameObject detectionZone;
+    public Animator anim;
 
     private bool timerActive;
 
@@ -25,6 +26,7 @@ public class DetectionZoneManager : MonoBehaviour
         {
             timerActive = false;
             detectionZone.SetActive(true);
+            anim.SetTrigger("PetCat");
             StartCoroutine(DetectionZoneTimer());
         }
     }

@@ -60,11 +60,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|Armature|Armature|ArmatureAction_Armature
-      takeName: Armature|Armature|Armature|ArmatureAction_Armature
-      internalID: 6201186396713936200
+      name: Watching anim
+      takeName: Armature|Armature|Armature|ArmatureAction
+      internalID: -5075894107677747073
       firstFrame: 0
-      lastFrame: 1
+      lastFrame: 0.10000001
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -158,7 +158,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0

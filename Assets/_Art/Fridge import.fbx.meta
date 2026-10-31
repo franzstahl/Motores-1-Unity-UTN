@@ -81,10 +81,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Puerta heladera|SM_LPI_Appl_Fridge_01.016Action
+      name: Fridge opened
       takeName: Puerta heladera|SM_LPI_Appl_Fridge_01.016Action
       internalID: -5950892037976375578
-      firstFrame: 0
+      firstFrame: 34.5
       lastFrame: 35
       wrapMode: 0
       orientationOffsetY: 0
