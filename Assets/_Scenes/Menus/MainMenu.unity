@@ -2447,6 +2447,11 @@ MonoBehaviour:
   noiseMeterFrame: {fileID: 0}
   maxNoiseUntilDefeat: 10
   amountOfNoise: 0
+  madeNoiseVolume: {fileID: 0}
+  peakWeight: 1
+  fadeInDuration: 0.1
+  holdDuration: 0.15
+  fadeOutDuration: 0.8
 --- !u!114 &863883334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2823,7 +2828,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1069830476
 Canvas:
   m_ObjectHideFlags: 0
@@ -2883,9 +2888,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadScenes
   movementScript: {fileID: 1988610281}
   playerCamera: {fileID: 40641535}
-  playerInput: {fileID: 1988610280}
   mainMenu: {fileID: 75835765}
   pauseMenu: {fileID: 1457530675}
+  startPaused: 1
   menuCamera: {fileID: 631450073}
   gameCamera: {fileID: 1832631948}
 --- !u!43 &1074966723
@@ -6232,6 +6237,8 @@ MonoBehaviour:
   climbableTag: Climbable
   minClimbHeightAboveGround: 1
   minClimbHeightBelowCeiling: 0.7
+  climbCastRadius: 0.2
+  headReachSide: 0.6
   climbArmaturePosition: {x: 0.0086, y: 0.3522, z: 0.9}
   climbRotationSpeed: 2
   cameraTransform: {fileID: 40641536}
