@@ -22,21 +22,15 @@ public class CameraCollision : MonoBehaviour
 
     private void Start()
     {
+
         Vector3 angles = transform.eulerAngles;
+        rotY = Mathf.DeltaAngle(0f, angles.x); // Converts 350 to -10 so the Min Y / Max Y clamp works
 
         rotX = angles.y;
         rotY = angles.x;
 
         Cursor.lockState = CursorLockMode.Locked;
         gameObject.GetComponent<CinemachineBrain>().enabled = false;
-        currentDistance = distance;
-    }
-
-    public void SyncFromTransform() // Called after the intro: copy the current camera angles so control resumes without a jump
-    {
-        Vector3 angles = transform.eulerAngles;
-        rotX = angles.y;
-        rotY = Mathf.DeltaAngle(0f, angles.x); 
         currentDistance = distance;
     }
 

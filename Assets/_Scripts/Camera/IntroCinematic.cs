@@ -26,7 +26,6 @@ public class IntroCinematic : MonoBehaviour
         cinematicCamera.SetActive(false); // The Brain blends back to the player camera by itself
         yield return new WaitForSeconds(blendDuration); // Wait for the blend to finish
 
-        cameraCollision.SyncFromTransform();
         brain.enabled = false;
         cameraCollision.enabled = true;
 
