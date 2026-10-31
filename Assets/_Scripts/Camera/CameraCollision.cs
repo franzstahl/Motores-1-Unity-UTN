@@ -32,6 +32,14 @@ public class CameraCollision : MonoBehaviour
         currentDistance = distance;
     }
 
+    public void SyncFromTransform() // Called after the intro: copy the current camera angles so control resumes without a jump
+    {
+        Vector3 angles = transform.eulerAngles;
+        rotX = angles.y;
+        rotY = Mathf.DeltaAngle(0f, angles.x); 
+        currentDistance = distance;
+    }
+
     private void LateUpdate()
     {
         if (!target) return;
