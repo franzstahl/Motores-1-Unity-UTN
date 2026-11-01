@@ -1,6 +1,8 @@
 using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class IntroCinematic : MonoBehaviour
 {
@@ -14,13 +16,14 @@ public class IntroCinematic : MonoBehaviour
     private IEnumerator Start()
     {
         yield return null; // Wait one frame so GameManager.Start has already run
+        Cursor.lockState = CursorLockMode.None; // Free the cursor while the main menu is open
+        Cursor.visible = true;
         GameManager.Instance.SetMovementActive(false); // Locked while the main menu is open
     }
 
     public void PlayIntro() // Called by the Play button
     {
         StartCoroutine(IntroRoutine());
-        Debug.Log("PlayIntro called"); // Temporary, remove after debugging
     }
 
     private IEnumerator IntroRoutine()
@@ -34,4 +37,5 @@ public class IntroCinematic : MonoBehaviour
         hud.SetActive(true);
         GameManager.Instance.SetMovementActive(true);
     }
+    
 }

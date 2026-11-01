@@ -31,8 +31,11 @@ public class CatBehaviour : MonoBehaviour
     // It also checks if the cat is falling or walking based on its previous and current positions, and triggers the appropriate animations.
     private void Update() 
     {
-        if (canMove)
+        bool chasing = canMove && GameManager.Instance.isMovementActive; // Stops when the cat is disabled or while the player is caught / locked
+
+        if (chasing)
         {
+            cat.isStopped = false; // Let the agent move again after a stop
             cat.SetDestination(mouse.position);
             if (prevPosition.y > transform.position.y)
             {
@@ -50,6 +53,15 @@ public class CatBehaviour : MonoBehaviour
                 catAnimator.SetBool("Walking", false);
             prevPosition = transform.position;
         }
+        else
+        {
+            Debug.Log($"{name} STOPPED | isStopped={cat.isStopped} | speed={cat.velocity.magnitude} | onLink={cat.isOnOffMeshLink}"); // Temporary
+            cat.isStopped = true; // Halt the agent in place
+            cat.ResetPath(); // Drop the old destination so it can't resume on its own
+            cat.velocity = Vector3.zero; // Kill the leftover speed right away, no sliding
+            catAnimator.SetBool("Walking", false); // Stop the walk animation
+            prevPosition = transform.position; // Avoid a false "moving" or "falling" reading when it resumes
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -62,6 +74,11 @@ public class CatBehaviour : MonoBehaviour
         else if (other.CompareTag("Sitting zone"))
         {
             catAnimator.SetBool("Sitting", true);
+        }
+
+        else if (canMove && other.CompareTag("Player")) // Only an active cat can catch the mouse
+        {
+            GameManager.Instance.PlayerDetected = true; // Same flow as being spotted: sound, fade, respawn
         }
     }
 }
