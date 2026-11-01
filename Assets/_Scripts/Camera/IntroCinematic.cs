@@ -14,7 +14,9 @@ public class IntroCinematic : MonoBehaviour
     [SerializeField] private CameraCollision cameraCollision;
     [SerializeField] private CinemachineBrain brain;
     [SerializeField] private Fridge fridge; // To close it during the camera cut
-
+    [SerializeField] private CanvasGroup menuGroup; // CanvasGroup on the main menu canvas
+    [SerializeField] private LoadScenes loadScenes; // The menu's LoadScenes, called after the fade
+    [SerializeField] private float menuFadeDuration = 0.5f;
     private IEnumerator Start()
     {
         yield return null; // Wait one frame so GameManager.Start has already run
@@ -30,6 +32,17 @@ public class IntroCinematic : MonoBehaviour
 
     private IEnumerator IntroRoutine()
     {
+        menuGroup.interactable = false; // No double clicks while fading
+        float t = 0f;
+        while (t < menuFadeDuration)
+        {
+            t += Time.unscaledDeltaTime; // Unscaled: the game is still paused (timeScale = 0) while the menu is open
+            menuGroup.alpha = 1f - t / menuFadeDuration;
+            yield return null;
+        }
+        menuGroup.alpha = 0f;
+
+        loadScenes.StartGame(); // Hides the menu and resumes the game, now that it has faded out
         yield return new WaitForSeconds(holdDuration); // Time on the fridge after pressing Play
 
         fridge.CloseInstantly(); // Closed in the same frame as the camera cut
