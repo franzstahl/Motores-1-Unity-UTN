@@ -34,8 +34,9 @@ public class PlayerInteraction : MonoBehaviour
         {
             Debug.Log("Golpeó: " + hit.collider.gameObject.name);
 
-            if (hit.collider.GetComponent<InteractibleInterface>() != null)
-                hit.collider.GetComponent<InteractibleInterface>().Interact();
+            InteractibleInterface interactible = hit.collider.GetComponentInParent<InteractibleInterface>(); // Checks the hit object and its parents, so child colliders work too
+            if (interactible != null)
+                interactible.Interact();
         }
       
     }

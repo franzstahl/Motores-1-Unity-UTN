@@ -39,14 +39,14 @@ public class CatBehaviour : MonoBehaviour
             cat.SetDestination(mouse.position);
             if (prevPosition.y > transform.position.y)
             {
-                Debug.Log("Cae");
+                //Debug.Log("Cae");
                 catAnimator.SetBool("Falling", true);
             }
             else
                 catAnimator.SetBool("Falling", false);
             if ((prevPosition.x != transform.position.x || prevPosition.z != transform.position.z) && prevPosition.y == transform.position.y)
             {
-                Debug.Log("Se mueve");
+                //Debug.Log("Se mueve");
                 catAnimator.SetBool("Walking", true);
             }
             else
@@ -55,7 +55,7 @@ public class CatBehaviour : MonoBehaviour
         }
         else
         {
-            Debug.Log($"{name} STOPPED | isStopped={cat.isStopped} | speed={cat.velocity.magnitude} | onLink={cat.isOnOffMeshLink}"); // Temporary
+            //Debug.Log($"{name} STOPPED | isStopped={cat.isStopped} | speed={cat.velocity.magnitude} | onLink={cat.isOnOffMeshLink}"); // Temporary
             cat.isStopped = true; // Halt the agent in place
             cat.ResetPath(); // Drop the old destination so it can't resume on its own
             cat.velocity = Vector3.zero; // Kill the leftover speed right away, no sliding
@@ -68,7 +68,7 @@ public class CatBehaviour : MonoBehaviour
     {
         if (other.CompareTag("Navmesh jump"))
         {
-            Debug.Log("Salta");
+            //Debug.Log("Salta");
             catAnimator.SetTrigger("Jumped");
         }
         else if (other.CompareTag("Sitting zone"))

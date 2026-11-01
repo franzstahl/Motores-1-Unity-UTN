@@ -10,8 +10,10 @@ public class IntroCinematic : MonoBehaviour
     [SerializeField] private GameObject hud; // Starts disabled in the editor, enabled when the cinematic ends
     [SerializeField] private float holdDuration = 3f; // Seconds the fridge stays on screen
     [SerializeField] private float blendDuration = 6f; // Should match the Brain's Default Blend
+    [SerializeField] private float closedHoldDuration = 2f; // Seconds the closed fridge stays on screen before the camera moves
     [SerializeField] private CameraCollision cameraCollision;
     [SerializeField] private CinemachineBrain brain;
+    [SerializeField] private Fridge fridge; // To close it during the camera cut
 
     private IEnumerator Start()
     {
@@ -29,6 +31,9 @@ public class IntroCinematic : MonoBehaviour
     private IEnumerator IntroRoutine()
     {
         yield return new WaitForSeconds(holdDuration); // Time on the fridge after pressing Play
+
+        fridge.CloseInstantly(); // Closed in the same frame as the camera cut
+        yield return new WaitForSeconds(closedHoldDuration);
 
         cinematicCamera.SetActive(false);
         yield return new WaitForSeconds(blendDuration);

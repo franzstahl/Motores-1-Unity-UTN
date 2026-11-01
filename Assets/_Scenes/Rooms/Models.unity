@@ -25459,6 +25459,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 711702640}
     m_Modifications:
+    - target: {fileID: 1994261882476492318, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
+      propertyPath: m_Name
+      value: Puerta freezer(1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064101143583365944, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cf0c19f05f6b84f4daac2aaf1c6c7f4e, type: 2}
     - target: {fileID: 6170730672591223787, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -0.000004325712
@@ -25478,6 +25486,34 @@ PrefabInstance:
     - target: {fileID: 6965532692132695487, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
       propertyPath: m_Name
       value: Fridge prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404720124210071142, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
+      propertyPath: m_Size.x
+      value: 0.00021844788
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404720124210071142, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
+      propertyPath: m_Size.y
+      value: 0.017249998
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404720124210071142, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
+      propertyPath: m_Size.z
+      value: 0.0065776985
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404720124210071142, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404720124210071142, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
+      propertyPath: m_Center.x
+      value: -0.0028765707
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404720124210071142, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
+      propertyPath: m_Center.y
+      value: 0.009175
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404720124210071142, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
+      propertyPath: m_Center.z
+      value: 0.00073942845
       objectReference: {fileID: 0}
     - target: {fileID: 7773595279852361477, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25519,10 +25555,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8185949368767778366, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8185949368767778366, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cf0c19f05f6b84f4daac2aaf1c6c7f4e, type: 2}
+    - target: {fileID: 8185949368767778366, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bfa079fb48070584eaf87abd23f38d70, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6965532692132695487, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1083416022}
   m_SourcePrefab: {fileID: 100100000, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
 --- !u!4 &151605086 stripped
 Transform:
@@ -157231,10 +157282,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IntroCinematic
   cinematicCamera: {fileID: 1281137967}
   hud: {fileID: 2037865655}
-  holdDuration: 8
+  holdDuration: 6
   blendDuration: 6
+  closedHoldDuration: 6
   cameraCollision: {fileID: 939342784}
   brain: {fileID: 939342783}
+  fridge: {fileID: 1083416022}
 --- !u!4 &644081264
 Transform:
   m_ObjectHideFlags: 0
@@ -222486,6 +222539,34 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &1083416020 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6965532692132695487, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
+  m_PrefabInstance: {fileID: 151605085}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1083416021 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5022815082751538597, guid: 440cb8e1be86d1e4b85d906cba606363, type: 3}
+  m_PrefabInstance: {fileID: 151605085}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1083416022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083416020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a419d1a36e8baea4280ab793bd474979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Fridge
+  padlock: {fileID: 0}
+  animator: {fileID: 1083416021}
+  openTrigger: OpenFridge
+  openState: Fridge opened
+  closedState: Fridge closed
+  fridgeLight: {fileID: 0}
 --- !u!1 &1084325878
 GameObject:
   m_ObjectHideFlags: 0

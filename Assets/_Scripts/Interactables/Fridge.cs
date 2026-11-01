@@ -9,9 +9,16 @@ public class Fridge : MonoBehaviour, InteractibleInterface
     [SerializeField] private Padlock padlock;
     [SerializeField] private Animator animator;
     [SerializeField] private string openTrigger = "Open"; // Name of the trigger parameter in the Animator
+    [SerializeField] private string openState = "Fridge opened"; // Last state of the chain, the open pose
+    [SerializeField] private string closedState = "Fridge closed"; // Default state, the closed pose
     [SerializeField] private Light fridgeLight; // Interior light, must start disabled
-
+  
     private bool isOpen;
+
+    private void Start()
+    {
+        ShowOpenPose(); // The main menu shows the fridge already open
+    }
     public void Interact() // Handles the interaction with the fridge object
     {
         if (isOpen) return;
@@ -30,10 +37,7 @@ public class Fridge : MonoBehaviour, InteractibleInterface
         }
 
         TurnOnLight();
-
-        //GameObject clone;
-        //clone = Instantiate(openFridge, prefabPosition, prefabRotation);
-        //Destroy(gameObject);
+        
     }
 
     public void TurnOnLight() // Public so an Animation Event can also call it at a specific frame
@@ -42,5 +46,25 @@ public class Fridge : MonoBehaviour, InteractibleInterface
         {
             fridgeLight.enabled = true;
         }
+    }
+
+    public void ShowOpenPose() // Jumps to the last frame of the opening state
+    {
+        if (animator == null) return;
+        animator.Play(openState, 0, 1f);
+        animator.Update(0f); // Apply the pose right now, don't wait for the next frame
+    }
+
+    public void CloseInstantly() // Back to the closed pose with no animation
+    {
+        if (animator != null)
+        {
+            animator.Play(closedState, 0, 0f);
+            animator.Update(0f);
+            animator.ResetTrigger(openTrigger); // So a leftover trigger can't reopen it
+        }
+
+        isOpen = false;
+        if (fridgeLight != null) fridgeLight.enabled = false; // The interior light starts off
     }
 }
