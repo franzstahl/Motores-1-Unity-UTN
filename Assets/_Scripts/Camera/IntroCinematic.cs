@@ -14,21 +14,23 @@ public class IntroCinematic : MonoBehaviour
     private IEnumerator Start()
     {
         yield return null; // Wait one frame so GameManager.Start has already run
+        GameManager.Instance.SetMovementActive(false); // Locked while the main menu is open
+    }
 
-        cinematicCamera.SetActive(true);
-        yield return null; // Let the Brain do the cut this frame
+    public void PlayIntro() // Called by the Play button
+    {
+        StartCoroutine(IntroRoutine());
+        Debug.Log("PlayIntro called"); // Temporary, remove after debugging
+    }
 
-        GameManager.Instance.SetMovementActive(false);
-        cinematicCamera.SetActive(true);
+    private IEnumerator IntroRoutine()
+    {
+        yield return new WaitForSeconds(holdDuration); // Time on the fridge after pressing Play
 
-        yield return new WaitForSeconds(holdDuration);
+        cinematicCamera.SetActive(false);
+        yield return new WaitForSeconds(blendDuration);
 
-        cinematicCamera.SetActive(false); // The Brain blends back to the player camera by itself
-        yield return new WaitForSeconds(blendDuration); // Wait for the blend to finish
-
-        brain.enabled = false;
-        cameraCollision.enabled = true;
-
+        cameraCollision.enabled = true; // Gives the camera to the player (its Start turns off the Brain)
         hud.SetActive(true);
         GameManager.Instance.SetMovementActive(true);
     }
