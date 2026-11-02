@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class UIsounds : MonoBehaviour
 {
-    //It's a singleton for a sound Manager
+    // Singleton for a sound Manager
     static UIsounds instance;
     public static UIsounds Instance => instance;
     [SerializeField] private AudioSource source;
     [SerializeField] private AudioClip soundClip;
+
     private void Awake()
     {
         if (instance == null)
@@ -19,17 +20,13 @@ public class UIsounds : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+   
+    private void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public void PlaySound()
     {
         source.PlayOneShot(soundClip);

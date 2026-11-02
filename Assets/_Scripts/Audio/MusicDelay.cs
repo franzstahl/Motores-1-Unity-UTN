@@ -5,7 +5,7 @@ using UnityEngine;
 public class MusicDelay : MonoBehaviour
 {
     [Tooltip("Tiempo de silencio en segundos (2 minutos = 120)")]
-    [SerializeField] private float tiempoDeSilencio = 120f;
+    [SerializeField] private float silenceTime = 120f;
 
     private AudioSource audioSource;
 
@@ -27,7 +27,7 @@ public class MusicDelay : MonoBehaviour
             yield return new WaitForSeconds(audioSource.clip.length);
 
             // Espera los 2 minutos de silencio absolutos
-            yield return new WaitForSeconds(tiempoDeSilencio);
+            yield return new WaitForSeconds(silenceTime);
         }
     }
 }
