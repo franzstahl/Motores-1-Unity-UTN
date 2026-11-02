@@ -66,22 +66,19 @@ public class CatBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag != null)
+        if (other.CompareTag("Navmesh jump"))
         {
-            if (other.CompareTag("Navmesh jump"))
-            {
-                //Debug.Log("Salta");
-                catAnimator.SetTrigger("Jumped");
-            }
-            else if (other.CompareTag("Sitting zone"))
-            {
-                catAnimator.SetBool("Sitting", true);
-            }
+            //Debug.Log("Salta");
+            catAnimator.SetTrigger("Jumped");
+        }
+        else if (other.CompareTag("Sitting zone"))
+        {
+            catAnimator.SetBool("Sitting", true);
+        }
 
-            else if (canMove && other.CompareTag("Player")) // Only an active cat can catch the mouse
-            {
-                GameManager.Instance.PlayerDetected = true; // Same flow as being spotted: sound, fade, respawn
-            }
+        else if (canMove && other.CompareTag("Player")) // Only an active cat can catch the mouse
+        {
+            GameManager.Instance.PlayerDetected = true; // Same flow as being spotted: sound, fade, respawn
         }
     }
 }
