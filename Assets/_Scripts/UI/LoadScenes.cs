@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 public class LoadScenes : MonoBehaviour
 {
     [Header("Player scripts")]
-    [SerializeField] private MonoBehaviour movementScript;
-    [SerializeField] private MonoBehaviour playerCamera;
+    [SerializeField] private PlayerMovement movementScript;
+    [SerializeField] private CameraCollision playerCamera;
     [Header("Menu panels")]
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject pauseMenu;
@@ -54,6 +55,7 @@ public class LoadScenes : MonoBehaviour
     }
     public void TogglePause()
     {
+        if (pauseMenu == null) return;
         if (mainMenu != null && mainMenu.activeSelf) return; // Don't open the pause menu over the main menu
 
         if (isPaused) { Resume(); ClosePauseMenu(); }
@@ -92,9 +94,11 @@ public class LoadScenes : MonoBehaviour
     public void OpenPauseMenu()
     {
         pauseMenu.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
     }
     public void ClosePauseMenu()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         pauseMenu.SetActive(false);
     }
 }

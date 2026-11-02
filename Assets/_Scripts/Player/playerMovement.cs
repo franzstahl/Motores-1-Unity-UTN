@@ -114,6 +114,9 @@ public class PlayerMovement : MonoBehaviour
         inputActions.Player.Jump.performed -= OnJumpPerformed;
         inputActions.Player.Sprint.performed -= OnSprintPerformed;
         inputActions.Player.Sprint.canceled -= OnSprintCanceled;
+
+        moveInput = Vector2.zero; // Clear stale input so the mouse doesn't keep walking after a pause
+        sprintHeld = false;
         inputActions.Player.Disable();
     }
 
