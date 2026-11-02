@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class LoadScenes : MonoBehaviour
 {
@@ -100,5 +101,11 @@ public class LoadScenes : MonoBehaviour
     {
         EventSystem.current.SetSelectedGameObject(null);
         pauseMenu.SetActive(false);
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
