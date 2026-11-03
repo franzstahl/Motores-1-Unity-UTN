@@ -41,8 +41,11 @@ public class Obstacle : MonoBehaviour
             noiseMeter.IncreaseNoiseMeter();
             //objectCollidedWith.GetComponent<AudioSource>().Play();
             if (roomSFX != null) roomSFX.Play("BreakObstacle");
-            GameObject go = Instantiate(destroyParticle, gameObject.transform.position, Quaternion.Euler(-90f, 0f, 0f));
-            Destroy(go, 1f);
+            if (destroyParticle != null)
+            {
+                GameObject go = Instantiate(destroyParticle, gameObject.transform.position, Quaternion.Euler(-90f, 0f, 0f));
+                Destroy(go, 1f);
+            }
             Destroy(gameObject, 1f);
         }
     }

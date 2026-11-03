@@ -5,6 +5,8 @@ public class ChangeToSnapshot : MonoBehaviour
 {
     [SerializeField] private AudioMixerSnapshot snapshotToChangeInto;
     [SerializeField] private float changeTimer;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip clipToChangeInto;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,6 +24,7 @@ public class ChangeToSnapshot : MonoBehaviour
         if (collision.collider.tag == "Player")
         {
             snapshotToChangeInto.TransitionTo(changeTimer);
+            if(audioSource != null && clipToChangeInto != null) audioSource.clip = clipToChangeInto;
         }
     }
 }

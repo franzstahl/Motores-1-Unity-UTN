@@ -8,6 +8,8 @@ public class DetectionZoneManager : MonoBehaviour
     [SerializeField] private float timer;
     [SerializeField] private float timerStartValue;
     [SerializeField] private GameObject detectionZone;
+    [SerializeField] private PickRandomClipFromTwoSets clipSelector;
+    [SerializeField] private PickRandomClipFromTwoSets catClipSelector;
     public Animator anim;
 
     private bool timerActive;
@@ -27,6 +29,8 @@ public class DetectionZoneManager : MonoBehaviour
             timerActive = false;
             detectionZone.SetActive(true);
             anim.SetTrigger("PetCat");
+            clipSelector.useVariantSet = true;
+            catClipSelector.useVariantSet = true;
             StartCoroutine(DetectionZoneTimer());
         }
     }
@@ -38,6 +42,8 @@ public class DetectionZoneManager : MonoBehaviour
         yield return new WaitForSeconds(timeDetectionZoneLasts);
         Debug.Log("Fin countdown 1");
         detectionZone.SetActive(false);
+        clipSelector.useVariantSet = false;
+        catClipSelector.useVariantSet = false;
         timer = timerStartValue;
         timerActive = true;
     }
