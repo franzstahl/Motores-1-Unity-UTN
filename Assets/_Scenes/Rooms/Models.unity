@@ -10729,6 +10729,35 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &67421575 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1867161786143369084, guid: c87609673cbf903418b88c726912f83a, type: 3}
+  m_PrefabInstance: {fileID: 496003000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &67421577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67421575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 856fceda193bb824f8e7df8a7bbe5332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
+  button: {fileID: 67421578}
+--- !u!114 &67421578 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7867512120138826069, guid: c87609673cbf903418b88c726912f83a, type: 3}
+  m_PrefabInstance: {fileID: 496003000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67421575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!43 &67593601
 Mesh:
   m_ObjectHideFlags: 0
@@ -12963,7 +12992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &83411876
 Transform:
   m_ObjectHideFlags: 0
@@ -12973,7 +13002,7 @@ Transform:
   m_GameObject: {fileID: 83411875}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.6672907, y: 2.75, z: 13.5}
+  m_LocalPosition: {x: 5.168, y: 2.079, z: 13.899}
   m_LocalScale: {x: 0.23947, y: 0.23947, z: 0.23947}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -13142,7 +13171,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -13313,7 +13342,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -43730,7 +43759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &249014105
 Transform:
   m_ObjectHideFlags: 0
@@ -43740,7 +43769,7 @@ Transform:
   m_GameObject: {fileID: 249014104}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 16.399, y: 20.442, z: -4.9}
+  m_LocalPosition: {x: 16.399, y: 20.442, z: -4.678}
   m_LocalScale: {x: 0.23947, y: 0.23947, z: 0.23947}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -43909,7 +43938,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -44080,7 +44109,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -44457,14 +44486,14 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 2
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 0}
+    m_Rotation: {x: 90, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
@@ -59481,7 +59510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &354581780
 Transform:
   m_ObjectHideFlags: 0
@@ -59491,7 +59520,7 @@ Transform:
   m_GameObject: {fileID: 354581779}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.6672907, y: 5.4297695, z: -1.4895287}
+  m_LocalPosition: {x: 4.184, y: 5.522, z: -1.4895287}
   m_LocalScale: {x: 0.23947, y: 0.23947, z: 0.23947}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -59660,7 +59689,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -59831,7 +59860,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -60208,14 +60237,14 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 2
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 0}
+    m_Rotation: {x: 180, y: 30, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
@@ -70772,6 +70801,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6925176424493075332, guid: 3392b6a2b4103473b88b24101998300d, type: 3}
   m_PrefabInstance: {fileID: 392068824}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &395773061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 395773062}
+  - component: {fileID: 395773063}
+  m_Layer: 0
+  m_Name: UISounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &395773062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395773061}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 836.1489, y: -6.66905, z: 2626.583}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1738748419}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &395773063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395773061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13a8b9ea5614abc4a9e5bdf5cb08cc1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIsounds
+  source: {fileID: 491190668}
+  soundClips:
+  - {fileID: 8300000, guid: c7e257cce6e0c394280ef391b825805f, type: 3}
+  - {fileID: 8300000, guid: de5030deb7cf4714d8ddd24b848f4d8f, type: 3}
+  - {fileID: 8300000, guid: 0f6407de5f42f72428114fe611f083ff, type: 3}
 --- !u!1 &398939053
 GameObject:
   m_ObjectHideFlags: 0
@@ -131159,6 +131237,103 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!82 &491190668
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491190660}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &491214220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133149,6 +133324,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7840647614877722129, guid: c87609673cbf903418b88c726912f83a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 491190666}
+    - targetCorrespondingSourceObject: {fileID: 7840647614877722129, guid: c87609673cbf903418b88c726912f83a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 491190668}
+    - targetCorrespondingSourceObject: {fileID: 1585031866963118757, guid: c87609673cbf903418b88c726912f83a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2128904661}
+    - targetCorrespondingSourceObject: {fileID: 1867161786143369084, guid: c87609673cbf903418b88c726912f83a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 67421577}
+    - targetCorrespondingSourceObject: {fileID: 7044349418716853082, guid: c87609673cbf903418b88c726912f83a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1117552914}
   m_SourcePrefab: {fileID: 100100000, guid: c87609673cbf903418b88c726912f83a, type: 3}
 --- !u!1 &497068578
 GameObject:
@@ -211720,7 +211907,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1082158319
 Transform:
   m_ObjectHideFlags: 0
@@ -211899,7 +212086,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -212070,7 +212257,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -223368,6 +223555,35 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &1117552912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7044349418716853082, guid: c87609673cbf903418b88c726912f83a, type: 3}
+  m_PrefabInstance: {fileID: 496003000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1117552914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117552912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 856fceda193bb824f8e7df8a7bbe5332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
+  button: {fileID: 1117552915}
+--- !u!114 &1117552915 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5421135017640588245, guid: c87609673cbf903418b88c726912f83a, type: 3}
+  m_PrefabInstance: {fileID: 496003000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117552912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!33 &1117655468
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -242957,7 +243173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1174813436
 Transform:
   m_ObjectHideFlags: 0
@@ -242967,7 +243183,7 @@ Transform:
   m_GameObject: {fileID: 1174813435}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 31.646, y: 6.298, z: 16.831}
+  m_LocalPosition: {x: 31.654, y: 6.065, z: 14.64}
   m_LocalScale: {x: 0.23947, y: 0.23947, z: 0.23947}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -243136,7 +243352,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -243307,7 +243523,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -243684,14 +243900,14 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 2
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 0}
+    m_Rotation: {x: 180, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
@@ -403387,7 +403603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1686732583
 Transform:
   m_ObjectHideFlags: 0
@@ -403397,7 +403613,7 @@ Transform:
   m_GameObject: {fileID: 1686732582}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 22.25, y: 2.09, z: 17.89}
+  m_LocalPosition: {x: 22.25, y: 1.996, z: 17.89}
   m_LocalScale: {x: 0.23947, y: 0.23947, z: 0.23947}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -403566,7 +403782,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -403737,7 +403953,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -414411,6 +414627,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 395773062}
   - {fileID: 699352888}
   - {fileID: 1596006224}
   - {fileID: 2031276525}
@@ -437690,7 +437907,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1943994050
 Transform:
   m_ObjectHideFlags: 0
@@ -437700,7 +437917,7 @@ Transform:
   m_GameObject: {fileID: 1943994049}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -14.415, y: -2.09, z: 16.4}
+  m_LocalPosition: {x: -14.13, y: 1.43, z: 16.4}
   m_LocalScale: {x: 0.23947, y: 0.23947, z: 0.23947}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -437869,7 +438086,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -438040,7 +438257,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -442526,7 +442743,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1945823980
 Transform:
   m_ObjectHideFlags: 0
@@ -442536,7 +442753,7 @@ Transform:
   m_GameObject: {fileID: 1945823979}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -3.799, y: 14.523, z: -24.344}
+  m_LocalPosition: {x: -3.799, y: 13.78, z: -24.344}
   m_LocalScale: {x: 0.23947, y: 0.23947, z: 0.23947}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -442705,7 +442922,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -442876,7 +443093,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -475549,6 +475766,35 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &2128904659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1585031866963118757, guid: c87609673cbf903418b88c726912f83a, type: 3}
+  m_PrefabInstance: {fileID: 496003000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2128904661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128904659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 856fceda193bb824f8e7df8a7bbe5332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
+  button: {fileID: 2128904662}
+--- !u!114 &2128904662 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7298837460496461517, guid: c87609673cbf903418b88c726912f83a, type: 3}
+  m_PrefabInstance: {fileID: 496003000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128904659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &2130562955
 GameObject:
   m_ObjectHideFlags: 0

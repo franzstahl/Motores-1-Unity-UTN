@@ -1,12 +1,17 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class UIsounds : MonoBehaviour
 {
     // Singleton for a sound Manager
     static UIsounds instance;
     public static UIsounds Instance => instance;
+    [Header("Audio Source")]
     [SerializeField] private AudioSource source;
-    [SerializeField] private AudioClip soundClip;
+    [Header ("Audio Clips")]
+    [SerializeField] private List<AudioClip> soundClips = new List<AudioClip>();
+    private int listIndex;
+    private System.Random clipRandomizer = new System.Random();
 
     private void Awake()
     {
@@ -29,6 +34,7 @@ public class UIsounds : MonoBehaviour
     
     public void PlaySound()
     {
-        source.PlayOneShot(soundClip);
+        listIndex = clipRandomizer.Next(0, soundClips.Count);
+        source.PlayOneShot(soundClips[listIndex]);
     }
 }

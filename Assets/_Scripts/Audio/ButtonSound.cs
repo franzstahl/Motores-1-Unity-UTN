@@ -9,7 +9,7 @@ public class ButtonSound : MonoBehaviour
    
     private void Start()
     {
-        instance = GameObject.Find("UIsoundManager");
+        instance = GameObject.Find("UISounds");
         soundManager = instance.GetComponent<UIsounds>();
 
         if (button != null)
