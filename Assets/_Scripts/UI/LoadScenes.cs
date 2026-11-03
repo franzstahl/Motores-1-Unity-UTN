@@ -12,9 +12,9 @@ public class LoadScenes : MonoBehaviour
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private bool startPaused = true; // Uncheck in scenes without a main menu, so the game doesn't start frozen
-    [Header("Cameras")]
-    [SerializeField] private GameObject menuCamera;
-    [SerializeField] private GameObject gameCamera;
+    //[Header("Cameras")]
+    //[SerializeField] private GameObject menuCamera;
+    //[SerializeField] private GameObject gameCamera;
     private bool isPaused;
     private void Awake()
     {
@@ -23,14 +23,14 @@ public class LoadScenes : MonoBehaviour
         {
             mainMenu.SetActive(true);
         }
-        if (menuCamera != null)
-        {
-            menuCamera.SetActive(true);
-        }
-        if (gameCamera != null)
-        {
-            gameCamera.SetActive(false);
-        }
+        //if (menuCamera != null)
+        //{
+        //    menuCamera.SetActive(true);
+        //}
+        //if (gameCamera != null)
+        //{
+        //    gameCamera.SetActive(false);
+        //}
         Pause();
     }
     private void Update()
@@ -43,14 +43,14 @@ public class LoadScenes : MonoBehaviour
     }
     public void StartGame()
     {
-        if (menuCamera != null)
-        {
-            menuCamera.SetActive(false);
-        }
-        if (gameCamera != null)
-        {
-            gameCamera.SetActive(true);
-        }
+        //if (menuCamera != null)
+        //{
+        //    menuCamera.SetActive(false);
+        //}
+        //if (gameCamera != null)
+        //{
+        //    gameCamera.SetActive(true);
+        //}
         mainMenu.SetActive(false);
         Resume();
     }
