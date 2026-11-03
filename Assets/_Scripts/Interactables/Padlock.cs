@@ -4,6 +4,7 @@ using UnityEngine;
 public class Padlock : MonoBehaviour, InteractibleInterface
 {
     private Rigidbody rb;
+    [SerializeField] private SFXPlayer sfx;
 
     public bool isUnlocked { get; private set; }
     private void Awake()

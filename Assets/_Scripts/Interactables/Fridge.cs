@@ -2,16 +2,12 @@ using UnityEngine;
 
 public class Fridge : MonoBehaviour, InteractibleInterface
 {
-    //[SerializeField] private GameObject openFridge;
-    //[SerializeField] private Vector3 prefabPosition;
-    //[SerializeField] private Quaternion prefabRotation;
-
     [SerializeField] private Padlock padlock;
     [SerializeField] private Animator animator;
     [SerializeField] private string openTrigger = "Open"; // Name of the trigger parameter in the Animator
     [SerializeField] private string openState = "Fridge opened"; // Last state of the chain, the open pose
     [SerializeField] private string closedState = "Fridge closed"; // Default state, the closed pose
-    [SerializeField] private Light fridgeLight; // Interior light, must start disabled
+    [SerializeField] private Light[] fridgeLights; // Interior light, must start disabled
   
     private bool isOpen;
 
@@ -36,18 +32,27 @@ public class Fridge : MonoBehaviour, InteractibleInterface
             animator.SetTrigger(openTrigger); // Trigger the opening animation
         }
 
-        TurnOnLight();
+        TurnOnLights();
         
     }
 
-    public void TurnOnLight() // Public so an Animation Event can also call it at a specific frame
+    public void TurnOnLights() // Public so an Animation Event can also call it at a specific frame
     {
-        if (fridgeLight != null)
-        {
-            fridgeLight.enabled = true;
-        }
+        SetLights(true);
     }
 
+    public void TurnOffLights()
+    {
+        SetLights(false);
+    }
+
+    private void SetLights(bool on) // Helper function to turn on/off the fridge lights
+    {
+        foreach (Light l in fridgeLights)
+        {
+            if (l != null) l.enabled = on;
+        }
+    }
     public void ShowOpenPose() // Jumps to the last frame of the opening state
     {
         if (animator == null) return;
@@ -65,6 +70,6 @@ public class Fridge : MonoBehaviour, InteractibleInterface
         }
 
         isOpen = false;
-        if (fridgeLight != null) fridgeLight.enabled = false; // The interior light starts off
+        TurnOffLights();
     }
 }
