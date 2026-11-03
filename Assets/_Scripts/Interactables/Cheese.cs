@@ -9,10 +9,11 @@ public class Cheese : MonoBehaviour, InteractibleInterface
     [SerializeField] private float delayBeforeLoad = 1f;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip victoryAudio;
-    private int interactionsDone;
     [SerializeField] private GameObject[] cheesesToSpawn;
     [SerializeField] private GameObject currentCheese;
+    [SerializeField] private SFXPlayer playerSFX3D;
     private bool finalInteraction;
+    private int interactionsDone;
 
     private void Start()
     {
@@ -47,11 +48,12 @@ public class Cheese : MonoBehaviour, InteractibleInterface
     private void NextCheese()
     {
         currentCheese.SetActive(false);
-        //play eat cheese noise
+        playerSFX3D.Play("CheeseBite");
         interactionsDone++;
         currentCheese = cheesesToSpawn[interactionsDone];
         currentCheese.SetActive(true);
-        if (interactionsDone == cheesesToSpawn.Length)
+
+        if (interactionsDone == cheesesToSpawn.Length - 1)
         {
             finalInteraction = true;
         }

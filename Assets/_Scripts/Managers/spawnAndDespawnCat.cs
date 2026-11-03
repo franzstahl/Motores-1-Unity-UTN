@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class spawnAndDespawnCat : MonoBehaviour
+public class SpawnAndDespawnCat : MonoBehaviour
 {
     [SerializeField] private GameObject catToSpawn;
     [SerializeField] private GameObject catToDespawn;

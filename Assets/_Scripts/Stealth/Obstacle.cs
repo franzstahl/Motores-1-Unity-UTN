@@ -7,10 +7,11 @@ public class Obstacle : MonoBehaviour
     protected NoiseMeter noiseMeter;
     public GameObject destroyParticle;
     private bool hasMadeNoise;
-
     private Vector3 startPosition;
     private Quaternion startRotation;
     private Rigidbody rb;
+
+    [SerializeField] private SFXPlayer roomSFX;
     private void Start()
     {
         gameManager = GameManager.Instance;
@@ -38,7 +39,8 @@ public class Obstacle : MonoBehaviour
         {
             hasMadeNoise = true;
             noiseMeter.IncreaseNoiseMeter();
-            objectCollidedWith.GetComponent<AudioSource>().Play();
+            //objectCollidedWith.GetComponent<AudioSource>().Play();
+            if (roomSFX != null) roomSFX.Play("BreakObstacle");
             GameObject go = Instantiate(destroyParticle, gameObject.transform.position, Quaternion.Euler(-90f, 0f, 0f));
             Destroy(go, 1f);
             Destroy(gameObject, 1f);

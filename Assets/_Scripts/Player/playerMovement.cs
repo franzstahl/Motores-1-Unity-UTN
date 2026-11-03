@@ -30,10 +30,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float minClimbHeightBelowCeiling = 0.6f; // Ray length from the head origin; going up is blocked when a ceiling is closer than this (tune in Play)
     [SerializeField] private float climbCastRadius = 0.2f; // Thickness of the obstacle check, so thin edges can't slip through
     [SerializeField] private float headReachSide = 0.6f; // Reach when moving sideways (tune in Play)
-
-
     [SerializeField] private Vector3 climbArmaturePosition = new Vector3(0.0086f, 0.3522f, -0.9f); // Armature local position while climbing, tune it in Play mode
     [SerializeField] private float climbRotationSpeed; // How fast the body turns toward the climb direction
+
+    [Header("Audio")]
+    [SerializeField] private SFXPlayer sfx3D; 
+    [SerializeField] private float walkStepInterval = 0.5f;
+    [SerializeField] private float sprintStepInterval = 0.3f;
+    private float stepTimer;
     private float climbRoll; // Current roll of the model around the wall axis, in degrees
     private Vector3 armatureDefaultPosition; // Armature position while walking
     private bool wasClimbing;
@@ -118,6 +122,27 @@ public class PlayerMovement : MonoBehaviour
         moveInput = Vector2.zero; // Clear stale input so the mouse doesn't keep walking after a pause
         sprintHeld = false;
         inputActions.Player.Disable();
+    }
+
+    private void PlaySFX(string id)
+    {
+        if (sfx3D != null) sfx3D.Play(id);
+    }
+
+    private void HandleFootsteps(bool isSprinting)
+    {
+        if (!isGrounded || horizontalSpeed < 0.1f)
+        {
+            stepTimer = 0f; // el primer paso suena apenas empezás a moverte
+            return;
+        }
+
+        stepTimer -= Time.deltaTime;
+        if (stepTimer <= 0f)
+        {
+            PlaySFX("Footsteps");
+            stepTimer = isSprinting ? sprintStepInterval : walkStepInterval;
+        }
     }
 
     private void OnMovePerformed(InputAction.CallbackContext context) // Save where you are moving (Vector2) every time you press a movement key
@@ -352,6 +377,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         horizontalSpeed = gameManager.isMovementActive ? moveDirection.magnitude * currentSpeed : 0f; // 0 when movement is locked
+        HandleFootsteps(isSprinting); // Play footstep sounds based on movement state
 
         if (moveDirection.sqrMagnitude > 0.01f)
         {
@@ -365,6 +391,7 @@ public class PlayerMovement : MonoBehaviour
         if (jumpRequested && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            PlaySFX("Jump");
             if (animator != null) animator.SetTrigger(JumpHash); // Skip if there is no Animator
         }
 
