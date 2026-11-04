@@ -17,7 +17,7 @@ public class Obstacle : MonoBehaviour
         gameManager = GameManager.Instance;
         noiseMeter = gameManager.GetComponent<NoiseMeter>();
         rb = GetComponent<Rigidbody>();
-        rb.mass = 1f;
+        rb.mass = 0.1f;
         Collider col = gameObject.GetComponent<Collider>();
         ApplyColliderType(col);
             
