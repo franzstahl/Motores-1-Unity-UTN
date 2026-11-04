@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 4500274183357071599}
   - component: {fileID: 8147953318839971935}
   - component: {fileID: 1131998965204590064}
+  - component: {fileID: 4226415715149578286}
   m_Layer: 0
   m_Name: Keys
   m_TagString: Untagged
@@ -231,11 +232,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 5750641705701389665, guid: 673aedb0701aedc459d04679885e131a, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 37246c6da658db74c8ea23769b70864c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
+  m_Volume: 0.596
+  m_Pitch: 0.05
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -277,7 +278,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -317,6 +318,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4226415715149578286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3019568617730713240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33a2297797dcc8a46ba7c64f13864e23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomizeAudioSourceValues
+  minPitch: 500
+  maxPitch: 800
+  minVolume: 500
+  maxVolume: 600
 --- !u!1 &4723547211238572199
 GameObject:
   m_ObjectHideFlags: 0

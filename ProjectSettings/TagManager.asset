@@ -9,6 +9,7 @@ TagManager:
   - RoomZone
   - Navmesh jump
   - Sitting zone
+  - KeyPickUpVolume
   layers:
   - Default
   - TransparentFX

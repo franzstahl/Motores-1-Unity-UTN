@@ -15,6 +15,6 @@ public class RandomizeAudioSourceValues : MonoBehaviour
     public void ChangeValues(AudioSource audioSource)
     {
         audioSource.pitch = pitchRandomizer.Next(minPitch, maxPitch)/1000.0f;
-        audioSource.volume = volumeRandomizer.Next(maxVolume, minVolume) / 1000.0f;
+        audioSource.volume = volumeRandomizer.Next(minVolume, maxVolume) / 1000.0f;
     }
 }

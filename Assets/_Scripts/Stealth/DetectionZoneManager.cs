@@ -27,9 +27,9 @@ public class DetectionZoneManager : MonoBehaviour
         if(timer <= 0 && timerActive)
         {
             timerActive = false;
-            detectionZone.SetActive(true);
+            detectionZone.SetActive(false);
             anim.SetTrigger("PetCat");
-            clipSelector.useVariantSet = true;
+            clipSelector.useVariantSet = true; //Variant set = petting
             catClipSelector.useVariantSet = true;
             StartCoroutine(DetectionZoneTimer());
         }
@@ -41,7 +41,7 @@ public class DetectionZoneManager : MonoBehaviour
         Debug.Log("Inicia countdown");
         yield return new WaitForSeconds(timeDetectionZoneLasts);
         Debug.Log("Fin countdown 1");
-        detectionZone.SetActive(false);
+        detectionZone.SetActive(true);
         clipSelector.useVariantSet = false;
         catClipSelector.useVariantSet = false;
         timer = timerStartValue;
