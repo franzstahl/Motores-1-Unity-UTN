@@ -3,17 +3,17 @@ using UnityEngine.SceneManagement;
 
 public class Cheese : MonoBehaviour, InteractibleInterface
 {
-    private string nextSceneName = "Win";
-
-    
     [SerializeField] private float delayBeforeLoad = 1f;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip victoryAudio;
     [SerializeField] private GameObject[] cheesesToSpawn;
     [SerializeField] private GameObject currentCheese;
+
     [SerializeField] private SFXPlayer playerSFX3D;
+
     private bool finalInteraction;
     private int interactionsDone;
+    private bool ending;
 
     private void Start()
     {
@@ -24,15 +24,19 @@ public class Cheese : MonoBehaviour, InteractibleInterface
     {
         if (finalInteraction)
         {
+            if (ending) return;
+            ending = true;
+
+            if (audioSource != null && victoryAudio != null) audioSource.PlayOneShot(victoryAudio);
+
             if (GameManager.Instance != null)
             {
-                audioSource.PlayOneShot(victoryAudio);
-                GameManager.Instance.FadeOut();
-                Invoke(nameof(LoadNextScene), delayBeforeLoad);
+                GameManager.Instance.EnterEndingState();
+                Invoke(nameof(LoadScene), delayBeforeLoad);
             }
             else
             {
-                LoadNextScene();
+                LoadScene();
             }
         }
         else
@@ -41,9 +45,9 @@ public class Cheese : MonoBehaviour, InteractibleInterface
         }
     }
 
-    private void LoadNextScene()
+    private void LoadScene()
     {
-        SceneManager.LoadScene(nextSceneName);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     private void NextCheese()
     {

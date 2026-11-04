@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
 
     public event System.Action OnPlayerRespawn;
 
+    //---------------------------------------------------------
     public void SetCurrentRoomLight(RoomLight roomLight)
     {
         CurrentRoomLight = roomLight;
@@ -48,6 +49,12 @@ public class GameManager : MonoBehaviour
         set { playerDetected = value; }
     }
 
+    public void EnterEndingState()
+    {
+        isCaught = true;
+        isMovementActive = false;
+        FadeOut();
+    }
     private void Awake()
     {
         if (Instance != null && Instance != this) 

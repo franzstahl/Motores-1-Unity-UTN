@@ -32,11 +32,11 @@ public class Fridge : MonoBehaviour, InteractibleInterface
             animator.SetTrigger(openTrigger); // Trigger the opening animation
         }
 
-        TurnOnLights();
+        TurnOnLight();
         
     }
 
-    public void TurnOnLights() // Public so an Animation Event can also call it at a specific frame
+    public void TurnOnLight() // Public so an Animation Event can also call it at a specific frame
     {
         SetLights(true);
     }
