@@ -221,6 +221,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Key
   groundOffset: 0.02
+  pickUpVolume: {fileID: 0}
+  peakWeight: 1
+  fadeInDuration: 0.1
+  holdDuration: 0.15
+  fadeOutDuration: 0.8
 --- !u!82 &1131998965204590064
 AudioSource:
   m_ObjectHideFlags: 0
@@ -245,7 +250,7 @@ AudioSource:
   MinDistance: 0.3
   MaxDistance: 2
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0

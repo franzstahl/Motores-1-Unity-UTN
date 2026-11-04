@@ -195261,6 +195261,7 @@ MonoBehaviour:
   victoryAudio: {fileID: 8300000, guid: 08ce36178f8eb6c40b06d2a163f4c46e, type: 3}
   cheesesToSpawn: []
   currentCheese: {fileID: 0}
+  endScreen: {fileID: 0}
   playerSFX3D: {fileID: 0}
 --- !u!1 &933320702
 GameObject:
@@ -195740,7 +195741,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939342778}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &939342780
 Camera:
   m_ObjectHideFlags: 0
@@ -221358,6 +221359,7 @@ MonoBehaviour:
   - {fileID: 1416698066}
   - {fileID: 1361780576}
   currentCheese: {fileID: 619608654}
+  endScreen: {fileID: 939342778}
   playerSFX3D: {fileID: 48241372}
 --- !u!65 &1097174347
 BoxCollider:
@@ -261400,8 +261402,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9642c17149546d4fb1b380ed6bf7139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  catToSpawn: {fileID: 673413111}
-  catToDespawn: {fileID: 1235702318}
+  catToSpawn: {fileID: 1508575023}
+  catToDespawn: {fileID: 0}
 --- !u!65 &1259350937
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -414520,7 +414522,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 5.6
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -442717,7 +442719,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 7.562523
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
