@@ -78,14 +78,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-            playerDetected = true;
-
-        if (Input.GetKeyDown(KeyCode.G))
-            FadeOut();
-
-        if (Input.GetKeyDown(KeyCode.H))
-            FadeIn();
 
         if (playerDetected)
         {

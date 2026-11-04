@@ -12,6 +12,7 @@ public class KitchenTimer : MonoBehaviour
     [SerializeField] private int miliseconds;
     [SerializeField] private TextMeshProUGUI number;
     [SerializeField] private bool startCountdown;
+    [SerializeField] private GameObject endScreen;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,7 +24,7 @@ public class KitchenTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (startCountdown == true)
+        if (startCountdown == true && endScreen.activeInHierarchy == false)
         {
             timer -= Time.deltaTime;
  

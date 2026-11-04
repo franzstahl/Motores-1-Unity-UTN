@@ -8,6 +8,7 @@ public class Cheese : MonoBehaviour, InteractibleInterface
     [SerializeField] private AudioClip victoryAudio;
     [SerializeField] private GameObject[] cheesesToSpawn;
     [SerializeField] private GameObject currentCheese;
+    [SerializeField] private GameObject endScreen;
 
     [SerializeField] private SFXPlayer playerSFX3D;
 
@@ -29,25 +30,12 @@ public class Cheese : MonoBehaviour, InteractibleInterface
 
             if (audioSource != null && victoryAudio != null) audioSource.PlayOneShot(victoryAudio);
 
-            if (GameManager.Instance != null)
-            {
-                GameManager.Instance.EnterEndingState();
-                Invoke(nameof(LoadScene), delayBeforeLoad);
-            }
-            else
-            {
-                LoadScene();
-            }
+            endScreen.SetActive(true);
         }
         else
         {
             NextCheese();
         }
-    }
-
-    private void LoadScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     private void NextCheese()
     {
