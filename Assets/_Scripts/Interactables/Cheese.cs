@@ -30,12 +30,24 @@ public class Cheese : MonoBehaviour, InteractibleInterface
 
             if (audioSource != null && victoryAudio != null) audioSource.PlayOneShot(victoryAudio);
 
-            endScreen.SetActive(true);
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.EnterEndingState();
+            }
+            else
+            {
+                endScreen.SetActive(true);
+            }
         }
         else
         {
             NextCheese();
         }
+    }
+
+    private void LoadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     private void NextCheese()
     {
