@@ -4897,6 +4897,9 @@ MonoBehaviour:
   - id: BreakObstacle
     clips:
     - {fileID: 8300000, guid: efd8eef0b39dff84787b85b62c50762e, type: 3}
+    - {fileID: 8300000, guid: d399c01abae2b3942b61c5908c4fffad, type: 3}
+    - {fileID: 8300000, guid: 2ae177bdfdfc224448ca97228bc4cd9c, type: 3}
+    - {fileID: 8300000, guid: 88626d1197776df48b9765d3f55ccb95, type: 3}
     pitchRange: {x: 0.9, y: 1.1}
     volumeRange: {x: 0.5, y: 0.7}
 --- !u!82 &29434137
@@ -25905,6 +25908,9 @@ MonoBehaviour:
   - id: BreakObstacle
     clips:
     - {fileID: 8300000, guid: efd8eef0b39dff84787b85b62c50762e, type: 3}
+    - {fileID: 8300000, guid: d399c01abae2b3942b61c5908c4fffad, type: 3}
+    - {fileID: 8300000, guid: 2ae177bdfdfc224448ca97228bc4cd9c, type: 3}
+    - {fileID: 8300000, guid: 88626d1197776df48b9765d3f55ccb95, type: 3}
     pitchRange: {x: 0.9, y: 1.1}
     volumeRange: {x: 0.5, y: 0.7}
 --- !u!82 &143547927
@@ -30628,14 +30634,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CaughtSequence
   audioSource: {fileID: 173107299}
-  footstepsClip: {fileID: 0}
+  footstepsClip: {fileID: 8300000, guid: 1664fc2e819453b41af1a65a5a23d8ff, type: 3}
   Clips:
   - {fileID: 8300000, guid: 1a9b8312a9b1fa543b65302d5b2cda3b, type: 3}
   - {fileID: 8300000, guid: 6f687fd431eb3f14f8253a9862d5c4ab, type: 3}
   - {fileID: 8300000, guid: 1eb4fe127ff09d04b8487ee3d5eeecbb, type: 3}
   - {fileID: 8300000, guid: 8f7b4b4cc7cecf14980deb89ebd1b8e2, type: 3}
-  footstepsDuration: 0
-  pauseAfterLight: 0
+  footstepsDuration: 4
+  pauseAfterLight: 2
   pauseAfterVoice: 4
 --- !u!1 &173194984
 GameObject:
@@ -115511,6 +115517,9 @@ MonoBehaviour:
   - id: BreakObstacle
     clips:
     - {fileID: 8300000, guid: efd8eef0b39dff84787b85b62c50762e, type: 3}
+    - {fileID: 8300000, guid: d399c01abae2b3942b61c5908c4fffad, type: 3}
+    - {fileID: 8300000, guid: 2ae177bdfdfc224448ca97228bc4cd9c, type: 3}
+    - {fileID: 8300000, guid: 88626d1197776df48b9765d3f55ccb95, type: 3}
     pitchRange: {x: 0.9, y: 1.1}
     volumeRange: {x: 0.5, y: 0.7}
 --- !u!82 &455311038
@@ -197784,6 +197793,9 @@ MonoBehaviour:
   - id: BreakObstacle
     clips:
     - {fileID: 8300000, guid: efd8eef0b39dff84787b85b62c50762e, type: 3}
+    - {fileID: 8300000, guid: d399c01abae2b3942b61c5908c4fffad, type: 3}
+    - {fileID: 8300000, guid: 2ae177bdfdfc224448ca97228bc4cd9c, type: 3}
+    - {fileID: 8300000, guid: 88626d1197776df48b9765d3f55ccb95, type: 3}
     pitchRange: {x: 0.9, y: 1.1}
     volumeRange: {x: 0.5, y: 0.7}
 --- !u!82 &905729391
@@ -263417,6 +263429,9 @@ MonoBehaviour:
   - id: BreakObstacle
     clips:
     - {fileID: 8300000, guid: efd8eef0b39dff84787b85b62c50762e, type: 3}
+    - {fileID: 8300000, guid: d399c01abae2b3942b61c5908c4fffad, type: 3}
+    - {fileID: 8300000, guid: 2ae177bdfdfc224448ca97228bc4cd9c, type: 3}
+    - {fileID: 8300000, guid: 88626d1197776df48b9765d3f55ccb95, type: 3}
     pitchRange: {x: 0.9, y: 1.1}
     volumeRange: {x: 0.5, y: 0.7}
 --- !u!82 &1220029680
@@ -332617,15 +332632,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.486
+      value: -5.427
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.823
+      value: 6.67
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -39.22
+      value: -38.993
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
       propertyPath: m_LocalRotation.w
@@ -395658,6 +395673,9 @@ MonoBehaviour:
   - id: BreakObstacle
     clips:
     - {fileID: 8300000, guid: efd8eef0b39dff84787b85b62c50762e, type: 3}
+    - {fileID: 8300000, guid: d399c01abae2b3942b61c5908c4fffad, type: 3}
+    - {fileID: 8300000, guid: 2ae177bdfdfc224448ca97228bc4cd9c, type: 3}
+    - {fileID: 8300000, guid: 88626d1197776df48b9765d3f55ccb95, type: 3}
     pitchRange: {x: 0.9, y: 1.1}
     volumeRange: {x: 0.5, y: 0.7}
 --- !u!82 &1593074497
@@ -428505,6 +428523,9 @@ MonoBehaviour:
   - id: BreakObstacle
     clips:
     - {fileID: 8300000, guid: efd8eef0b39dff84787b85b62c50762e, type: 3}
+    - {fileID: 8300000, guid: d399c01abae2b3942b61c5908c4fffad, type: 3}
+    - {fileID: 8300000, guid: 2ae177bdfdfc224448ca97228bc4cd9c, type: 3}
+    - {fileID: 8300000, guid: 88626d1197776df48b9765d3f55ccb95, type: 3}
     pitchRange: {x: 0.9, y: 1.1}
     volumeRange: {x: 0.5, y: 0.7}
 --- !u!82 &1734555236
