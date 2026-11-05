@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioClip clip;
     [SerializeField] private int delayBeforeReload = 1;
     private bool isCaught;
-    private CaughtSequence caughtSequence;
+    [SerializeField] private CaughtSequence caughtSequence;
    
     public GameObject player;
     private Coroutine fadeCoroutine;

@@ -8,6 +8,7 @@ public class StartCountdown : MonoBehaviour
     [SerializeField] private TMP_Text countdownTimerText;
     [SerializeField] private GameObject countdownTimerTextParent;
     [SerializeField] private GameObject finalSequenceAudioParent;
+    [SerializeField] private GameObject scratchDoorParent;
     [SerializeField] private AudioSource catScratchingDoor;
     [SerializeField] private GameObject variantMusicAudioParent;
     [SerializeField] private float countdownTimer;
@@ -39,6 +40,7 @@ public class StartCountdown : MonoBehaviour
         {
             timerActive = true;
             finalSequenceAudioParent.SetActive(true);
+            scratchDoorParent.SetActive(true);
             variantMusicAudioParent.SetActive(false);
             countdownTimerTextParent.SetActive(true);
             catScratchingDoor.Play();

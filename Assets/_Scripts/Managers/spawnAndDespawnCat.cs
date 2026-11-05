@@ -9,8 +9,8 @@ public class SpawnAndDespawnCat : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            catToSpawn.SetActive(true);
-            catToDespawn.SetActive(false);
+            if(catToSpawn != null) catToSpawn.SetActive(true);
+            if (catToDespawn != null) catToDespawn.SetActive(false);
         }
     }
 }

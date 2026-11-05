@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CaughtSequence : MonoBehaviour
@@ -6,7 +7,9 @@ public class CaughtSequence : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip footstepsClip;
-    [SerializeField] private AudioClip voiceClip; // Optional
+    [SerializeField] private List<AudioClip> Clips = new List<AudioClip>();
+    private AudioClip voiceClip; // Optional
+    private System.Random clipRandomizer = new System.Random(); // Audio clips
 
     [Header("Timing")]
     [SerializeField] private float footstepsDuration;
@@ -15,6 +18,8 @@ public class CaughtSequence : MonoBehaviour
 
     public IEnumerator Play()
     {
+        int index = clipRandomizer.Next(0, Clips.Count);
+        voiceClip = Clips[index];
         // 1) Footsteps getting closer: volume increase over time
 
         if (footstepsClip != null && audioSource != null)

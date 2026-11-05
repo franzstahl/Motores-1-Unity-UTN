@@ -1278,7 +1278,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: d0ec53fb960a71a469baae8a78d5085b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1481038252}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2012193888850344796, guid: d0ec53fb960a71a469baae8a78d5085b, type: 3}
       insertIndex: -1
@@ -4873,7 +4876,7 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: efd8eef0b39dff84787b85b62c50762e, type: 3}
     pitchRange: {x: 0.9, y: 1.1}
-    volumeRange: {x: 0.85, y: 1}
+    volumeRange: {x: 0.5, y: 0.7}
 --- !u!82 &29434137
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4887,7 +4890,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.531
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -26059,7 +26062,7 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: efd8eef0b39dff84787b85b62c50762e, type: 3}
     pitchRange: {x: 0.9, y: 1.1}
-    volumeRange: {x: 0.85, y: 1}
+    volumeRange: {x: 0.5, y: 0.7}
 --- !u!82 &143547927
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26073,7 +26076,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.531
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -30589,6 +30592,7 @@ MonoBehaviour:
   audioSource: {fileID: 173107299}
   clip: {fileID: 8300000, guid: 39bb23fdf80187246b32610002c6a0d8, type: 3}
   delayBeforeReload: 1
+  caughtSequence: {fileID: 0}
   player: {fileID: 1411934243}
 --- !u!82 &173107299
 AudioSource:
@@ -30599,7 +30603,7 @@ AudioSource:
   m_GameObject: {fileID: 173107297}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5129233076501547280, guid: 673aedb0701aedc459d04679885e131a, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
@@ -30779,12 +30783,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9612c0227c6ef304c92f998273a4f614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CaughtSequence
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 173107299}
   footstepsClip: {fileID: 0}
-  voiceClip: {fileID: 0}
+  Clips:
+  - {fileID: 8300000, guid: 1a9b8312a9b1fa543b65302d5b2cda3b, type: 3}
+  - {fileID: 8300000, guid: 6f687fd431eb3f14f8253a9862d5c4ab, type: 3}
+  - {fileID: 8300000, guid: 1eb4fe127ff09d04b8487ee3d5eeecbb, type: 3}
+  - {fileID: 8300000, guid: 8f7b4b4cc7cecf14980deb89ebd1b8e2, type: 3}
   footstepsDuration: 0
   pauseAfterLight: 0
-  pauseAfterVoice: 0
+  pauseAfterVoice: 2
 --- !u!1 &173194984
 GameObject:
   m_ObjectHideFlags: 0
@@ -59380,6 +59388,7 @@ MonoBehaviour:
   countdownTimerText: {fileID: 1047667009}
   countdownTimerTextParent: {fileID: 906379456}
   finalSequenceAudioParent: {fileID: 239506121}
+  scratchDoorParent: {fileID: 0}
   catScratchingDoor: {fileID: 598000605}
   variantMusicAudioParent: {fileID: 2031276524}
   countdownTimer: 120
@@ -59398,8 +59407,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChangeToSnapshot
   snapshotToChangeInto: {fileID: 8211628274558010859, guid: 673aedb0701aedc459d04679885e131a, type: 2}
   changeTimer: 0.5
-  audioSource: {fileID: 0}
-  clipToChangeInto: {fileID: 0}
+  audioSource: {fileID: 239506122}
+  clipToChangeInto: {fileID: 8300000, guid: 5267deff128a3c6499b516f51f6c271b, type: 3}
 --- !u!65 &334735070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -115641,7 +115650,7 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: efd8eef0b39dff84787b85b62c50762e, type: 3}
     pitchRange: {x: 0.9, y: 1.1}
-    volumeRange: {x: 0.85, y: 1}
+    volumeRange: {x: 0.5, y: 0.7}
 --- !u!82 &455311038
 AudioSource:
   m_ObjectHideFlags: 0
@@ -115655,7 +115664,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.531
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -154607,7 +154616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &598000604
 Transform:
   m_ObjectHideFlags: 0
@@ -197288,7 +197297,7 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: efd8eef0b39dff84787b85b62c50762e, type: 3}
     pitchRange: {x: 0.9, y: 1.1}
-    volumeRange: {x: 0.85, y: 1}
+    volumeRange: {x: 0.5, y: 0.7}
 --- !u!82 &905729391
 AudioSource:
   m_ObjectHideFlags: 0
@@ -197302,7 +197311,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.531
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -219797,8 +219806,8 @@ MonoBehaviour:
   m_SerializedVersion: 0
   m_AgentTypeID: 0
   m_CollectObjects: 1
-  m_Size: {x: 25.564625, y: 15.8, z: 29.378174}
-  m_Center: {x: 10.289944, y: 7.2, z: 2.3614979}
+  m_Size: {x: 23.0167, y: 15.800001, z: 26.620155}
+  m_Center: {x: 9.015982, y: 7.2, z: 3.7405071}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -233342,11 +233351,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickRandomClipFromTwoSets
   ClipSet1:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 7593f133d7199e74888896e3a0ac0317, type: 3}
+  - {fileID: 8300000, guid: f8c57fffd3d9a1a4c8d4f3e31494a957, type: 3}
+  - {fileID: 8300000, guid: 04fa6d499374d90439da6c47b961004a, type: 3}
+  - {fileID: 8300000, guid: f892578cb20ed7540a7f0cd94c42732d, type: 3}
   ClipSet2:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 53eceaab31f7ab643aee474f8606f61c, type: 3}
+  - {fileID: 8300000, guid: d9637c31845b1ff4891be40404b2e5a3, type: 3}
+  - {fileID: 8300000, guid: 5fc261fc5ceb58e49982b719e563ae71, type: 3}
+  - {fileID: 8300000, guid: 71d3de3c59bdb2a47801569259a74cd4, type: 3}
   useVariantSet: 0
   modifyAudioSource: 0
   randomizeAudioSource: {fileID: 0}
@@ -263095,7 +263108,7 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: efd8eef0b39dff84787b85b62c50762e, type: 3}
     pitchRange: {x: 0.9, y: 1.1}
-    volumeRange: {x: 0.85, y: 1}
+    volumeRange: {x: 0.5, y: 0.7}
 --- !u!82 &1220029680
 AudioSource:
   m_ObjectHideFlags: 0
@@ -263109,7 +263122,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.531
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -337732,6 +337745,89 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7185886393175157201, guid: 103288a5d2f76432aab4922df45a94db, type: 3}
   m_PrefabInstance: {fileID: 1480853100}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1481038251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1481038252}
+  - component: {fileID: 1481038255}
+  - component: {fileID: 1481038254}
+  - component: {fileID: 1481038253}
+  m_Layer: 0
+  m_Name: CatSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1481038252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481038251}
+  serializedVersion: 2
+  m_LocalRotation: {x: -5.462618e-19, y: -0.705128, z: 5.4932346e-19, w: 0.7090801}
+  m_LocalPosition: {x: 0.31, y: 2.4, z: 1.64}
+  m_LocalScale: {x: 2.1226556, y: 2.533711, z: 2.3705199}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 150773916}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1481038253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481038251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9642c17149546d4fb1b380ed6bf7139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnAndDespawnCat
+  catToSpawn: {fileID: 0}
+  catToDespawn: {fileID: 673413111}
+--- !u!114 &1481038254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481038251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9642c17149546d4fb1b380ed6bf7139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  catToSpawn: {fileID: 0}
+  catToDespawn: {fileID: 1235702318}
+--- !u!65 &1481038255
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481038251}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.4367886, y: 1, z: 2.2275486}
+  m_Center: {x: 0.21839365, y: 1.2626355e-26, z: -0.036086254}
 --- !u!1 &1481503689
 GameObject:
   m_ObjectHideFlags: 0
@@ -395022,7 +395118,7 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: efd8eef0b39dff84787b85b62c50762e, type: 3}
     pitchRange: {x: 0.9, y: 1.1}
-    volumeRange: {x: 0.85, y: 1}
+    volumeRange: {x: 0.5, y: 0.7}
 --- !u!82 &1593074497
 AudioSource:
   m_ObjectHideFlags: 0
@@ -395036,7 +395132,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.531
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -428044,7 +428140,7 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: efd8eef0b39dff84787b85b62c50762e, type: 3}
     pitchRange: {x: 0.9, y: 1.1}
-    volumeRange: {x: 0.85, y: 1}
+    volumeRange: {x: 0.5, y: 0.7}
 --- !u!82 &1734555236
 AudioSource:
   m_ObjectHideFlags: 0
@@ -428058,7 +428154,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.531
   m_Pitch: 1
   Loop: 0
   Mute: 0
