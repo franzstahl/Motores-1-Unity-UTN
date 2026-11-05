@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class StartCountdown : MonoBehaviour
@@ -13,11 +14,13 @@ public class StartCountdown : MonoBehaviour
     [SerializeField] private GameObject variantMusicAudioParent;
     [SerializeField] private float countdownTimer;
     [SerializeField] private bool timerActive;
-
+    [SerializeField] private AudioSource finalSectionAudioSource;
+    [SerializeField] private bool deactivator;
+    private float timerReseter;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        timerReseter = countdownTimer;
     }
 
     // Update is called once per frame
@@ -34,9 +37,9 @@ public class StartCountdown : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.tag == "Player" && !deactivator)
         {
             timerActive = true;
             finalSequenceAudioParent.SetActive(true);
@@ -44,6 +47,18 @@ public class StartCountdown : MonoBehaviour
             variantMusicAudioParent.SetActive(false);
             countdownTimerTextParent.SetActive(true);
             catScratchingDoor.Play();
+            finalSectionAudioSource.PlayScheduled(Time.deltaTime + 1f);
+        }
+        else if (other.tag == "Player" && deactivator)
+        {
+            timerActive = false;
+            countdownTimer = timerReseter;
+            finalSequenceAudioParent.SetActive(false);
+            scratchDoorParent.SetActive(false);
+            variantMusicAudioParent.SetActive(true);
+            countdownTimerTextParent.SetActive(false);
+            catScratchingDoor.Stop();
+            finalSectionAudioSource.Stop();
         }
     }
 }

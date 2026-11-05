@@ -19,10 +19,11 @@ public class ChangeToSnapshot : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.collider.tag == "Player")
+        if (other.tag == "Player")
         {
+            Debug.Log("Cambio snap");
             snapshotToChangeInto.TransitionTo(changeTimer);
             if (audioSource != null && clipToChangeInto != null)
             {
