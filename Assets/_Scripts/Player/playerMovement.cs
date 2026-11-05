@@ -44,16 +44,19 @@ public class PlayerMovement : MonoBehaviour
     private float airTime;
 
     private float climbTimer; // Time left on the wall
+    public float timeNormalized => climbTimer / climbDuration; // value from 0 to 1, for the UI
     private Vector3 wallNormal; // Points away from the wall, toward the player
     private bool canClimb = true; // Set to false after leaving a wall, reset when touching the ground
+    public bool CanClimb => canClimb;
     private float currentStamina;
     private float regenTimer;
     private bool exhausted; // True after hitting 0, until stamina recovers past the minimum
     private bool groundedAfterGravity; // Grounded result from the gravity Move only, so other Moves can't overwrite it
 
-    public float StaminaNormalized => currentStamina / maxStamina; // 0 to 1, for the UI later
+    public float StaminaNormalized => currentStamina / maxStamina; // 0 to 1, for the UI
 
     private bool sprintHeld; // True while the sprint key is being held down
+    public bool SprintHeld => sprintHeld;
     public MovementState CurrentState { get; private set; } = MovementState.Walking; // Other scripts can read it but not change it
     
 
