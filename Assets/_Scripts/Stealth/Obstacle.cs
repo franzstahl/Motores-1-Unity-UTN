@@ -46,7 +46,7 @@ public class Obstacle : MonoBehaviour
                 GameObject go = Instantiate(destroyParticle, gameObject.transform.position, Quaternion.Euler(-90f, 0f, 0f));
                 Destroy(go, 1f);
             }
-            Destroy(gameObject, 1f);
+            //Destroy(gameObject, 1f);
         }
     }
 
@@ -63,11 +63,11 @@ public class Obstacle : MonoBehaviour
         transform.SetPositionAndRotation(startPosition, startRotation);
     }
 
-    private void OnDestroy()
-    {
-        if (gameManager != null)
-        {
-            gameManager.OnPlayerRespawn -= ResetObstacle; // Unsubscribe from the OnPlayerRespawn event when the obstacle is destroyed
-        }
-    }
+//    private void OnDestroy()
+//    {
+//        if (gameManager != null)
+//        {
+//            gameManager.OnPlayerRespawn -= ResetObstacle; // Unsubscribe from the OnPlayerRespawn event when the obstacle is destroyed
+//        }
+//    }
 }

@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class Cheese : MonoBehaviour, InteractibleInterface
 {
-    [SerializeField] private float delayBeforeLoad = 1f;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip victoryAudio;
     [SerializeField] private GameObject[] cheesesToSpawn;
@@ -45,10 +44,6 @@ public class Cheese : MonoBehaviour, InteractibleInterface
         }
     }
 
-    private void LoadScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
     private void NextCheese()
     {
         currentCheese.SetActive(false);

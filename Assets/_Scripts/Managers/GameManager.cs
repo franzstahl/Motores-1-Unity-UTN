@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float fadeDuration = 5.0f;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip clip;
-
+    [SerializeField] private int delayBeforeReload = 1;
     private bool isCaught;
     private CaughtSequence caughtSequence;
    
@@ -53,7 +53,14 @@ public class GameManager : MonoBehaviour
     {
         isCaught = true;
         isMovementActive = false;
-        FadeOut();
+        StartCoroutine(EndingRoutine());
+    }
+
+    private IEnumerator EndingRoutine()
+    {
+        yield return StartFade(1f);
+        yield return new WaitForSeconds(delayBeforeReload);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     private void Awake()
     {
