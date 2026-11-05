@@ -24,7 +24,11 @@ public class ChangeToSnapshot : MonoBehaviour
         if (collision.collider.tag == "Player")
         {
             snapshotToChangeInto.TransitionTo(changeTimer);
-            if(audioSource != null && clipToChangeInto != null) audioSource.clip = clipToChangeInto;
+            if (audioSource != null && clipToChangeInto != null)
+            {
+                audioSource.clip = clipToChangeInto;
+                audioSource.PlayScheduled(Time.deltaTime + 1f);
+            }
         }
     }
 }

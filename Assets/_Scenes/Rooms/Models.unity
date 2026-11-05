@@ -152533,9 +152533,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 41.62482
+  MaxDistance: 34.6
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -265904,7 +265904,7 @@ Transform:
   m_GameObject: {fileID: 1259350934}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 7.7469874e-19, w: 1}
-  m_LocalPosition: {x: 12.669, y: 14.156, z: -34.13}
+  m_LocalPosition: {x: -7.53, y: 10.54, z: -14.88}
   m_LocalScale: {x: 1.1631, y: 1.1631, z: 1.1631}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -265922,7 +265922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9642c17149546d4fb1b380ed6bf7139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  catToSpawn: {fileID: 1508575023}
+  catToSpawn: {fileID: 1235702318}
   catToDespawn: {fileID: 0}
 --- !u!65 &1259350937
 BoxCollider:
@@ -320970,7 +320970,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
   shootPoint: {fileID: 1411934245}
   maxDistance: 2
-  pushPower: 2
+  pushPower: 6
 --- !u!143 &1411934249
 CharacterController:
   m_ObjectHideFlags: 0
