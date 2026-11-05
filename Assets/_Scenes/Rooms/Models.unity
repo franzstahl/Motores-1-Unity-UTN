@@ -59507,7 +59507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76ac14dde724cbb4c81e72ecbe85d8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeToSnapshot
-  snapshotToChangeInto: {fileID: 8211628274558010859, guid: 673aedb0701aedc459d04679885e131a, type: 2}
+  snapshotToChangeInto: {fileID: -1295136790071801531, guid: 673aedb0701aedc459d04679885e131a, type: 2}
   changeTimer: 0.5
   audioSource: {fileID: 239506122}
   clipToChangeInto: {fileID: 8300000, guid: 5267deff128a3c6499b516f51f6c271b, type: 3}
@@ -325810,7 +325810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9642c17149546d4fb1b380ed6bf7139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  catToSpawn: {fileID: 518014727}
+  catToSpawn: {fileID: 0}
   catToDespawn: {fileID: 673413111}
 --- !u!65 &1418193354
 BoxCollider:
@@ -332617,15 +332617,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.49
+      value: -5.486
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.662
+      value: 6.823
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -38.445
+      value: -39.22
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
       propertyPath: m_LocalRotation.w
