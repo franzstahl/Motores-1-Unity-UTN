@@ -231618,6 +231618,11 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!4 &1116908334 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2854563699051640978, guid: 86805314b9fb175499f83d1ca01f2756, type: 3}
+  m_PrefabInstance: {fileID: 1463046688}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1116954534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -324348,7 +324353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1a9ff6f9806704baa23d3ec78bf773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
-  shootPoint: {fileID: 1411934245}
+  shootPoint: {fileID: 1116908334}
   maxDistance: 2
   pushPower: 6
 --- !u!143 &1411934249
