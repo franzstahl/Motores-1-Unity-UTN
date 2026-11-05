@@ -15,7 +15,7 @@ public class Padlock : MonoBehaviour, InteractibleInterface
 
     public void Interact()
     {
-        Debug.Log("Padlock.Interact, hasKey: " + (GameManager.Instance != null && GameManager.Instance.hasKey));
+       
         if (isUnlocked) return; // Already on te floor, do nothing
 
         if (GameManager.Instance == null || !GameManager.Instance.hasKey)
