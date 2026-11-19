@@ -1,5 +1,6 @@
 using System;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
@@ -17,6 +18,9 @@ public class StartCountdown : MonoBehaviour
     [SerializeField] private AudioSource finalSectionAudioSource;
     [SerializeField] private bool deactivator;
     private float timerReseter;
+    private int minutes;
+    private int seconds;
+    private int miliseconds;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,10 +33,20 @@ public class StartCountdown : MonoBehaviour
         if (timerActive)
         {
             countdownTimer -= Time.deltaTime;
-            countdownTimerText.text = countdownTimer.ToString();
+
+            minutes = Mathf.FloorToInt(countdownTimer / 60f); // calculates minutes, seconds and miliseconds
+            seconds = Mathf.FloorToInt(countdownTimer % 60f);
+            miliseconds = Mathf.FloorToInt((countdownTimer * 100f) % 100f);
+
+            countdownTimerText.text = string.Format("{0:00}:{1:00}.{2:00}", minutes, seconds, miliseconds); // sets de format
+
             if (countdownTimer <= 0)
             {
                 GameManager.Instance.PlayerDetected = true;
+                timerActive = false; // stops the process
+                minutes = 0; // sets the timer to 0
+                seconds = 0;
+                miliseconds = 0;
             }
         }
     }
