@@ -58982,6 +58982,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChangeToSnapshot
   snapshotToChangeInto: {fileID: -1295136790071801531, guid: 673aedb0701aedc459d04679885e131a, type: 2}
   changeTimer: 0.5
+  snapshotNormal: {fileID: 0}
+  tiempoRegreso: 1.5
   audioSource: {fileID: 239506122}
   clipToChangeInto: {fileID: 8300000, guid: 5267deff128a3c6499b516f51f6c271b, type: 3}
 --- !u!65 &334735070
@@ -114897,6 +114899,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChangeToSnapshot
   snapshotToChangeInto: {fileID: 24500006, guid: 673aedb0701aedc459d04679885e131a, type: 2}
   changeTimer: 0.5
+  snapshotNormal: {fileID: 0}
+  tiempoRegreso: 1.5
   audioSource: {fileID: 0}
   clipToChangeInto: {fileID: 0}
 --- !u!65 &455014136
@@ -148528,6 +148532,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChangeToSnapshot
   snapshotToChangeInto: {fileID: 8211628274558010859, guid: 673aedb0701aedc459d04679885e131a, type: 2}
   changeTimer: 1
+  snapshotNormal: {fileID: 0}
+  tiempoRegreso: 1.5
   audioSource: {fileID: 699352887}
   clipToChangeInto: {fileID: 8300000, guid: 2b14111bed87da3419ba0519122ef89e, type: 3}
 --- !u!65 &561102927
@@ -226644,8 +226650,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76ac14dde724cbb4c81e72ecbe85d8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeToSnapshot
-  snapshotToChangeInto: {fileID: 7937643059210143555, guid: 673aedb0701aedc459d04679885e131a, type: 2}
+  snapshotToChangeInto: {fileID: 8211628274558010859, guid: 673aedb0701aedc459d04679885e131a, type: 2}
   changeTimer: 1
+  snapshotNormal: {fileID: 24500006, guid: 673aedb0701aedc459d04679885e131a, type: 2}
+  tiempoRegreso: 1.5
   audioSource: {fileID: 0}
   clipToChangeInto: {fileID: 0}
 --- !u!65 &1084119429
