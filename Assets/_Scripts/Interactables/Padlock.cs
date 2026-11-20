@@ -25,6 +25,7 @@ public class Padlock : MonoBehaviour, InteractibleInterface
         }
 
         isUnlocked = true;
+        if (sfx != null) sfx.Play("PadlockUnlock");
         rb.isKinematic = false; // Falling the padlock when unlocked
     }
 }

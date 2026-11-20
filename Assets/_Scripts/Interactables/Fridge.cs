@@ -10,6 +10,7 @@ public class Fridge : MonoBehaviour, InteractibleInterface
     [SerializeField] private Light[] fridgeLights; // Interior light, must start disabled
   
     private bool isOpen;
+    [SerializeField] private SFXPlayer playerSFX3D;
 
     private void Start()
     {
@@ -26,6 +27,8 @@ public class Fridge : MonoBehaviour, InteractibleInterface
         }
 
         isOpen = true;
+        if (playerSFX3D != null)
+            playerSFX3D.Play("FridgeOpen");
 
         if (animator != null)
         {

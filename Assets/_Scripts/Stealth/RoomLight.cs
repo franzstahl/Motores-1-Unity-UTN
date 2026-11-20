@@ -4,7 +4,7 @@ using UnityEngine;
 public class RoomLight : MonoBehaviour
 {
     [SerializeField] private Light[] roomLights;
-
+    [SerializeField] private SFXPlayer sfx2D;
     private void Start()
     {
         // Turn the light off again every time the player respawns
@@ -22,7 +22,11 @@ public class RoomLight : MonoBehaviour
 
     public void TurnOn()
     {
-        foreach(Light light in roomLights)
+        if (sfx2D != null)
+            sfx2D.Play("RoomLightsOn");
+
+
+        foreach (Light light in roomLights)
         {
             light.enabled = true;
         }

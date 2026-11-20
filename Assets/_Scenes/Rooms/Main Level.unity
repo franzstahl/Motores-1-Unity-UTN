@@ -6530,6 +6530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
   roomLights:
   - {fileID: 37435816}
+  sfx2D: {fileID: 48241372}
 --- !u!1 &37714520
 GameObject:
   m_ObjectHideFlags: 0
@@ -9232,6 +9233,11 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 3e58a0972e9ce7e4180660ea6d19f22c, type: 3}
     - {fileID: 8300000, guid: 56d49103e3884cf4f88cd81ea501b84b, type: 3}
     - {fileID: 8300000, guid: 250855c9ad0ca03409fb4a26d1b14d66, type: 3}
+    pitchRange: {x: 0.9, y: 1.1}
+    volumeRange: {x: 0.85, y: 1}
+  - id: FridgeOpen
+    clips:
+    - {fileID: 8300000, guid: 6901c4859240eb347aedb9cfe661e0f9, type: 3}
     pitchRange: {x: 0.9, y: 1.1}
     volumeRange: {x: 0.85, y: 1}
 --- !u!82 &48241373
@@ -13094,6 +13100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
   roomLights:
   - {fileID: 80527190}
+  sfx2D: {fileID: 48241372}
 --- !u!1001 &81721542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56436,6 +56443,135 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1643967432}
   m_SourcePrefab: {fileID: 100100000, guid: cf9ccd9d31abfc048ae93ec3fefa652f, type: 3}
+--- !u!1 &310532864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 310532865}
+  - component: {fileID: 310532866}
+  m_Layer: 0
+  m_Name: Ca
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &310532865
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310532864}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 24.39, y: -8.39, z: 3.55}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 711702640}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &310532866
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310532864}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 421565763937832267, guid: 673aedb0701aedc459d04679885e131a, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 90425126150937646b5c29afae25cb1f, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.274
+  m_Pitch: 0.75
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 5.6
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &311385196
 GameObject:
   m_ObjectHideFlags: 0
@@ -62302,6 +62438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
   roomLights:
   - {fileID: 353903533}
+  sfx2D: {fileID: 48241372}
 --- !u!1 &354581779
 GameObject:
   m_ObjectHideFlags: 0
@@ -75347,6 +75484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
   roomLights:
   - {fileID: 412461442}
+  sfx2D: {fileID: 48241372}
 --- !u!43 &412959783
 Mesh:
   m_ObjectHideFlags: 0
@@ -121526,6 +121664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
   roomLights: []
+  sfx2D: {fileID: 48241372}
 --- !u!1001 &485844650
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -138144,6 +138283,7 @@ MonoBehaviour:
   - {fileID: 497558570}
   - {fileID: 698348976}
   - {fileID: 485783840}
+  sfx2D: {fileID: 48241372}
 --- !u!43 &498573455
 Mesh:
   m_ObjectHideFlags: 0
@@ -148571,6 +148711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnAndDespawnCat
   catToSpawn: {fileID: 1940622697}
   catToDespawn: {fileID: 0}
+  sfx2D: {fileID: 0}
 --- !u!114 &561102929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148585,6 +148726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnAndDespawnCat
   catToSpawn: {fileID: 1116954536}
   catToDespawn: {fileID: 0}
+  sfx2D: {fileID: 0}
 --- !u!114 &561102930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148599,6 +148741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnAndDespawnCat
   catToSpawn: {fileID: 518014727}
   catToDespawn: {fileID: 0}
+  sfx2D: {fileID: 0}
 --- !u!1 &561803954
 GameObject:
   m_ObjectHideFlags: 0
@@ -153993,6 +154136,34 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 752633268}
+    - target: {fileID: 2178796397823712571, guid: 7005d1800cf25af46b51a196c3ad3dd7, type: 3}
+      propertyPath: sfx.Array.data[0].id
+      value: PadlockUnlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178796397823712571, guid: 7005d1800cf25af46b51a196c3ad3dd7, type: 3}
+      propertyPath: sfx.Array.data[0].pitchRange.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178796397823712571, guid: 7005d1800cf25af46b51a196c3ad3dd7, type: 3}
+      propertyPath: sfx.Array.data[0].pitchRange.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178796397823712571, guid: 7005d1800cf25af46b51a196c3ad3dd7, type: 3}
+      propertyPath: sfx.Array.data[0].volumeRange.x
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178796397823712571, guid: 7005d1800cf25af46b51a196c3ad3dd7, type: 3}
+      propertyPath: sfx.Array.data[0].clips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178796397823712571, guid: 7005d1800cf25af46b51a196c3ad3dd7, type: 3}
+      propertyPath: 'sfx.Array.data[0].clips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: abdb5e2980e47b14f99f67546f7334db, type: 3}
+    - target: {fileID: 2178796397823712571, guid: 7005d1800cf25af46b51a196c3ad3dd7, type: 3}
+      propertyPath: 'sfx.Array.data[0].clips.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 37246c6da658db74c8ea23769b70864c, type: 3}
     - target: {fileID: 2461299809521347412, guid: 7005d1800cf25af46b51a196c3ad3dd7, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -166161,6 +166332,25 @@ MonoBehaviour:
     clips: []
     pitchRange: {x: 0, y: 0}
     volumeRange: {x: 0, y: 0}
+  - id: RoomLightsOn
+    clips:
+    - {fileID: 8300000, guid: 39bb23fdf80187246b32610002c6a0d8, type: 3}
+    pitchRange: {x: 0.9, y: 1.1}
+    volumeRange: {x: 0.85, y: 1}
+  - id: KeySpawn
+    clips:
+    - {fileID: 8300000, guid: 6112e08476165044db770c91d4b7518f, type: 3}
+    pitchRange: {x: 0.9, y: 1.1}
+    volumeRange: {x: 0.85, y: 1}
+  - id: CatAppears
+    clips:
+    - {fileID: 8300000, guid: 5f488c603ecccb44baf62b58de15b311, type: 3}
+    - {fileID: 8300000, guid: 0bed5ed572d1c1b46bb469b1d3ac9a8c, type: 3}
+    - {fileID: 8300000, guid: 7101e6b0856d6e64890aec052bdee005, type: 3}
+    - {fileID: 8300000, guid: f5b127c3c0c162745b3cca076f9f5f36, type: 3}
+    - {fileID: 8300000, guid: 83e3d05fb59452240b4db2f2a94a5d2e, type: 3}
+    pitchRange: {x: 0.9, y: 1.1}
+    volumeRange: {x: 0.85, y: 1}
 --- !u!82 &691337109
 AudioSource:
   m_ObjectHideFlags: 0
@@ -167594,6 +167784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
   roomLights: []
+  sfx2D: {fileID: 48241372}
 --- !u!1 &699352886
 GameObject:
   m_ObjectHideFlags: 0
@@ -169930,7 +170121,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 151605086}
-  - {fileID: 1701757805}
+  - {fileID: 310532865}
   m_Father: {fileID: 1972975676}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &711768699 stripped
@@ -184134,6 +184325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   catToSpawn: {fileID: 673413111}
   catToDespawn: {fileID: 1235702318}
+  sfx2D: {fileID: 691337108}
 --- !u!65 &820621119
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -187326,6 +187518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
   roomLights:
   - {fileID: 851524046}
+  sfx2D: {fileID: 48241372}
 --- !u!114 &851524045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226605,6 +226798,7 @@ MonoBehaviour:
   fridgeLights:
   - {fileID: 1987502137}
   - {fileID: 851524046}
+  playerSFX3D: {fileID: 48241372}
 --- !u!1 &1084119426
 GameObject:
   m_ObjectHideFlags: 0
@@ -227320,6 +227514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
   roomLights:
   - {fileID: 1085740041}
+  sfx2D: {fileID: 48241372}
 --- !u!114 &1085740040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236500,6 +236695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
   roomLights:
   - {fileID: 1132238072}
+  sfx2D: {fileID: 48241372}
 --- !u!43 &1133238123
 Mesh:
   m_ObjectHideFlags: 0
@@ -265373,6 +265569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
   roomLights:
   - {fileID: 1238213685}
+  sfx2D: {fileID: 48241372}
 --- !u!43 &1238246445
 Mesh:
   m_ObjectHideFlags: 0
@@ -269473,6 +269670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   catToSpawn: {fileID: 1235702318}
   catToDespawn: {fileID: 0}
+  sfx2D: {fileID: 0}
 --- !u!65 &1259350937
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -305590,6 +305788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
   roomLights:
   - {fileID: 1275130862}
+  sfx2D: {fileID: 48241372}
 --- !u!1 &1276431003
 GameObject:
   m_ObjectHideFlags: 0
@@ -317761,6 +317960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
   roomLights:
   - {fileID: 1362933761}
+  sfx2D: {fileID: 48241372}
 --- !u!1 &1364567493
 GameObject:
   m_ObjectHideFlags: 0
@@ -325807,6 +326007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   catToSpawn: {fileID: 0}
   catToDespawn: {fileID: 673413111}
+  sfx2D: {fileID: 0}
 --- !u!65 &1418193354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -338109,6 +338310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnAndDespawnCat
   catToSpawn: {fileID: 0}
   catToDespawn: {fileID: 673413111}
+  sfx2D: {fileID: 0}
 --- !u!114 &1481038254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338123,6 +338325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   catToSpawn: {fileID: 0}
   catToDespawn: {fileID: 1235702318}
+  sfx2D: {fileID: 0}
 --- !u!65 &1481038255
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -338158,6 +338361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnAndDespawnCat
   catToSpawn: {fileID: 0}
   catToDespawn: {fileID: 518014727}
+  sfx2D: {fileID: 0}
 --- !u!114 &1481038257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338172,6 +338376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnAndDespawnCat
   catToSpawn: {fileID: 0}
   catToDespawn: {fileID: 1116954536}
+  sfx2D: {fileID: 0}
 --- !u!114 &1481038258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338186,6 +338391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnAndDespawnCat
   catToSpawn: {fileID: 0}
   catToDespawn: {fileID: 1940622697}
+  sfx2D: {fileID: 0}
 --- !u!1 &1481503689
 GameObject:
   m_ObjectHideFlags: 0
@@ -424408,7 +424614,7 @@ GameObject:
   - component: {fileID: 1701757805}
   - component: {fileID: 1701757806}
   m_Layer: 0
-  m_Name: Fridge audio
+  m_Name: 'Car Ambience 3D '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -424423,11 +424629,11 @@ Transform:
   m_GameObject: {fileID: 1701757804}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.39, y: -8.39, z: 3.55}
+  m_LocalPosition: {x: 25.3, y: 8.14, z: -47.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 711702640}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1701757806
 AudioSource:
@@ -424440,7 +424646,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 421565763937832267, guid: 673aedb0701aedc459d04679885e131a, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 90425126150937646b5c29afae25cb1f, type: 3}
+  m_Resource: {fileID: 8300000, guid: 2b14111bed87da3419ba0519122ef89e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.274
   m_Pitch: 0.75
@@ -424450,8 +424656,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 5.6
+  MinDistance: 0.45726967
+  MaxDistance: 22.433619
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -424486,7 +424692,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -470592,6 +470798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
   roomLights:
   - {fileID: 1987436743}
+  sfx2D: {fileID: 48241372}
 --- !u!114 &1987436742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470734,6 +470941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoomLight
   roomLights:
   - {fileID: 1987502137}
+  sfx2D: {fileID: 48241372}
 --- !u!114 &1987502136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693237,6 +693445,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1701757805}
   - {fileID: 939342781}
   - {fileID: 5723535834267751933}
   - {fileID: 332261691}

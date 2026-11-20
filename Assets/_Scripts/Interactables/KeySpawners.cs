@@ -12,6 +12,8 @@ public class KeySpawners : MonoBehaviour
 
         Transform point = transform.GetChild(Random.Range(0, transform.childCount));
         GameObject keyObject = Instantiate(keyPrefab, point.position, point.rotation);
+        if (sfx2D != null)
+            sfx2D.Play("KeySpawn");
 
         Key key = keyObject.GetComponent<Key>();
         if (key != null) key.SetSFX(sfx2D);
