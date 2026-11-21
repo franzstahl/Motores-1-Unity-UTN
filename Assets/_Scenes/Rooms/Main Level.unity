@@ -109639,19 +109639,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'FRANCISCO GARZON
+  m_text: 'FRANCISCO GARZON - PROGRAMMING AND TESTING
 
 
-    JUAN HENRIQUEZ
+    JUAN HENRIQUEZ - PROGRAMMING
+    AND ANIMATING
 
 
-    ANA VICTORIA FERRENO
+    ANA VICTORIA FERRENO - ART AND LEVEL DESIGN
 
 
     LUCIANO
-    JUAREZ
+    JUAREZ - VARIOUS ASSETS
 
-'
+
+    JUAN CRUZ ''CRUIJS'' CIACCI - MUSIC AND VOICES'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0cd027b595d33ff40bec94cd17dc5b49, type: 2}
   m_sharedMaterial: {fileID: 4133180558702467232, guid: 0cd027b595d33ff40bec94cd17dc5b49, type: 2}
@@ -109660,7 +109662,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278233295
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -109720,7 +109722,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &607513476
@@ -544665,6 +544667,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1032959903218059542, guid: db13acd70be30bd46b1becc3b8ba0162, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1909476481496155718, guid: db13acd70be30bd46b1becc3b8ba0162, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
